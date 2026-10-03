@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/site-config";
 import { insightArticles } from "@/lib/insights-data";
+import { servicesDetailData } from "@/lib/services-detail-data";
+import { platformsDetailData } from "@/lib/platforms-detail-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
@@ -13,6 +15,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/contact", priority: 0.8 },
     { path: "/gallery", priority: 0.6 },
   ];
+
+  const serviceRoutes: MetadataRoute.Sitemap = Object.keys(servicesDetailData).map((slug) => ({
+    url: `${siteConfig.url}/services/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly",
+    priority: 0.9,
+  }));
+
+  const platformRoutes: MetadataRoute.Sitemap = Object.keys(platformsDetailData).map((slug) => ({
+    url: `${siteConfig.url}/platforms/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly",
+    priority: 0.9,
+  }));
 
   const articleRoutes: MetadataRoute.Sitemap = insightArticles.map((a) => ({
     url: `${siteConfig.url}/insights/${a.slug}`,
@@ -28,6 +44,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly" as const,
       priority,
     })),
+    ...serviceRoutes,
+    ...platformRoutes,
     ...articleRoutes,
   ];
 }

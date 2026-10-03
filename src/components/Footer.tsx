@@ -222,12 +222,13 @@ export default function Footer() {
               </span>
               <ul className="space-y-2.5 text-xs text-paper/75">
                 {[
-                  { href: "/services#enterprise-creation", label: "01 — Enterprise Creation" },
-                  { href: "/services#sme-growth", label: "02 — SME Growth & Competitiveness" },
-                  { href: "/services#capital-advisory", label: "03 — Capital & Financial Advisory" },
-                  { href: "/services#digital-transformation", label: "04 — Digital & AI Transformation" },
-                  { href: "/services#sector-advisory", label: "05 — Sector-Specific Advisory" },
-                  { href: "/services#ecosystem-development", label: "06 — Ecosystem & Institutions" },
+                  { href: "/services/business-registration-ghana", label: "Business Registration & Filing (ORC)" },
+                  { href: "/services/enterprise-creation", label: "01 — Enterprise Creation" },
+                  { href: "/services/sme-growth", label: "02 — SME Growth & Competitiveness" },
+                  { href: "/services/capital-advisory", label: "03 — Capital & Financial Advisory" },
+                  { href: "/services/digital-transformation", label: "04 — Digital & AI Transformation" },
+                  { href: "/services/sector-advisory", label: "05 — Sector-Specific Advisory" },
+                  { href: "/services/ecosystem-development", label: "06 — Ecosystem & Institutions" },
                 ].map((item) => (
                   <li key={item.href}>
                     <Link
@@ -249,11 +250,11 @@ export default function Footer() {
               </span>
               <ul className="space-y-2.5 text-xs text-paper/75">
                 {[
-                  { href: "/platforms#hopefusion-africa", label: "HopeFusion Africa™" },
-                  { href: "/platforms#adwuma-enterprise-pipeline", label: "Adwuma Enterprise Pipeline™" },
-                  { href: "/platforms#nkabom-business-advance", label: "Nkabom Business Advance™" },
-                  { href: "/platforms#nuru-women-enterprise", label: "Nuru Women Enterprise™" },
-                  { href: "/platforms#asase-green-enterprise", label: "Asase Green Enterprise™" },
+                  { href: "/platforms/hopefusion-africa", label: "HopeFusion Africa™" },
+                  { href: "/platforms/adwuma-enterprise-pipeline", label: "Adwuma Enterprise Pipeline™" },
+                  { href: "/platforms/nkabom-business-advance", label: "Nkabom Business Advance™" },
+                  { href: "/platforms/nuru-women-enterprise", label: "Nuru Women Enterprise™" },
+                  { href: "/platforms/asase-green-enterprise", label: "Asase Green Enterprise™" },
                 ].map((item) => (
                   <li key={item.href}>
                     <Link

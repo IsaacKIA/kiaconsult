@@ -193,7 +193,9 @@ export default function PlatformsPage() {
                         </span>
                       </div>
                       <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-extrabold text-ink mt-1">
-                        {platform.name}
+                        <Link href={`/platforms/${platform.id}`} className="hover:text-gold-deep transition-colors">
+                          {platform.name}
+                        </Link>
                       </h2>
                     </div>
                   </div>
@@ -260,19 +262,19 @@ export default function PlatformsPage() {
 
                     {/* Call to Action */}
                     <div className="pt-2 flex flex-wrap items-center gap-3">
+                      <Link
+                        href={`/platforms/${platform.id}`}
+                        className="btn-magnetic inline-flex items-center gap-1.5 text-xs font-black text-black bg-gradient-to-r from-gold via-gold-solar to-gold-deep px-5 py-2.5 rounded-full shadow-[0_0_18px_rgba(255,215,0,0.35)] hover:scale-105 transition-all"
+                      >
+                        <span>Access Dedicated Prospectus</span>
+                        <ChevronRight className="w-3.5 h-3.5" />
+                      </Link>
                       <WhatsAppCTA
                         message={whatsappMessages.platform(platform.name)}
                         className="btn-magnetic"
                       >
                         Partner on {platform.name}
                       </WhatsAppCTA>
-                      <Link
-                        href="/contact"
-                        className="inline-flex items-center gap-1.5 text-xs font-bold text-gold-deep hover:underline px-4 py-2.5 rounded-full hover:bg-gold-500/10 transition-colors"
-                      >
-                        <span>Request Institutional Prospectus</span>
-                        <ChevronRight className="w-3.5 h-3.5" />
-                      </Link>
                     </div>
                   </div>
 

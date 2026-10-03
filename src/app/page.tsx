@@ -327,7 +327,9 @@ export default function Home() {
                     </span>
                   </div>
                   <h3 className="font-display text-xl font-semibold text-ink group-hover:text-gold-deep transition-colors duration-300 leading-snug">
-                    {service.title}
+                    <Link href={`/services/${service.id}`}>
+                      {service.title}
+                    </Link>
                   </h3>
                   <p className="mt-3 text-sm leading-relaxed text-ink/85 line-clamp-3">
                     {service.problem}
@@ -342,10 +344,10 @@ export default function Home() {
                   </div>
                   <div className="flex items-center justify-between pt-2 border-t border-line/60">
                     <Link
-                      href={`/services#${service.id}`}
+                      href={`/services/${service.id}`}
                       className="text-xs font-bold text-ink hover:text-gold-deep inline-flex items-center gap-1 group/link"
                     >
-                      <span>Capability details</span>
+                      <span>Explore Practice</span>
                       <ArrowRight className="h-3.5 w-3.5 text-gold-deep group-hover/link:translate-x-0.5 transition-transform" />
                     </Link>
                     <WhatsAppCTA message={service.ctaMessage} size="sm" variant="outline">
@@ -386,7 +388,9 @@ export default function Home() {
               >
                 <div>
                   <h3 className="font-display text-xl font-bold text-white group-hover:text-gold-300 transition-colors duration-300 leading-snug">
-                    {platform.name}
+                    <Link href={`/platforms/${platform.id}`}>
+                      {platform.name}
+                    </Link>
                   </h3>
                   <p className="mt-1 text-xs font-extrabold uppercase tracking-wide text-gold-400 font-mono">
                     {platform.tagline}
@@ -411,10 +415,10 @@ export default function Home() {
 
                 <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
                   <Link
-                    href={`/platforms#${platform.id}`}
+                    href={`/platforms/${platform.id}`}
                     className="group/link inline-flex items-center gap-1.5 text-xs font-extrabold text-gold-400 group-hover/link:text-gold-200 transition-colors"
                   >
-                    <span>Full Platform Specs</span>
+                    <span>Dedicated Prospectus</span>
                     <ArrowRight className="h-3.5 w-3.5 group-hover/link:translate-x-1 transition-transform text-gold-400" />
                   </Link>
                   <WhatsAppCTA

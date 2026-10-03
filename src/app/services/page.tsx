@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import {
   Check,
   ArrowRight,
@@ -282,7 +283,9 @@ export default function ServicesPage() {
                 <div className={`section-reveal space-y-8 lg:col-span-7 ${!isEven ? "lg:order-2" : ""}`}>
                   <div>
                     <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-ink leading-snug">
-                      {service.title}
+                      <Link href={`/services/${service.id}`} className="hover:text-gold-deep transition-colors">
+                        {service.title}
+                      </Link>
                     </h2>
                     <div className="w-14 h-0.5 bg-gradient-to-r from-gold-500 to-transparent mt-4" />
                   </div>
@@ -329,9 +332,18 @@ export default function ServicesPage() {
                     </div>
                   </div>
 
-                  <WhatsAppCTA message={service.ctaMessage} className="btn-magnetic">
-                    Discuss This Pillar With KIA
-                  </WhatsAppCTA>
+                  <div className="flex flex-wrap items-center gap-3 pt-2">
+                    <Link
+                      href={`/services/${service.id}`}
+                      className="btn-magnetic inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-gold via-gold-solar to-gold-deep text-black font-extrabold text-xs shadow-[0_0_18px_rgba(255,215,0,0.35)] hover:scale-105 transition-all"
+                    >
+                      <span>Explore Dedicated Practice &amp; Deliverables</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
+                    <WhatsAppCTA message={service.ctaMessage} size="sm" variant="outline">
+                      Discuss This Pillar
+                    </WhatsAppCTA>
+                  </div>
                 </div>
 
                 {/* Image */}

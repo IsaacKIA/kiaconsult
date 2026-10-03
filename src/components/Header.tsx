@@ -21,6 +21,7 @@ import {
   Sparkles,
   Camera,
   ArrowUpRight,
+  FileText,
 } from "lucide-react";
 import { navigation, siteConfig, whatsappMessages, buildWhatsAppLink } from "@/lib/site-config";
 import WhatsAppCTA from "./WhatsAppCTA";
@@ -29,67 +30,79 @@ import WhatsAppChatbot from "./WhatsAppChatbot";
 
 const SERVICE_ITEMS = [
   {
+    icon: FileText,
+    title: "Business Registration & Filing (ORC)",
+    desc: "100% turnkey Ghanaian incorporation, yearly renewals, and annual returns.",
+    href: "/services/business-registration-ghana",
+  },
+  {
     icon: Briefcase,
     title: "Enterprise Creation & Venture Development",
     desc: "From concept to structured, bankable enterprise entities.",
-    href: "/services#enterprise-creation",
+    href: "/services/enterprise-creation",
   },
   {
     icon: TrendingUp,
     title: "SME Growth & Competitiveness Advisory",
     desc: "Scale operational capacity, governance, and market share.",
-    href: "/services#sme-growth",
+    href: "/services/sme-growth",
   },
   {
     icon: Coins,
     title: "Capital & Financial Advisory",
     desc: "Investment readiness, valuation, and capital syndication.",
-    href: "/services#capital-advisory",
+    href: "/services/capital-advisory",
   },
   {
     icon: Cpu,
     title: "Digital & Technology Transformation",
     desc: "Applied enterprise software, automation, and AI workflows.",
-    href: "/services#digital-transformation",
+    href: "/services/digital-transformation",
   },
   {
     icon: Globe2,
     title: "Sector-Specific Advisory",
-    desc: "Agribusiness, green energy, AfCFTA trade, and manufacturing.",
-    href: "/services#sector-advisory",
+    desc: "Agribusiness, real estate, AfCFTA trade corridors, and manufacturing.",
+    href: "/services/sector-advisory",
   },
   {
     icon: Building,
     title: "Ecosystem Development & Institutional Support",
     desc: "Programs for DFIs, TVETs, ministries, and donor agencies.",
-    href: "/services#ecosystem-development",
+    href: "/services/ecosystem-development",
   },
 ];
 
 const PLATFORM_PREVIEWS = [
   {
-    name: "HopeFusion Capital Platform",
-    tagline: "Blended finance & capital syndication for African ventures",
-    stat: "$2.5M+ Catalyzed",
-    href: "/platforms#hopefusion",
+    name: "HopeFusion Africa™",
+    tagline: "$150M blended finance & capital syndication facility",
+    stat: "1,200 Businesses",
+    href: "/platforms/hopefusion-africa",
   },
   {
     name: "Adwuma Enterprise Pipeline™",
     tagline: "Scalable youth employment & high-growth venture engine",
-    stat: "4,500+ Trained",
-    href: "/platforms#adwuma",
+    stat: "25,000 Cohort",
+    href: "/platforms/adwuma-enterprise-pipeline",
   },
   {
-    name: "Nkabom Market Linkages",
+    name: "Nkabom Business Advance™",
     tagline: "AfCFTA cross-border trade & corporate procurement corridors",
-    stat: "12 Corridors",
-    href: "/platforms#nkabom",
+    stat: "6,000 SMEs",
+    href: "/platforms/nkabom-business-advance",
   },
   {
-    name: "Asase Agri-Holdings",
-    tagline: "Food sovereignty, post-harvest & rural economic assets",
-    stat: "340+ Metric Tonnes",
-    href: "/platforms#asase",
+    name: "Nuru Women Enterprise™",
+    tagline: "$25M dedicated facility for African women founders",
+    stat: "4,000 Founders",
+    href: "/platforms/nuru-women-enterprise",
+  },
+  {
+    name: "Asase Green Enterprise™",
+    tagline: "Climate-smart agriculture, cold-chain & carbon monetization",
+    stat: "28,000 Green Jobs",
+    href: "/platforms/asase-green-enterprise",
   },
 ];
 
