@@ -5,6 +5,7 @@ import { insightArticles } from "@/lib/insights-data";
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     { path: "", priority: 1 },
+    { path: "/services/business-registration-ghana", priority: 0.95 },
     { path: "/services", priority: 0.9 },
     { path: "/platforms", priority: 0.9 },
     { path: "/about", priority: 0.85 },

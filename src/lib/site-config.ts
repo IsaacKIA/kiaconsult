@@ -47,6 +47,8 @@ export const whatsappMessages = {
     `Hello KIA, I am interested in ${platformName}. I would like to learn how this could support my business or organization.`,
   contactForm: (name: string, topic: string) =>
     `Hello KIA, my name is ${name}. I submitted an enquiry about "${topic}" on your website and would like to continue the conversation here.`,
+  businessRegistration: (profile: string, serviceType: string, name?: string, businessName?: string) =>
+    `Hello KIA–Start Up Consult, I would like assistance with ${serviceType} in Ghana. Profile: ${profile}.${name ? ` My name is ${name}.` : ""}${businessName ? ` Business/Proposed Name: ${businessName}.` : ""} Please guide me on process, requirements, and fees.`,
 } as const;
 
 export type WhatsappMessageKey = keyof typeof whatsappMessages;

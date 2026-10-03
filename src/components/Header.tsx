@@ -270,18 +270,16 @@ export default function Header() {
                   </div>
 
                   {/* Bottom banner */}
-                  <div className="mt-3 pt-3 border-t border-line flex items-center justify-between bg-gold/[0.06] p-3 rounded-xl border border-gold-deep/15">
-                    <span className="text-xs text-ink/80 font-medium">
-                      Need custom sovereign or bilateral consulting?
+                  <div className="mt-3 pt-3 border-t border-line flex items-center justify-between bg-gold/[0.08] p-3 rounded-xl border border-gold-deep/20">
+                    <span className="text-xs text-ink font-medium">
+                      🇬🇭 Starting a business in Ghana? Fast remote formation &amp; annual compliance:
                     </span>
-                    <a
-                      href={buildWhatsAppLink(whatsappMessages.institutional)}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-xs font-bold text-gold-deep hover:underline flex items-center gap-1"
+                    <Link
+                      href="/services/business-registration-ghana"
+                      className="text-xs font-bold text-gold-deep hover:underline flex items-center gap-1 shrink-0"
                     >
-                      Request Institutional Briefing →
-                    </a>
+                      Business Registration Desk →
+                    </Link>
                   </div>
                 </div>
               </div>

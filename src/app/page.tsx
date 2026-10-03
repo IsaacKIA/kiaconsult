@@ -21,6 +21,7 @@ import ImpactDashboard from "@/components/ImpactDashboard";
 import FAQAccordion from "@/components/FAQAccordion";
 import AfricanNetworkCanvas from "@/components/AfricanNetworkCanvas";
 import CapitalSimulator from "@/components/CapitalSimulator";
+import BusinessRegistrationLeadSection from "@/components/BusinessRegistrationLeadSection";
 import StickySectionNav, { type NavSectionItem } from "@/components/StickySectionNav";
 import {
   nationalImpactTargets,
@@ -58,6 +59,7 @@ const HOME_NAV_SECTIONS: NavSectionItem[] = [
   { id: "architecture", label: "7-Layer Framework", shortLabel: "Architecture" },
   { id: "simulator", label: "Capital Simulator", shortLabel: "Simulator" },
   { id: "practices", label: "6 Practices", shortLabel: "Practices" },
+  { id: "registration-filing", label: "Business Registration & Filing", shortLabel: "Registration" },
   { id: "platforms", label: "Impact Vehicles", shortLabel: "Platforms" },
   { id: "impact", label: "Impact Targets", shortLabel: "Impact" },
   { id: "media", label: "Executive Media", shortLabel: "Media" },
@@ -190,7 +192,7 @@ export default function Home() {
       {/* ─── 4. TRUST / CREDENTIALS BAR ──────────────────────────────────── */}
       <section className="border-y border-line bg-gradient-to-r from-mist/80 via-white to-mist/80 py-10">
         <div className="container-kia">
-          <p className="text-center text-[11px] font-mono uppercase tracking-[0.18em] text-ink/55 font-bold mb-8">
+          <p className="text-center text-[11px] font-mono uppercase tracking-[0.18em] text-ink/70 font-bold mb-8">
             Recognized & Engaged By
           </p>
           <div className="flex flex-wrap items-center justify-center gap-5 md:gap-8">
@@ -213,7 +215,7 @@ export default function Home() {
                   <p className="text-xs font-bold text-ink group-hover:text-gold-deep transition-colors">
                     {item.label}
                   </p>
-                  <p className="text-[11px] text-ink/65 font-medium">{item.sub}</p>
+                  <p className="text-[11px] text-ink/80 font-medium">{item.sub}</p>
                 </div>
               );
             })}
@@ -356,6 +358,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ─── 7B. BUSINESS REGISTRATION, YEARLY RENEWAL & ANNUAL FILING ────── */}
+      <BusinessRegistrationLeadSection />
 
       {/* ─── 8. PROPRIETARY IMPACT PLATFORMS ─────────────────────────────── */}
       <section id="platforms" className="border-y border-gold-500/30 gold-aurora-bg py-20 md:py-28 text-paper relative overflow-hidden scroll-mt-28">

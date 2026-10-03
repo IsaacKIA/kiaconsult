@@ -72,7 +72,7 @@ export default function Footer() {
                 <h3 className="font-display text-xl sm:text-2xl font-bold text-white leading-snug">
                   Receive Strategic Intelligence &amp; Platform Updates
                 </h3>
-                <p className="mt-2 text-sm text-paper/65 max-w-sm leading-relaxed">
+                <p className="mt-2 text-sm text-paper/80 max-w-sm leading-relaxed">
                   Bilateral pipeline updates, capital windows, and platform allocation notices from
                   KIA — directly to you.
                 </p>
@@ -141,7 +141,7 @@ export default function Footer() {
                 </div>
               </Link>
 
-              <p className="max-w-sm text-sm leading-relaxed text-paper/60">
+              <p className="max-w-sm text-sm leading-relaxed text-paper/75">
                 An Economic Architecture Platform for Youth Employment, Entrepreneurship, and
                 Sustainable Growth in Africa.
               </p>
@@ -156,7 +156,7 @@ export default function Footer() {
                   href={siteConfig.social.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex h-9 w-9 items-center justify-center rounded-full border border-line-dark bg-ink-soft text-paper/50 transition-all duration-300 hover:border-gold hover:text-gold hover:bg-gold/10 hover:shadow-[0_0_12px_rgba(255,215,0,0.3)]"
+                  className="group flex h-9 w-9 items-center justify-center rounded-full border border-line-dark bg-ink-soft text-paper/65 transition-all duration-300 hover:border-gold hover:text-gold hover:bg-gold/10 hover:shadow-[0_0_12px_rgba(255,215,0,0.3)]"
                   aria-label="KIA on Instagram"
                 >
                   <svg
@@ -220,7 +220,7 @@ export default function Footer() {
               <span className="text-xs font-bold uppercase tracking-widest text-gold">
                 Services
               </span>
-              <ul className="space-y-2.5 text-xs text-paper/60">
+              <ul className="space-y-2.5 text-xs text-paper/75">
                 {[
                   { href: "/services#enterprise-creation", label: "01 — Enterprise Creation" },
                   { href: "/services#sme-growth", label: "02 — SME Growth & Competitiveness" },
@@ -247,7 +247,7 @@ export default function Footer() {
               <span className="text-xs font-bold uppercase tracking-widest text-gold">
                 Impact Platforms
               </span>
-              <ul className="space-y-2.5 text-xs text-paper/60">
+              <ul className="space-y-2.5 text-xs text-paper/75">
                 {[
                   { href: "/platforms#hopefusion-africa", label: "HopeFusion Africa™" },
                   { href: "/platforms#adwuma-enterprise-pipeline", label: "Adwuma Enterprise Pipeline™" },
@@ -282,7 +282,7 @@ export default function Footer() {
               <span className="text-xs font-bold uppercase tracking-widest text-gold">
                 Headquarters
               </span>
-              <ul className="space-y-3.5 text-xs text-paper/60">
+              <ul className="space-y-3.5 text-xs text-paper/75">
                 <li className="flex items-start gap-2.5">
                   <MapPin className="h-4 w-4 text-gold shrink-0 mt-0.5" />
                   <span>{siteConfig.address}</span>
@@ -308,10 +308,10 @@ export default function Footer() {
 
               {/* "Built for Africa" box */}
               <div className="mt-6 rounded-xl border border-gold/20 bg-gradient-to-br from-gold/10 to-gold/5 p-4 text-center">
-                <p className="text-[10px] font-bold uppercase tracking-widest text-gold/70 mb-1">
+                <p className="text-[10px] font-bold uppercase tracking-widest text-gold/90 mb-1">
                   Built for Africa
                 </p>
-                <p className="text-xs text-paper/50 leading-tight">
+                <p className="text-xs text-paper/70 leading-tight">
                   Connecting skills, enterprise, capital &amp; sustainable growth.
                 </p>
               </div>
@@ -322,7 +322,7 @@ export default function Footer() {
           <div className="mt-14 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
 
           {/* Bottom Bar */}
-          <div className="mt-8 flex flex-wrap items-center justify-between gap-4 text-xs text-paper/35">
+          <div className="mt-8 flex flex-wrap items-center justify-between gap-4 text-xs text-paper/55">
             <p>
               © {currentYear} {siteConfig.legalName}. All rights reserved.
             </p>

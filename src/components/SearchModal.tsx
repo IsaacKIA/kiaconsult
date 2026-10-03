@@ -68,6 +68,24 @@ const STATIC_INDEX: SearchItem[] = [
     badge: "Practices",
   },
   {
+    id: "page-business-registration",
+    title: "Business Registration in Ghana & Annual Filing",
+    category: "page",
+    href: "/services/business-registration-ghana",
+    description: "Launch your business in Ghana hassle-free. Fast ORC registration, yearly renewals, and 100% remote compliance for diaspora & foreigners.",
+    keywords: [
+      "business registration in ghana",
+      "business registration and annual filing",
+      "register business in ghana",
+      "yearly renewals",
+      "orc",
+      "incorporation",
+      "diaspora",
+      "foreigners",
+    ],
+    badge: "Specialized Desk",
+  },
+  {
     id: "page-platforms",
     title: "Proprietary Impact Platforms",
     category: "page",
@@ -139,6 +157,25 @@ const STATIC_INDEX: SearchItem[] = [
     href: "/#faq",
     description: "Detailed institutional answers on advisory engagement, pricing models, and eligibility.",
     keywords: ["faq", "questions", "answers", "cost", "eligibility", "help", "timeline", "criteria"],
+    badge: "Home Section",
+  },
+  {
+    id: "section-home-business-registration",
+    title: "Business Registration & Yearly Renewals Concierge",
+    category: "section",
+    href: "/#registration-filing",
+    description: "Launch your business in Ghana hassle-free. Fast ORC registration, yearly renewals, and 100% remote compliance for diaspora & foreigners.",
+    keywords: [
+      "business registration in ghana",
+      "business registration and annual filing",
+      "yearly renewals",
+      "annual filings",
+      "orc",
+      "registration",
+      "compliance",
+      "ghana card",
+      "gipc",
+    ],
     badge: "Home Section",
   },
   {
@@ -553,6 +590,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
             </div>
             <div className="flex flex-wrap gap-2">
               {[
+                { label: "🇬🇭 Business Registration", href: "/services/business-registration-ghana" },
                 { label: "⚡ Capital Simulator", href: "/#simulator" },
                 { label: "👤 CEO Isaac Agya Koomson", href: "/about#vision" },
                 { label: "🚀 Adwuma Youth Engine", href: "/platforms#adwuma" },
