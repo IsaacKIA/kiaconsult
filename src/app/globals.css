@@ -1,5 +1,4 @@
-/* ─── Google Fonts ────────────────────────────────────────────────────────── */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&display=swap");
+/* Fonts loaded via next/font in layout.tsx — zero render-blocking */
 
 @import "tailwindcss";
 
@@ -69,13 +68,14 @@
   --color-mist: var(--color-mist);
   --color-line: var(--color-line);
   --color-line-dark: var(--color-line-dark);
-  --font-sans: "Inter", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  --font-display: "Playfair Display", Georgia, "Iowan Old Style", serif;
+  --font-sans: var(--font-inter, "Inter", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif);
+  --font-display: var(--font-playfair, "Playfair Display", Georgia, "Iowan Old Style", serif);
 }
 
 /* ─── Base Styles ────────────────────────────────────────────────────────── */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
 }
 
 body {
@@ -292,6 +292,48 @@ body > * {
   70%  { transform: scale(0.95); }
   100% { transform: scale(1); opacity: 1; }
 }
+
+@keyframes kenburnsZoom {
+  0% {
+    transform: scale(1) translate(0%, 0%);
+  }
+  50% {
+    transform: scale(1.08) translate(-1.2%, -0.8%);
+  }
+  100% {
+    transform: scale(1.04) translate(1%, 0.6%);
+  }
+}
+
+@keyframes soundwaveBar {
+  0%, 100% {
+    height: 4px;
+    opacity: 0.5;
+  }
+  50% {
+    height: 18px;
+    opacity: 1;
+  }
+}
+
+@keyframes lightSweep {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+  }
+  50%, 100% {
+    transform: translateX(250%) skewX(-20deg);
+  }
+}
+
+.animate-kenburns {
+  animation: kenburnsZoom 14s ease-in-out infinite alternate;
+}
+
+.soundwave-bar-1 { animation: soundwaveBar 1.1s ease-in-out infinite 0.1s; }
+.soundwave-bar-2 { animation: soundwaveBar 0.9s ease-in-out infinite 0.3s; }
+.soundwave-bar-3 { animation: soundwaveBar 1.3s ease-in-out infinite 0.05s; }
+.soundwave-bar-4 { animation: soundwaveBar 0.8s ease-in-out infinite 0.4s; }
+.soundwave-bar-5 { animation: soundwaveBar 1.2s ease-in-out infinite 0.2s; }
 
 /* ─── Animation Utility Classes ─────────────────────────────────────────── */
 .animate-fade-up {

@@ -17,6 +17,30 @@ export const metadata: Metadata = {
   title: "Contact KIA–Start Up Consult | Start an Institutional Engagement",
   description:
     "Start an engagement with KIA–Start Up Consult. Reach out via WhatsApp or submit a structured project enquiry. Advisory services across 24 African nations.",
+  alternates: {
+    canonical: `${siteConfig.url}/contact`,
+  },
+  openGraph: {
+    title: "Contact KIA–Start Up Consult | Institutional Advisory",
+    description:
+      "Start an engagement with KIA–Start Up Consult. Reach out via WhatsApp or submit a structured project enquiry across 24 African nations.",
+    url: `${siteConfig.url}/contact`,
+    siteName: siteConfig.name,
+    images: [
+      {
+        url: `${siteConfig.url}/images/kia-og-banner.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "Contact KIA–Start Up Consult",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact KIA–Start Up Consult",
+    description: "Start an institutional engagement with KIA–Start Up Consult.",
+    images: [`${siteConfig.url}/images/kia-og-banner.jpg`],
+  },
 };
 
 const channels = [
@@ -91,7 +115,7 @@ export default function ContactPage() {
         <div className="grid gap-10 lg:grid-cols-12 lg:items-start">
 
           {/* Left Column: Channel Cards */}
-          <div className="lg:col-span-5 space-y-5">
+          <div id="channels" className="lg:col-span-5 space-y-5 scroll-mt-28">
             {/* WhatsApp Primary CTA — standout card */}
             <div className="relative overflow-hidden rounded-2xl border-2 border-gold-500/50 bg-gradient-to-br from-gold-500/18 via-gold-500/8 to-white p-7 shadow-[0_0_40px_rgba(255,215,0,0.18)] shimmer-on-hover">
               <div className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-gold-300 via-gold-500 to-gold-300" />
@@ -157,7 +181,7 @@ export default function ContactPage() {
           </div>
 
           {/* Right Column: Structured Form */}
-          <div className="lg:col-span-7">
+          <div id="form" className="lg:col-span-7 scroll-mt-28">
             <div className="relative rounded-2xl border border-gold-500/30 bg-white p-8 sm:p-10 shadow-[0_8px_48px_rgba(0,0,0,0.08),_0_0_24px_rgba(201,162,39,0.08)] overflow-hidden shimmer-on-hover">
               {/* Gold top accent bar */}
               <div className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-gold-300 via-gold-500 to-gold-300" />

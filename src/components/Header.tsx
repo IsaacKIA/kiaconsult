@@ -387,12 +387,12 @@ export default function Header() {
           <div className="hidden items-center gap-2.5 sm:flex">
             <button
               onClick={() => setSearchOpen(true)}
-              className="group flex items-center gap-2 rounded-full border border-line px-3.5 py-1.5 text-xs text-ink/60 transition-all duration-200 hover:border-gold hover:text-ink hover:bg-gold/5 bg-mist/40"
-              aria-label="Open search dialog"
+              className="group flex items-center gap-2 rounded-full border border-gold-500/35 bg-gold-500/[0.07] hover:bg-gold-500/15 hover:border-gold-500/60 px-3.5 py-1.5 text-xs text-ink font-semibold transition-all duration-200 shadow-sm"
+              aria-label="Quick find any section or page"
             >
               <Search className="h-3.5 w-3.5 text-gold-deep" />
-              <span className="hidden md:inline">Search</span>
-              <kbd className="hidden rounded bg-mist px-1.5 py-0.5 text-[10px] text-ink/40 md:inline group-hover:bg-gold/10 transition-colors">
+              <span className="hidden md:inline">Quick Find</span>
+              <kbd className="hidden rounded bg-black/10 px-1.5 py-0.5 text-[10px] font-mono text-ink/70 md:inline group-hover:bg-gold/20 transition-colors">
                 ⌘K
               </kbd>
             </button>
@@ -471,8 +471,27 @@ export default function Header() {
               </button>
             </div>
 
+            {/* Quick Section Finder CTA in mobile drawer */}
+            <div className="px-4 pt-3 pb-1">
+              <button
+                onClick={() => {
+                  closeMobile();
+                  setSearchOpen(true);
+                }}
+                className="w-full flex items-center justify-between gap-2.5 rounded-xl border border-gold-500/40 bg-gold-500/10 px-3.5 py-2.5 text-xs font-bold text-ink hover:bg-gold-500/20 transition-all shadow-sm"
+              >
+                <div className="flex items-center gap-2">
+                  <Search className="h-4 w-4 text-gold-deep" />
+                  <span>Locate Any Page or Section</span>
+                </div>
+                <span className="text-[10px] font-mono uppercase bg-gold-500/20 text-gold-deep px-2 py-0.5 rounded font-extrabold">
+                  Instant
+                </span>
+              </button>
+            </div>
+
             {/* Nav links */}
-            <div className="flex-1 overflow-y-auto px-4 py-4 space-y-1">
+            <div className="flex-1 overflow-y-auto px-4 py-3 space-y-1">
               {navigation.map((item) => (
                 <div key={item.href}>
                   <Link

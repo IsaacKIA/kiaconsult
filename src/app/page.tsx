@@ -14,12 +14,14 @@ import {
   TrendingUp,
   Award,
 } from "lucide-react";
+import HeroCinematicBanner from "@/components/HeroCinematicBanner";
 import WhatsAppCTA from "@/components/WhatsAppCTA";
 import EconomicArchitecture from "@/components/EconomicArchitecture";
 import ImpactDashboard from "@/components/ImpactDashboard";
 import FAQAccordion from "@/components/FAQAccordion";
 import AfricanNetworkCanvas from "@/components/AfricanNetworkCanvas";
 import CapitalSimulator from "@/components/CapitalSimulator";
+import StickySectionNav, { type NavSectionItem } from "@/components/StickySectionNav";
 import {
   nationalImpactTargets,
   platforms,
@@ -28,11 +30,15 @@ import {
   whatsappMessages,
 } from "@/lib/site-config";
 import { insightArticles } from "@/lib/insights-data";
+import { faqItems } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: `${siteConfig.legalName} — ${siteConfig.tagline}`,
   description:
     "KIA–Start Up Consult Ltd designs and implements institutional economic architecture that connects skills, enterprise, capital, technology and sustainable growth across Africa. Serving 24 nations.",
+  alternates: {
+    canonical: siteConfig.url,
+  },
 };
 
 const tickerItems = [
@@ -46,18 +52,17 @@ const tickerItems = [
   "Enterprise Creation → Capital Syndication → Growth",
 ];
 
-/** CSS-only floating particles for the hero — zero JS, zero images */
-const PARTICLES = [
-  { size: 4, top: "18%", left: "8%",  delay: 0,    duration: 7 },
-  { size: 3, top: "35%", left: "92%", delay: 1.5,  duration: 9 },
-  { size: 5, top: "62%", left: "5%",  delay: 3,    duration: 11 },
-  { size: 3, top: "78%", left: "88%", delay: 0.5,  duration: 8 },
-  { size: 4, top: "12%", left: "72%", delay: 2,    duration: 10 },
-  { size: 2, top: "50%", left: "50%", delay: 4,    duration: 13 },
-  { size: 5, top: "88%", left: "30%", delay: 1,    duration: 7.5 },
-  { size: 3, top: "25%", left: "55%", delay: 3.5,  duration: 12 },
-  { size: 4, top: "70%", left: "65%", delay: 0.8,  duration: 9 },
-  { size: 2, top: "45%", left: "20%", delay: 5,    duration: 14 },
+const HOME_NAV_SECTIONS: NavSectionItem[] = [
+  { id: "challenge", label: "Strategic Challenge", shortLabel: "Challenge" },
+  { id: "corridors", label: "24-Nation Corridors", shortLabel: "Corridors" },
+  { id: "architecture", label: "7-Layer Framework", shortLabel: "Architecture" },
+  { id: "simulator", label: "Capital Simulator", shortLabel: "Simulator" },
+  { id: "practices", label: "6 Practices", shortLabel: "Practices" },
+  { id: "platforms", label: "Impact Vehicles", shortLabel: "Platforms" },
+  { id: "impact", label: "Impact Targets", shortLabel: "Impact" },
+  { id: "media", label: "Executive Media", shortLabel: "Media" },
+  { id: "insights", label: "Publications", shortLabel: "Insights" },
+  { id: "faq", label: "FAQ", shortLabel: "FAQ" },
 ];
 
 export default function Home() {
@@ -65,109 +70,13 @@ export default function Home() {
 
   return (
     <>
-      {/* ─── 1. CINEMATIC HERO ─────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden border-b border-gold-500/30 gold-aurora-bg text-paper pt-14 pb-20 md:pt-20 md:pb-32">
-        {/* Layered ambient radiance */}
-        <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[700px] bg-[radial-gradient(ellipse_at_top,_rgba(255,215,0,0.28),_rgba(201,162,39,0.12)_45%,_transparent_75%)]" />
-        <div className="pointer-events-none absolute -left-40 top-1/3 w-[500px] h-[500px] bg-[radial-gradient(circle,_rgba(245,158,11,0.22),_transparent_70%)] blur-3xl" />
-        <div className="pointer-events-none absolute -right-40 top-1/4 w-[500px] h-[500px] bg-[radial-gradient(circle,_rgba(255,215,0,0.22),_transparent_70%)] blur-3xl" />
+      {/* Sticky Quick Section Navigator — lets users locate and jump to any section in < 2 seconds */}
+      <StickySectionNav title="Explore Home" sections={HOME_NAV_SECTIONS} />
 
-        {/* Subtle grid overlay */}
-        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:4rem_4rem]" />
-
-        {/* CSS floating particles */}
-        {PARTICLES.map((p, i) => (
-          <div
-            key={i}
-            className="particle absolute"
-            style={{
-              width: p.size + "px",
-              height: p.size + "px",
-              top: p.top,
-              left: p.left,
-              animationDuration: p.duration + "s",
-              animationDelay: p.delay + "s",
-            }}
-            aria-hidden="true"
-          />
-        ))}
-
-        <div className="container-kia relative z-10">
-          {/* Live Status Pill */}
-          <div className="flex justify-center mb-8 animate-fade-down">
-            <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-black/60 border-2 border-gold-400/60 text-gold-300 text-xs font-mono font-bold shadow-[0_0_24px_rgba(255,215,0,0.35)] hover:shadow-[0_0_32px_rgba(255,215,0,0.5)] transition-shadow cursor-default">
-              <span className="relative flex h-2.5 w-2.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold-400 opacity-90"></span>
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-gold-400"></span>
-              </span>
-              <span>ACTIVE PIPELINE: 24 NATIONS ENGAGED · Q3 2026 CAPITAL WINDOW OPEN</span>
-            </div>
-          </div>
-
-          {/* Main Headline */}
-          <div className="text-center max-w-4xl mx-auto mb-14">
-            <h1 className="font-display text-4xl sm:text-6xl lg:text-[4.5rem] xl:text-[5rem] font-bold tracking-tight text-white leading-[1.04] animate-fade-up">
-              Building the Systems Behind{" "}
-              <span className="shimmer-text-vibrant">Africa&rsquo;s Next Economy.</span>
-            </h1>
-            <p className="mt-7 text-base sm:text-xl text-white/92 max-w-2xl mx-auto leading-relaxed font-normal animate-fade-up delay-200">
-              KIA–Start Up Consult Ltd designs, formalizes, and deploys the institutional economic
-              architecture that connects skills, enterprise engines, syndicated capital, and
-              continental markets.
-            </p>
-
-            {/* Primary CTAs */}
-            <div className="mt-10 flex flex-wrap items-center justify-center gap-4 animate-fade-up delay-400">
-              <a
-                href="https://wa.me/233241332246?text=Hello%20KIA%E2%80%93Start%20Up%20Consult%2C%20I%20would%20like%20to%20schedule%20an%20Institutional%20Briefing%20with%20Isaac%20Agya%20Koomson."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-ripple btn-magnetic pulse-gold-action inline-flex items-center justify-center gap-2.5 px-9 py-4 rounded-full bg-gradient-to-r from-[#fff3a8] via-[#ffd700] to-[#c9a227] text-black font-extrabold text-sm sm:text-base shadow-[0_0_40px_rgba(255,215,0,0.55)] hover:shadow-[0_0_65px_rgba(255,215,0,0.9)] transition-all transform hover:scale-105 hover:-translate-y-0.5"
-              >
-                <Sparkles className="w-4 h-4 text-black" />
-                <span>Schedule Institutional Briefing</span>
-              </a>
-
-              <Link
-                href="/services"
-                className="btn-ripple btn-magnetic inline-flex items-center gap-2.5 rounded-full border-2 border-gold-400/60 bg-black/60 hover:bg-gold-500/18 px-7 py-4 text-sm font-bold text-gold-300 hover:text-white transition-all duration-300 shadow-[0_0_20px_rgba(255,215,0,0.12)] hover:shadow-[0_0_30px_rgba(255,215,0,0.25)]"
-              >
-                <span>Explore Strategic Practices</span>
-                <ArrowRight className="h-4 w-4 text-gold-400" />
-              </Link>
-            </div>
-          </div>
-
-          {/* Pan-African Network Canvas with golden frame */}
-          <div className="animate-fade-up delay-600 max-w-6xl mx-auto rounded-2xl p-[2px] bg-gradient-to-b from-gold-400/50 via-gold-500/15 to-gold-400/40 shadow-[0_0_50px_rgba(255,215,0,0.22)]">
-            <div className="rounded-[14px] overflow-hidden">
-              <AfricanNetworkCanvas />
-            </div>
-          </div>
-
-          {/* Proof Stats Row */}
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto pt-8 border-t border-gold-500/20 text-center animate-fade-up delay-700">
-            {[
-              { value: "$2.5M+", label: "Capital Syndication Pipeline" },
-              { value: "4,500+", label: "Founders & Leaders Trained" },
-              { value: "320+",   label: "Enterprises Formalized" },
-              { value: "12 Corridors", label: "AfCFTA Trade Linkages" },
-            ].map((stat) => (
-              <div
-                key={stat.label}
-                className="gold-glass-card stat-card-glow shimmer-on-hover p-5 rounded-2xl border border-gold-500/30 group"
-              >
-                <span className="text-3xl sm:text-4xl font-display font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#fff1a8] via-[#ffd700] to-[#f59e0b] group-hover:from-[#ffe566] group-hover:to-[#ffd700] transition-all duration-300 counter-animate">
-                  {stat.value}
-                </span>
-                <span className="block text-xs font-semibold text-white/85 mt-1.5 leading-snug">
-                  {stat.label}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* ─── 1. EXTRAORDINARY REAL ANIMATED HERO BANNER ────────────────────── */}
+      <div id="hero">
+        <HeroCinematicBanner />
+      </div>
 
       {/* ─── 2. CONTINENTAL TICKER STRIP (FLOATING AMBIENT BANNER) ──────── */}
       <section className="relative z-20 border-y-2 border-gold-500/50 bg-gradient-to-r from-[#07080a] via-[#1a1708] to-[#07080a] py-4.5 overflow-hidden shadow-[0_0_30px_rgba(255,215,0,0.2)]">
@@ -187,7 +96,7 @@ export default function Home() {
       </section>
 
       {/* ─── 3. CORE STORY: THE ARCHITECTURAL GAP & CEO ───────────────────── */}
-      <section className="container-kia py-20 md:py-28 relative overflow-hidden">
+      <section id="challenge" className="container-kia py-20 md:py-28 relative overflow-hidden scroll-mt-28">
         {/* Ambient background auras */}
         <div className="pointer-events-none absolute top-1/2 -translate-y-1/2 -left-32 w-[500px] h-[500px] bg-[radial-gradient(circle,_rgba(255,215,0,0.07),_transparent_70%)]" />
         <div className="pointer-events-none absolute top-1/4 right-0 w-64 h-64 bg-[radial-gradient(circle,_rgba(201,162,39,0.06),_transparent_70%)]" />
@@ -242,8 +151,8 @@ export default function Home() {
               <div className="p-[2px] rounded-2xl bg-gradient-to-br from-gold-400/60 via-gold-500/25 to-gold-600/60">
                 <div className="relative aspect-4/3 overflow-hidden rounded-[14px] bg-black">
                   <Image
-                    src="/images/aetf-ai-conference-stage.jpg"
-                    alt="Isaac Agya Koomson speaking at AETF.Ai Conference 2025"
+                    src="/images/gdiw-keynote-speaking.jpg"
+                    alt="Isaac Agya Koomson delivering keynote at Ghana Digital Innovation Week"
                     fill
                     sizes="(max-width: 1024px) 100vw, 560px"
                     className="object-cover transition-transform duration-700 hover:scale-[1.04]"
@@ -257,11 +166,10 @@ export default function Home() {
                       Keynote Address
                     </span>
                     <h4 className="text-xl font-display font-semibold mt-3 text-white leading-snug">
-                      African Economic Transformation &amp; AI Summit 2025
+                      Ghana Digital Innovation Week Keynote
                     </h4>
                     <p className="text-xs text-white/90 mt-1.5 line-clamp-2">
-                      Addressing sovereign delegates, DFIs, and institutional investors on
-                      AI-driven sustainable growth.
+                      Catalysing systemic change and institutional enterprise architecture across sovereign African markets.
                     </p>
                   </div>
                 </div>
@@ -313,8 +221,30 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ─── 4B. PAN-AFRICAN CORRIDOR ARCHITECTURE MAP ───────────────────── */}
+      <section id="corridors" className="container-kia py-20 md:py-28 relative scroll-mt-28">
+        <div className="max-w-3xl mb-12">
+          <div className="section-badge section-badge-gold mb-4">
+            CONTINENTAL CORRIDOR ARCHITECTURE
+          </div>
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-ink leading-tight">
+            Connecting 24 Sovereign African Nations &amp; AfCFTA Trade Corridors
+          </h2>
+          <div className="section-divider-gold mt-5 mb-5" />
+          <p className="text-base text-ink/85 leading-relaxed">
+            Interact with our active institutional hubs across Accra, Lagos, Nairobi, Kigali, and Johannesburg to explore live capital pipelines, sectoral value chains, and cross-border commercial corridors.
+          </p>
+        </div>
+
+        <div className="rounded-2xl p-[2px] bg-gradient-to-b from-gold-400/50 via-gold-500/15 to-gold-400/40 shadow-[0_0_50px_rgba(255,215,0,0.22)]">
+          <div className="rounded-[14px] overflow-hidden">
+            <AfricanNetworkCanvas />
+          </div>
+        </div>
+      </section>
+
       {/* ─── 5. 7-LAYER SYSTEMS ARCHITECTURE ENGINE ──────────────────────── */}
-      <section className="border-y border-gold-500/30 gold-aurora-bg py-20 md:py-28 text-white relative overflow-hidden">
+      <section id="architecture" className="border-y border-gold-500/30 gold-aurora-bg py-20 md:py-28 text-white relative overflow-hidden scroll-mt-28">
         {/* Extra depth layers */}
         <div className="pointer-events-none absolute right-0 top-0 w-96 h-96 bg-[radial-gradient(circle,_rgba(255,215,0,0.12),_transparent_70%)]" />
         <div className="container-kia relative z-10">
@@ -337,7 +267,7 @@ export default function Home() {
       </section>
 
       {/* ─── 6. INTERACTIVE CAPITAL & ENTERPRISE SIMULATOR ────────────────── */}
-      <section className="container-kia py-20 md:py-28 relative">
+      <section id="simulator" className="container-kia py-20 md:py-28 relative scroll-mt-28">
         <div className="pointer-events-none absolute top-0 right-0 w-80 h-80 bg-[radial-gradient(circle,_rgba(255,215,0,0.06),_transparent_70%)]" />
         <div className="max-w-3xl mb-12 relative z-10">
           <div className="section-badge section-badge-gold mb-4">
@@ -357,7 +287,7 @@ export default function Home() {
       </section>
 
       {/* ─── 7. SIX STRATEGIC SOLUTION PRACTICES ─────────────────────────── */}
-      <section className="border-t border-line bg-gradient-to-b from-[#f8f8f5] to-white py-20 md:py-28">
+      <section id="practices" className="border-t border-line bg-gradient-to-b from-[#f8f8f5] to-white py-20 md:py-28 scroll-mt-28">
         <div className="container-kia">
           <div className="flex flex-wrap items-end justify-between gap-6 mb-14">
             <div>
@@ -428,7 +358,7 @@ export default function Home() {
       </section>
 
       {/* ─── 8. PROPRIETARY IMPACT PLATFORMS ─────────────────────────────── */}
-      <section className="border-y border-gold-500/30 gold-aurora-bg py-20 md:py-28 text-paper relative overflow-hidden">
+      <section id="platforms" className="border-y border-gold-500/30 gold-aurora-bg py-20 md:py-28 text-paper relative overflow-hidden scroll-mt-28">
         <div className="pointer-events-none absolute left-0 bottom-0 w-96 h-96 bg-[radial-gradient(circle,_rgba(255,215,0,0.1),_transparent_70%)]" />
         <div className="container-kia relative z-10">
           <div className="max-w-2xl mb-14">
@@ -497,7 +427,7 @@ export default function Home() {
       </section>
 
       {/* ─── 9. IMPACT DASHBOARD ─────────────────────────────────────────── */}
-      <section className="container-kia py-20 md:py-28">
+      <section id="impact" className="container-kia py-20 md:py-28 scroll-mt-28">
         <ImpactDashboard
           heading="Pan-African Impact Milestones & Targets"
           timeframe="2026–2041 Continental Ambition"
@@ -506,7 +436,7 @@ export default function Home() {
       </section>
 
       {/* ─── 10. EXECUTIVE MEDIA SHOWCASE ────────────────────────────────── */}
-      <section className="border-y border-line bg-gradient-to-b from-[#f5f5f2] to-white py-20 md:py-28">
+      <section id="media" className="border-y border-line bg-gradient-to-b from-[#f5f5f2] to-white py-20 md:py-28 scroll-mt-28">
         <div className="container-kia">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-14">
             <div>
@@ -583,7 +513,7 @@ export default function Home() {
       </section>
 
       {/* ─── 11. KIA INSIGHTS INTELLIGENCE ───────────────────────────────── */}
-      <section className="py-20 md:py-28 container-kia">
+      <section id="insights" className="py-20 md:py-28 container-kia scroll-mt-28">
         <div className="flex flex-wrap items-end justify-between gap-6 mb-14">
           <div>
             <div className="section-badge section-badge-gold mb-3">EXECUTIVE INTELLIGENCE</div>
@@ -653,7 +583,25 @@ export default function Home() {
       </section>
 
       {/* ─── 12. FAQ ACCORDION ───────────────────────────────────────────── */}
-      <section className="border-t border-line bg-gradient-to-b from-[#f8f8f5] to-white py-20 md:py-28">
+      <section id="faq" className="border-t border-line bg-gradient-to-b from-[#f8f8f5] to-white py-20 md:py-28 scroll-mt-28">
+        {/* FAQPage JSON-LD — enables Google FAQ rich snippets directly in SERP */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: faqItems.map((faq) => ({
+                "@type": "Question",
+                name: faq.question,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: faq.answer,
+                },
+              })),
+            }),
+          }}
+        />
         <div className="container-kia">
           <div className="max-w-2xl mb-14">
             <div className="section-badge section-badge-gold mb-3">GOVERNANCE &amp; ENGAGEMENT</div>
@@ -671,7 +619,7 @@ export default function Home() {
       </section>
 
       {/* ─── 13. MASTER INSTITUTIONAL CONVERSION CTA ─────────────────────── */}
-      <section className="relative overflow-hidden border-t border-gold-500/30 gold-aurora-bg py-28 text-paper md:py-36">
+      <section id="contact-cta" className="relative overflow-hidden border-t border-gold-500/30 gold-aurora-bg py-28 text-paper md:py-36 scroll-mt-28">
         {/* Multi-layer radial glows */}
         <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[600px] w-[1000px] bg-[radial-gradient(circle,_rgba(255,215,0,0.30)_0%,_rgba(201,162,39,0.15)_50%,_transparent_75%)]" />
         <div className="pointer-events-none absolute left-0 bottom-0 w-96 h-96 bg-[radial-gradient(circle,_rgba(255,215,0,0.12),_transparent_70%)]" />

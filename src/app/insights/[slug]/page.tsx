@@ -30,23 +30,41 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: "Article Not Found" };
   }
 
+  const articleUrl = `${siteConfig.url}/insights/${article.slug}`;
+  const ogImage = `${siteConfig.url}${article.heroImage}`;
+
   return {
     title: `${article.title} — KIA Insights`,
     description: article.excerpt,
+    keywords: article.tags,
+    authors: [{ name: article.author.name, url: articleUrl }],
+    alternates: {
+      canonical: articleUrl,
+    },
     openGraph: {
       title: article.title,
       description: article.excerpt,
       type: "article",
+      url: articleUrl,
+      siteName: siteConfig.name,
       publishedTime: article.publishedAt,
       authors: [article.author.name],
+      tags: article.tags,
       images: [
         {
-          url: `${siteConfig.url}${article.heroImage}`,
+          url: ogImage,
           width: 1200,
           height: 630,
           alt: article.title,
+          type: "image/jpeg",
         },
       ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: article.title,
+      description: article.excerpt,
+      images: [ogImage],
     },
   };
 }
@@ -62,8 +80,56 @@ export default async function InsightArticlePage({ params }: Props) {
   const related = getRelatedArticles(slug);
   const waArticleMessage = whatsappMessages.article(article.title);
 
+  const articleUrl = `${siteConfig.url}/insights/${article.slug}`;
+
+  // Article JSON-LD for rich results
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": `${articleUrl}#article`,
+    headline: article.title,
+    description: article.excerpt,
+    url: articleUrl,
+    datePublished: article.publishedAt,
+    dateModified: article.publishedAt,
+    author: {
+      "@type": "Person",
+      "@id": `${siteConfig.url}/about#isaac-agya-koomson`,
+      name: article.author.name,
+      jobTitle: article.author.role,
+    },
+    publisher: {
+      "@type": "Organization",
+      "@id": `${siteConfig.url}/#organization`,
+      name: siteConfig.legalName,
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteConfig.url}/images/kia-logo.jpg`,
+      },
+    },
+    image: {
+      "@type": "ImageObject",
+      url: `${siteConfig.url}${article.heroImage}`,
+      caption: article.heroCaption ?? article.title,
+    },
+    articleSection: article.category,
+    keywords: article.tags.join(", "),
+    about: {
+      "@type": "Thing",
+      name: article.category,
+    },
+    isPartOf: {
+      "@type": "WebSite",
+      "@id": `${siteConfig.url}/#website`,
+    },
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       <article className="py-16 md:py-24">
         <div className="container-kia max-w-4xl">
           {/* Back link */}

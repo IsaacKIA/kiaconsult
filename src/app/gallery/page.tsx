@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import MediaGallery from "@/components/MediaGallery";
 import WhatsAppCTA from "@/components/WhatsAppCTA";
+import StickySectionNav, { type NavSectionItem } from "@/components/StickySectionNav";
 import { siteConfig, buildWhatsAppLink } from "@/lib/site-config";
 import { Camera, Award, Globe, Mic, Download, ArrowRight } from "lucide-react";
 
@@ -10,6 +11,31 @@ export const metadata: Metadata = {
   title: "Executive Media & Photographic Archive | KIA–Start Up Consult Ltd",
   description:
     "Explore verified photographic documentation of CEO Isaac Agya Koomson and KIA–Start Up Consult across international economic forums, UNDP partnerships, national television broadcasts, and continental enterprise summits.",
+  alternates: {
+    canonical: `${siteConfig.url}/gallery`,
+  },
+  openGraph: {
+    title: "Executive Media & Photographic Archive | KIA–Start Up Consult Ltd",
+    description:
+      "Explore verified photographic documentation of CEO Isaac Agya Koomson and KIA–Start Up Consult across international economic forums, UNDP partnerships, and continental enterprise summits.",
+    url: `${siteConfig.url}/gallery`,
+    siteName: siteConfig.name,
+    images: [
+      {
+        url: `${siteConfig.url}/images/aetf-ai-conference-stage.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "KIA Executive Media and Photographic Archive",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Executive Media & Photographic Archive | KIA–Start Up Consult Ltd",
+    description:
+      "Verified photographic documentation of CEO Isaac Agya Koomson across international economic forums and continental summits.",
+    images: [`${siteConfig.url}/images/aetf-ai-conference-stage.jpg`],
+  },
 };
 
 const STATS = [
@@ -19,11 +45,20 @@ const STATS = [
   { label: "Youth & Founders Convened", value: "12,000+" },
 ];
 
+const GALLERY_NAV_SECTIONS: NavSectionItem[] = [
+  { id: "overview", label: "Executive Overview", shortLabel: "Overview" },
+  { id: "archive", label: "Photographic Archive", shortLabel: "Archive" },
+  { id: "booking", label: "Keynote Booking", shortLabel: "Booking" },
+];
+
 export default function GalleryPage() {
   return (
     <main className="min-h-screen bg-[#070809] text-white">
+      {/* Sticky Fast Navigator */}
+      <StickySectionNav title="Gallery Sections" sections={GALLERY_NAV_SECTIONS} />
+
       {/* Hero Section */}
-      <section className="relative pt-24 pb-20 overflow-hidden border-b border-gold-500/30 gold-aurora-bg">
+      <section id="overview" className="relative pt-24 pb-20 overflow-hidden border-b border-gold-500/30 gold-aurora-bg scroll-mt-28">
         {/* Enhanced multi-layer background */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-[600px] bg-[radial-gradient(ellipse_at_top,_rgba(255,215,0,0.28),_rgba(201,162,39,0.14)_45%,_transparent_72%)] pointer-events-none" />
         <div className="absolute -left-32 top-1/3 w-[500px] h-[500px] bg-[radial-gradient(circle,_rgba(245,158,11,0.18),_transparent_70%)] blur-3xl pointer-events-none" />
@@ -63,7 +98,7 @@ export default function GalleryPage() {
       </section>
 
       {/* Featured Gallery Section */}
-      <section className="py-16 sm:py-24 bg-[#070809]">
+      <section id="archive" className="py-16 sm:py-24 bg-[#070809] scroll-mt-28">
         <div className="container-kia">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
             <div>
@@ -87,7 +122,7 @@ export default function GalleryPage() {
       </section>
 
       {/* Media & Press Booking CTA */}
-      <section className="py-16 border-t border-gold-500/20 bg-black/80">
+      <section id="booking" className="py-16 border-t border-gold-500/20 bg-black/80 scroll-mt-28">
         <div className="container-kia">
           <div className="rounded-2xl gold-glass-card border border-gold-500/30 p-8 sm:p-12 flex flex-col lg:flex-row items-center justify-between gap-8 shadow-2xl">
             <div className="max-w-xl">

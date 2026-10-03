@@ -19,13 +19,49 @@ import {
 } from "lucide-react";
 import WhatsAppCTA from "@/components/WhatsAppCTA";
 import MediaGallery from "@/components/MediaGallery";
+import StickySectionNav, { type NavSectionItem } from "@/components/StickySectionNav";
 import { siteConfig, whatsappMessages } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "About KIA–Start Up Consult | Economic Architecture for Africa",
   description:
-    "KIA–Start Up Consult Ltd is an African economic development and enterprise-building institution at the intersection of policy, capital, and execution. Serving 24 nations.",
+    "KIA–Start Up Consult Ltd is an African economic development and enterprise-building institution at the intersection of policy, capital, and execution. Serving 24 nations under Founder Isaac Agya Koomson.",
+  alternates: {
+    canonical: `${siteConfig.url}/about`,
+  },
+  openGraph: {
+    title: "About KIA–Start Up Consult | Economic Architecture for Africa",
+    description:
+      "An African economic development and enterprise-building institution connecting policy, capital, and execution across 24 nations.",
+    url: `${siteConfig.url}/about`,
+    siteName: siteConfig.name,
+    images: [
+      {
+        url: `${siteConfig.url}/images/kia-og-banner.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "About KIA–Start Up Consult — Isaac Agya Koomson",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About KIA–Start Up Consult | Economic Architecture for Africa",
+    description:
+      "Economic development and enterprise-building institution connecting policy, capital, and execution across 24 nations.",
+    images: [`${siteConfig.url}/images/kia-og-banner.jpg`],
+  },
 };
+
+const ABOUT_NAV_SECTIONS: NavSectionItem[] = [
+  { id: "vision", label: "Founder's Vision", shortLabel: "Vision" },
+  { id: "timeline", label: "Impact Timeline", shortLabel: "Timeline" },
+  { id: "model", label: "Operating Model", shortLabel: "Model" },
+  { id: "values", label: "Core Values", shortLabel: "Values" },
+  { id: "alignment", label: "Strategic Alignment", shortLabel: "Alignment" },
+  { id: "board", label: "Advisory Board", shortLabel: "Board" },
+  { id: "gallery", label: "Field Gallery", shortLabel: "Gallery" },
+];
 
 const values = [
   {
@@ -146,6 +182,8 @@ const operatingModel = [
 export default function AboutPage() {
   return (
     <>
+      <StickySectionNav title="About KIA" sections={ABOUT_NAV_SECTIONS} />
+
       {/* ─── 1. CINEMATIC HERO ─────────────────────────────────────────────── */}
       <section className="relative overflow-hidden border-b border-gold-500/30 gold-aurora-bg py-24 md:py-36 text-paper">
         {/* Multi-layer radial glow */}
@@ -196,7 +234,7 @@ export default function AboutPage() {
       </section>
 
       {/* ─── 2. CEO VISION ────────────────────────────────────────────────── */}
-      <section className="container-kia py-20 md:py-28">
+      <section id="vision" className="scroll-mt-28 container-kia py-20 md:py-28">
         <div className="grid gap-12 lg:grid-cols-12 lg:items-center">
           {/* Portrait */}
           <div className="lg:col-span-5 section-reveal">
@@ -270,7 +308,7 @@ export default function AboutPage() {
       </section>
 
       {/* ─── 3. PREMIUM MILESTONES TIMELINE ───────────────────────────────── */}
-      <section className="border-y border-gold-500/30 gold-aurora-bg py-20 text-paper md:py-28 overflow-hidden relative">
+      <section id="timeline" className="scroll-mt-28 border-y border-gold-500/30 gold-aurora-bg py-20 text-paper md:py-28 overflow-hidden relative">
         <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-full h-[400px] bg-[radial-gradient(ellipse_at_top,_rgba(255,215,0,0.2),_transparent_60%)]" />
         <div className="container-kia relative z-10">
           <div className="section-reveal max-w-xl mb-14">
@@ -323,7 +361,7 @@ export default function AboutPage() {
       </section>
 
       {/* ─── 4. THREE-TIER OPERATING MODEL ───────────────────────────────── */}
-      <section className="border-b border-line bg-gradient-to-b from-white to-[#f8f8f5] py-20 md:py-28">
+      <section id="model" className="scroll-mt-28 border-b border-line bg-gradient-to-b from-white to-[#f8f8f5] py-20 md:py-28">
         <div className="container-kia">
           <div className="section-reveal max-w-xl mb-14">
             <div className="section-badge section-badge-gold mb-4">HOW WE OPERATE</div>
@@ -360,7 +398,7 @@ export default function AboutPage() {
       </section>
 
       {/* ─── 5. VALUES ────────────────────────────────────────────────────── */}
-      <section className="container-kia py-20 md:py-28">
+      <section id="values" className="scroll-mt-28 container-kia py-20 md:py-28">
         <div className="section-reveal mb-14">
           <div className="section-badge section-badge-gold mb-4">OUR FOUNDATION</div>
           <h2 className="mt-2 max-w-xl font-display text-3xl font-bold text-ink md:text-4xl leading-tight">
@@ -386,7 +424,7 @@ export default function AboutPage() {
       </section>
 
       {/* ─── 6. STRATEGIC ALIGNMENT ───────────────────────────────────────── */}
-      <section className="border-y border-gold-500/30 gold-aurora-bg py-20 text-paper md:py-28 overflow-hidden relative">
+      <section id="alignment" className="scroll-mt-28 border-y border-gold-500/30 gold-aurora-bg py-20 text-paper md:py-28 overflow-hidden relative">
         <div className="pointer-events-none absolute right-0 top-0 w-80 h-80 bg-[radial-gradient(circle,_rgba(255,215,0,0.15),_transparent_70%)]" />
         <div className="pointer-events-none absolute left-0 bottom-0 w-72 h-72 bg-[radial-gradient(circle,_rgba(245,158,11,0.12),_transparent_70%)]" />
         <div className="container-kia relative z-10">
@@ -443,7 +481,7 @@ export default function AboutPage() {
       </section>
 
       {/* ─── 7. ADVISORY BOARD ────────────────────────────────────────────── */}
-      <section className="container-kia py-20 md:py-28">
+      <section id="board" className="scroll-mt-28 container-kia py-20 md:py-28">
         <div className="section-reveal mb-14">
           <div className="section-badge section-badge-gold mb-4">GOVERNANCE & GUIDANCE</div>
           <h2 className="mt-2 max-w-xl font-display text-3xl font-bold text-ink md:text-4xl leading-tight">
@@ -481,7 +519,7 @@ export default function AboutPage() {
       </section>
 
       {/* ─── 8. IN THE FIELD GALLERY ──────────────────────────────────────── */}
-      <section className="border-y border-line bg-gradient-to-b from-[#f8f8f5] to-white py-20 md:py-28">
+      <section id="gallery" className="scroll-mt-28 border-y border-line bg-gradient-to-b from-[#f8f8f5] to-white py-20 md:py-28">
         <div className="container-kia">
           <div className="max-w-2xl mb-12 section-reveal">
             <div className="section-badge section-badge-gold mb-4">VISUAL EVIDENCE</div>
