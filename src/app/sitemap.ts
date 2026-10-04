@@ -6,14 +6,16 @@ import { platformsDetailData } from "@/lib/platforms-detail-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
-    { path: "", priority: 1 },
+    { path: "", priority: 1.0 },
     { path: "/services/business-registration-ghana", priority: 0.95 },
     { path: "/services", priority: 0.9 },
     { path: "/platforms", priority: 0.9 },
     { path: "/about", priority: 0.85 },
+    { path: "/gallery", priority: 0.85 },
     { path: "/insights", priority: 0.85 },
     { path: "/contact", priority: 0.8 },
-    { path: "/gallery", priority: 0.6 },
+    { path: "/privacy", priority: 0.3 },
+    { path: "/terms", priority: 0.3 },
   ];
 
   const serviceRoutes: MetadataRoute.Sitemap = Object.keys(servicesDetailData).map((slug) => ({

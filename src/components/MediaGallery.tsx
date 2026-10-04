@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -92,6 +92,20 @@ const categories: Category[] = ["All", "Conference", "Institutional", "Mentorshi
 export default function MediaGallery() {
   const [activeCategory, setActiveCategory] = useState<Category>("All");
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+
+  useEffect(() => {
+    // When category tab changes, ensure newly displayed items animate/reveal smoothly
+    const timer = setTimeout(() => {
+      const vh = window.innerHeight || 800;
+      document.querySelectorAll<HTMLElement>(".section-reveal:not(.revealed)").forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top <= vh + 120 && rect.bottom >= -100) {
+          el.classList.add("revealed");
+        }
+      });
+    }, 40);
+    return () => clearTimeout(timer);
+  }, [activeCategory]);
 
   const filtered =
     activeCategory === "All"

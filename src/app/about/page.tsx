@@ -18,7 +18,6 @@ import {
   Zap,
 } from "lucide-react";
 import WhatsAppCTA from "@/components/WhatsAppCTA";
-import MediaGallery from "@/components/MediaGallery";
 import StickySectionNav, { type NavSectionItem } from "@/components/StickySectionNav";
 import { siteConfig, whatsappMessages } from "@/lib/site-config";
 
@@ -60,7 +59,6 @@ const ABOUT_NAV_SECTIONS: NavSectionItem[] = [
   { id: "values", label: "Core Values", shortLabel: "Values" },
   { id: "alignment", label: "Strategic Alignment", shortLabel: "Alignment" },
   { id: "board", label: "Advisory Board", shortLabel: "Board" },
-  { id: "gallery", label: "Field Gallery", shortLabel: "Gallery" },
 ];
 
 const values = [
@@ -516,23 +514,20 @@ export default function AboutPage() {
             </li>
           ))}
         </ul>
-      </section>
 
-      {/* ─── 8. IN THE FIELD GALLERY ──────────────────────────────────────── */}
-      <section id="gallery" className="scroll-mt-28 border-y border-line bg-gradient-to-b from-[#f8f8f5] to-white py-20 md:py-28">
-        <div className="container-kia">
-          <div className="max-w-2xl mb-12 section-reveal">
-            <div className="section-badge section-badge-gold mb-4">VISUAL EVIDENCE</div>
-            <h2 className="mt-2 font-display text-3xl font-bold text-ink md:text-4xl leading-tight">
-              KIA in action — documented proof.
-            </h2>
-            <div className="section-divider-gold mt-5" />
-          </div>
-          <MediaGallery />
+        {/* Link to dedicated Executive Media Gallery */}
+        <div className="mt-14 text-center section-reveal">
+          <Link
+            href="/gallery"
+            className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full border border-gold-500/40 bg-gold-500/10 hover:bg-gold-500/20 text-ink font-bold text-sm transition-all group shadow-sm"
+          >
+            <span>Explore Executive Media &amp; Field Photographic Archive</span>
+            <ArrowRight className="h-4 w-4 text-gold-deep group-hover:translate-x-1 transition-transform" />
+          </Link>
         </div>
       </section>
 
-      {/* ─── 9. PARTNERSHIP CTA — GOLD AURORA ────────────────────────────── */}
+      {/* ─── 8. PARTNERSHIP CTA — GOLD AURORA ────────────────────────────── */}
       <section className="relative overflow-hidden border-t border-gold-500/30 gold-aurora-bg py-28 text-paper md:py-36">
         <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[900px] bg-[radial-gradient(circle,_rgba(255,215,0,0.25)_0%,_rgba(201,162,39,0.12)_50%,_transparent_75%)]" />
         <div className="pointer-events-none absolute left-0 bottom-0 w-80 h-80 bg-[radial-gradient(circle,_rgba(255,215,0,0.1),_transparent_70%)]" />

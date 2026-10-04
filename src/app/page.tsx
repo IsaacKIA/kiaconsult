@@ -21,7 +21,6 @@ import ImpactDashboard from "@/components/ImpactDashboard";
 import FAQAccordion from "@/components/FAQAccordion";
 import AfricanNetworkCanvas from "@/components/AfricanNetworkCanvas";
 import CapitalSimulator from "@/components/CapitalSimulator";
-import BusinessRegistrationLeadSection from "@/components/BusinessRegistrationLeadSection";
 import StickySectionNav, { type NavSectionItem } from "@/components/StickySectionNav";
 import {
   nationalImpactTargets,
@@ -59,7 +58,6 @@ const HOME_NAV_SECTIONS: NavSectionItem[] = [
   { id: "architecture", label: "7-Layer Framework", shortLabel: "Architecture" },
   { id: "simulator", label: "Capital Simulator", shortLabel: "Simulator" },
   { id: "practices", label: "6 Practices", shortLabel: "Practices" },
-  { id: "registration-filing", label: "Business Registration & Filing", shortLabel: "Registration" },
   { id: "platforms", label: "Impact Vehicles", shortLabel: "Platforms" },
   { id: "impact", label: "Impact Targets", shortLabel: "Impact" },
   { id: "media", label: "Executive Media", shortLabel: "Media" },
@@ -360,9 +358,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* ─── 7B. BUSINESS REGISTRATION, YEARLY RENEWAL & ANNUAL FILING ────── */}
-      <BusinessRegistrationLeadSection />
 
       {/* ─── 8. PROPRIETARY IMPACT PLATFORMS ─────────────────────────────── */}
       <section id="platforms" className="border-y border-gold-500/30 gold-aurora-bg py-20 md:py-28 text-paper relative overflow-hidden scroll-mt-28">
