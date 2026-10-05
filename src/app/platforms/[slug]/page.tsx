@@ -88,23 +88,66 @@ export default async function PlatformDetailPage({ params }: PlatformPageProps) 
   const allPlatforms = Object.values(platformsDetailData);
   const otherPlatforms = allPlatforms.filter((p) => p.slug !== slug);
 
-  // Structured Data Schema for GovernmentService / FinancialService / Project
+  // Structured Data Schema for Google Rich Results (Service, BreadcrumbList & FAQPage)
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "GovernmentService",
-    name: platform.name,
-    description: platform.metaDescription,
-    provider: {
-      "@type": "Organization",
-      name: siteConfig.legalName,
-      url: siteConfig.url,
-      logo: `${siteConfig.url}/images/kia-logo.jpg`,
-    },
-    serviceType: "Economic Architecture & Blended Finance Platform",
-    areaServed: {
-      "@type": "Continent",
-      name: "Africa",
-    },
+    "@graph": [
+      {
+        "@type": "GovernmentService",
+        "@id": `${siteConfig.url}/platforms/${slug}#platform`,
+        name: platform.name,
+        description: platform.metaDescription,
+        provider: {
+          "@type": "Organization",
+          name: siteConfig.legalName,
+          url: siteConfig.url,
+          logo: `${siteConfig.url}/images/kia-logo.jpg`,
+        },
+        serviceType: "Economic Architecture & Blended Finance Platform",
+        areaServed: [
+          { "@type": "Country", name: "Ghana" },
+          { "@type": "Continent", name: "Africa" },
+        ],
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: siteConfig.url,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Platforms",
+            item: `${siteConfig.url}/platforms`,
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: platform.name,
+            item: `${siteConfig.url}/platforms/${slug}`,
+          },
+        ],
+      },
+      ...(platform.faqs && platform.faqs.length > 0
+        ? [
+            {
+              "@type": "FAQPage",
+              mainEntity: platform.faqs.map((faq) => ({
+                "@type": "Question",
+                name: faq.q,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: faq.a,
+                },
+              })),
+            },
+          ]
+        : []),
+    ],
   };
 
   return (

@@ -86,35 +86,78 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
   const allServices = Object.values(servicesDetailData);
   const otherServices = allServices.filter((s) => s.slug !== slug);
 
-  // Structured Data Schema for Google Rich Results
+  // Structured Data Schema for Google Rich Results (Service, BreadcrumbList & FAQPage)
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Service",
-    name: service.title,
-    description: service.metaDescription,
-    provider: {
-      "@type": "Organization",
-      name: siteConfig.legalName,
-      url: siteConfig.url,
-      logo: `${siteConfig.url}/images/kia-logo.jpg`,
-    },
-    areaServed: {
-      "@type": "Continent",
-      name: "Africa",
-    },
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: service.title,
-      itemListElement: service.pillars.map((p, idx) => ({
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: p.title,
-          description: p.description,
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": `${siteConfig.url}/services/${slug}#service`,
+        name: service.title,
+        description: service.metaDescription,
+        provider: {
+          "@type": "Organization",
+          name: siteConfig.legalName,
+          url: siteConfig.url,
+          logo: `${siteConfig.url}/images/kia-logo.jpg`,
         },
-        position: idx + 1,
-      })),
-    },
+        areaServed: [
+          { "@type": "Country", name: "Ghana" },
+          { "@type": "Continent", name: "Africa" },
+        ],
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: service.title,
+          itemListElement: service.pillars.map((p, idx) => ({
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: p.title,
+              description: p.description,
+            },
+            position: idx + 1,
+          })),
+        },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: siteConfig.url,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Services",
+            item: `${siteConfig.url}/services`,
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: service.title,
+            item: `${siteConfig.url}/services/${slug}`,
+          },
+        ],
+      },
+      ...(service.faqs && service.faqs.length > 0
+        ? [
+            {
+              "@type": "FAQPage",
+              mainEntity: service.faqs.map((faq) => ({
+                "@type": "Question",
+                name: faq.q,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: faq.a,
+                },
+              })),
+            },
+          ]
+        : []),
+    ],
   };
 
   return (

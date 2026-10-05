@@ -7,8 +7,7 @@ import WhatsAppFloatingButton from "@/components/WhatsAppFloatingButton";
 import SectionReveal from "@/components/SectionReveal";
 import ScrollProgressBar from "@/components/ScrollProgressBar";
 import HashScrollHandler from "@/components/HashScrollHandler";
-import { siteConfig } from "@/lib/site-config";
-
+import { siteConfig, faqItems } from "@/lib/site-config";
 /* ─── Self-hosted fonts via next/font (zero render-blocking) ─────────────── */
 const inter = Inter({
   subsets: ["latin"],
@@ -103,6 +102,12 @@ export const metadata: Metadata = {
     },
   },
   category: "Economic Architecture & Venture Consulting",
+  other: {
+    "geo.region": "GH-CP",
+    "geo.placename": "Ajumako, Ghana",
+    "geo.position": "5.3745;-1.0148",
+    ICBM: "5.3745, -1.0148",
+  },
 };
 
 /* ─── JSON-LD Structured Data ────────────────────────────────────────────── */
@@ -281,6 +286,19 @@ const websiteSchema = {
   },
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -306,6 +324,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
       </head>
       <body className="antialiased" suppressHydrationWarning>
