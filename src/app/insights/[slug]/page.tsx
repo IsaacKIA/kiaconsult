@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, Clock, Calendar, User, Share2, MessageCircle, CheckCircle } from "lucide-react";
+import { ArrowLeft, ArrowRight, Clock, Calendar, User, Share2, MessageCircle, CheckCircle, HelpCircle } from "lucide-react";
 import WhatsAppCTA from "@/components/WhatsAppCTA";
 import { whatsappMessages, siteConfig } from "@/lib/site-config";
 import {
@@ -148,9 +148,24 @@ export default async function InsightArticlePage({ params }: Props) {
     ],
   };
 
+  const faqSchema =
+    article.content.faqs && article.content.faqs.length > 0
+      ? {
+          "@type": "FAQPage",
+          mainEntity: article.content.faqs.map((f) => ({
+            "@type": "Question",
+            name: f.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: f.answer,
+            },
+          })),
+        }
+      : null;
+
   const jsonLdGraph = {
     "@context": "https://schema.org",
-    "@graph": [articleSchema, breadcrumbSchema],
+    "@graph": [articleSchema, breadcrumbSchema, ...(faqSchema ? [faqSchema] : [])],
   };
 
   return (
@@ -288,6 +303,44 @@ export default async function InsightArticlePage({ params }: Props) {
                 ))}
               </ul>
             </div>
+
+            {/* Frequently Asked Questions / Google People Also Ask Box */}
+            {article.content.faqs && article.content.faqs.length > 0 && (
+              <div className="my-12 space-y-6 pt-4 border-t border-line/60">
+                <div className="flex items-center gap-3">
+                  <div className="p-2.5 rounded-xl bg-gold/15 text-gold-deep">
+                    <HelpCircle className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <span className="text-xs font-mono font-bold uppercase tracking-widest text-gold-deep block">
+                      Frequently Asked Questions
+                    </span>
+                    <h2 className="font-display text-2xl sm:text-3xl font-bold text-ink">
+                      People Also Ask
+                    </h2>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  {article.content.faqs.map((faq, i) => (
+                    <div
+                      key={i}
+                      className="rounded-2xl border border-line/80 bg-paper/60 p-6 sm:p-7 space-y-2.5 transition-all hover:border-gold-500/40 shadow-sm"
+                    >
+                      <h3 className="font-display text-base sm:text-lg font-bold text-ink flex items-start gap-3">
+                        <span className="text-gold-deep font-mono text-sm shrink-0">
+                          Q{i + 1}.
+                        </span>
+                        <span>{faq.question}</span>
+                      </h3>
+                      <p className="text-sm sm:text-base text-ink/80 leading-relaxed pl-7">
+                        {faq.answer}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
 
             {/* In-Article Contextual Conversion Box (Per Directive §26) */}
             <div className="my-12 rounded-2xl border border-gold-500/35 gold-aurora-bg p-8 md:p-10 text-paper space-y-4 relative overflow-hidden shadow-2xl">
