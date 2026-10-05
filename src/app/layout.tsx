@@ -97,9 +97,9 @@ export const metadata: Metadata = {
     canonical: siteConfig.url,
   },
   verification: {
-    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || undefined,
+    google: "ABYN-qEa5KzqlZ7RPLGkU5NBnwaBafHruc4yRnq5EW0",
     other: {
-      "msvalidate.01": process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION || "",
+      "msvalidate.01": "522580722D78A032ED816855A17288DD",
     },
   },
   category: "Economic Architecture & Venture Consulting",
