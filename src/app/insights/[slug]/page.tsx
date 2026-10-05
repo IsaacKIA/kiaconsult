@@ -280,8 +280,8 @@ export default async function InsightArticlePage({ params }: Props) {
                 ))}
 
                 {section.pullQuote && (
-                  <figure className="my-8 quote-premium py-5 px-7 rounded-2xl">
-                    <blockquote className="font-display text-xl sm:text-2xl font-semibold italic text-white leading-relaxed">
+                  <figure className="my-8 quote-premium py-6 px-8 rounded-2xl shadow-xl">
+                    <blockquote className="font-display text-xl sm:text-2xl font-semibold italic !text-white leading-relaxed">
                       &ldquo;{section.pullQuote}&rdquo;
                     </blockquote>
                   </figure>
