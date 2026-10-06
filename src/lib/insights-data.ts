@@ -375,7 +375,7 @@ export const insightArticles: InsightArticle[] = [
         {
           heading: "The Diaspora & Foreign Investor Playbook: GIPC Equity & Non-Resident TIN Hurdles",
           paragraphs: [
-            "International investors and members of the African diaspora face distinct regulatory hurdles under the Ghana Investment Promotion Centre (GIPC) Act 2013 (Act 865). Specifically, foreign equity participation is subject to minimum statutory capital thresholds: $500,000 in equity for 100% foreign-owned enterprises; $200,000 in equity for joint ventures where a Ghanaian citizen owns at least 10%; and $1,000,000 for general trading enterprises, along with the mandatory employment of at least 20 skilled Ghanaians.",
+            "International investors and members of the African diaspora face distinct regulatory hurdles under the Ghana Investment Promotion Authority (GIPA) Act, 2026 (Act 1173), which replaces the old GIPC Act 865. Foreign equity participation is subject to minimum statutory capital thresholds: $500,000 in equity for 100% foreign-owned enterprises; $200,000 in equity for joint ventures where a Ghanaian citizen owns at least 10%; and $500,000 in cash equity for foreign trading enterprises, alongside the mandatory requirement that at least 75% of all employees must be skilled Ghanaian nationals.",
             "However, many diaspora returnees and founders are unaware of strategic structuring exemptions. For example, dual citizens who hold verified Ghanaian citizenship can incorporate under indigenous domestic rules, completely bypassing GIPC foreign capital minimums. Manufacturing and export-oriented entities also enjoy preferential capital criteria.",
             "Furthermore, Ghana's transition to the Ghana Card as the exclusive Tax Identification Number (TIN) has created bottlenecks for foreigners who do not possess a national ID. Non-resident founders must navigate the specialized GRA non-resident TIN registration process with certified passport notarization—a step KIA–Start Up Consult executes seamlessly on behalf of our diaspora clients.",
           ],
@@ -413,7 +413,7 @@ export const insightArticles: InsightArticle[] = [
       takeaways: [
         "Incorporate under Companies Act 2019 (Act 992) using accredited institutional consultants to avoid the prevalent 'goro boy' counterfeit trap.",
         "Diaspora founders can utilize dual-citizenship and strategic equity structuring to lawfully optimize GIPC foreign minimum capital requirements.",
-        "Missing yearly renewals and annual filings triggers compounding ORC fines (GHS 600–1,000/mo) and involuntary company strike-off by the Registrar.",
+        "Missing yearly renewals and annual filings triggers ORC statutory penalties — GHS 1,000 for non-filing from 1–4 years and GHS 2,000 for 5 years and above — and eventual involuntary company strike-off by the Registrar.",
         "KIA–Start Up Consult provides 100% remote formation, statutory secretary services, and automated annual compliance protection.",
       ],
     },
@@ -718,9 +718,9 @@ export const insightArticles: InsightArticle[] = [
   },
   {
     slug: "gipc-gipa-ghana-investment-registration-guide-2026",
-    title: "GIPA & GIPC Ghana Investment Guide 2026: New Reforms, Minimum Capital & Diaspora Setup",
+    title: "GIPA Ghana Investment Guide 2026: Act 1173 Reforms, Minimum Capital & Diaspora Setup",
     excerpt:
-      "The definitive 2026 regulatory roadmap for diaspora entrepreneurs and foreign investors: understanding Ghana Investment Promotion Authority (GIPA/GIPC) reforms, statutory minimum capital thresholds, joint-venture structures, and automatic work quotas.",
+      "The definitive 2026 regulatory roadmap for diaspora entrepreneurs and foreign investors: understanding the Ghana Investment Promotion Authority Act, 2026 (Act 1173), statutory minimum capital thresholds, reserved sectors, automatic work quotas, and investor protections.",
     category: "Policy & Economic Development",
     author: {
       name: "Isaac Agya Koomson",
@@ -728,108 +728,148 @@ export const insightArticles: InsightArticle[] = [
       avatar: "/images/aetf-ai-panel-speaker.jpg",
     },
     publishedAt: "March 2026",
-    readingTime: "9 min read",
+    readingTime: "10 min read",
     heroImage: "/images/gdiw-keynote-speaking.jpg",
     heroCaption: "Isaac Agya Koomson presenting on foreign direct investment, enterprise policy, and continental market integration.",
     tags: [
-      "GIPC Registration Ghana",
       "GIPA Ghana",
+      "GIPA Act 1173",
       "Ghana Investment Promotion Authority",
       "Foreign Investor Ghana",
       "Diaspora Business Setup",
       "Minimum Capital Requirements Ghana",
-      "GIPC Act 865 2026 Reforms",
+      "Reserved Sectors Ghana",
       "Ghana Companies Act 2019",
     ],
     content: {
       intro:
-        "Ghana has solidified its reputation as the premier commercial gateway to West Africa and the diplomatic capital of the African Continental Free Trade Area (AfCFTA). However, international investors, multinational enterprises, and returning diaspora founders frequently encounter a maze of conflicting guidance regarding the statutory investment framework governed by the Ghana Investment Promotion Centre / Authority (GIPC/GIPA). With significant 2026 regulatory modernization initiatives underway, navigating minimum capital requirements, Bank of Ghana equity confirmation, automatic work quotas, and diaspora exemptions requires precise institutional strategy.",
+        "Ghana has solidified its reputation as the premier commercial gateway to West Africa and the diplomatic capital of the African Continental Free Trade Area (AfCFTA). The Ghana Investment Promotion Authority Act, 2026 (Act 1173) formally replaces the old Ghana Investment Promotion Centre (GIPC) under Act 865 and introduces landmark reforms engineered to accelerate foreign direct investment. International investors, multinational enterprises, and returning diaspora founders must now navigate the updated statutory framework: minimum capital requirements, reserved sectors, Bank of Ghana equity confirmation, automatic work quotas, and strengthened investor protections under this new legislation.",
       sections: [
         {
-          heading: "1. Understanding GIPA / GIPC and the 2026 Investment Modernization Reforms",
+          heading: "1. GIPA Act 1173 — The New Investment Authority & One-Stop Shop",
           paragraphs: [
-            "The Ghana Investment Promotion Centre (established under GIPC Act 2013, Act 865, and currently modernized under enhanced 2026 GIPA regulatory frameworks) serves as the primary government agency mandated to encourage, promote, and facilitate private investments across all sectors of the Ghanaian economy—excluding mining, petroleum, and free zones, which are governed by specialized commissions.",
-            "The 2026 reforms introduce crucial updates designed to accelerate foreign direct investment (FDI): streamlined digital one-stop investor clearance, expedited Bank of Ghana capital importation verification, expanded green-economy and agritech tax incentives, and formalized investor protection protocols aligned with AfCFTA regional investment standards. GIPC registration is not merely a formality—it is a statutory legal requirement that confers vital protections, including constitutional guarantees against expropriation, unconditional transferability of dividends, and official immigrant work quota allocations.",
+            "The Ghana Investment Promotion Authority Act, 2026 (Act 1173) establishes the Ghana Investment Promotion Authority (GIPA) as the official successor to the Ghana Investment Promotion Centre (GIPC). GIPA is mandated to encourage, promote, and facilitate private investments across all sectors of the Ghanaian economy—excluding mining, petroleum, and free zones, which are governed by their own specialized commissions.",
+            "Under Act 1173, GIPA operates as a formal one-stop shop—a single point of institutional contact designed to improve transparency, reduce bureaucratic friction, and consolidate investor information and approvals. GIPA registration is not merely a formality; it is a statutory legal requirement that confers vital protections, including constitutional guarantees against expropriation, unconditional transferability of dividends and profits, and official immigrant work quota allocations.",
           ],
           pullQuote:
-            "Ghana's 2026 investment architecture is engineered to reward compliant institutional capital with sovereign tax protections and frictionless continental market access.",
+            "Ghana's Act 1173 investment architecture is engineered to reward compliant institutional capital with sovereign protections and frictionless continental market access.",
         },
         {
-          heading: "2. The 2026 Foreign Minimum Capital Thresholds: Facts vs. Myths",
+          heading: "2. The Act 1173 Foreign Minimum Capital Thresholds: Facts vs. Myths",
           paragraphs: [
-            "The most scrutinized element of Act 865 is the statutory minimum foreign capital requirement. Many prospective investors erroneously believe they must deposit millions in non-refundable cash fees. In statutory reality, minimum capital represents equity investment committed into the business, which can be satisfied through either cash equity transfers via the Bank of Ghana or verifiable capital equipment/machinery shipped into Ghana.",
-            "Under the prevailing statutory provisions, the thresholds are categorized as follows:",
+            "The most scrutinized element of Act 1173 is the statutory minimum foreign capital requirement. Many prospective investors erroneously believe they must deposit non-refundable fees. In statutory reality, minimum capital represents equity investment committed into the business, which can be satisfied through cash equity transfers via the Bank of Ghana or verifiable capital equipment/machinery shipped into Ghana.",
+            "Under Act 1173, the thresholds are categorized as follows:",
             "• Joint Venture (JV) with Ghanaian Citizen: A minimum foreign equity capital of USD $200,000 is required, provided the Ghanaian partner owns not less than 10% of the voting equity in the enterprise.",
             "• 100% Foreign-Owned Enterprise: A minimum foreign equity capital of USD $500,000 is required for ventures involved in service delivery, manufacturing, hospitality, technology, and general enterprise.",
-            "• General Trading Enterprises: For foreign businesses engaged in the buy-and-sell retail/wholesale trade of imported goods, the statutory threshold is USD $1,000,000 in equity or capital goods, alongside the mandatory requirement to permanently employ a minimum of 20 skilled Ghanaian nationals.",
+            "• Foreign Trading Enterprises: For foreign businesses engaged in a trading enterprise (buying and selling goods), the statutory threshold is USD $500,000 in cash equity capital, alongside the mandatory requirement that at least 75% of all employees must be skilled Ghanaian nationals.",
           ],
         },
         {
-          heading: "3. The Diaspora Strategic Blueprint: Exemption Pathways & Dual Citizenship",
+          heading: "3. Sectors Reserved Exclusively for Ghanaians",
           paragraphs: [
-            "A critical breakthrough for the African diaspora: if you hold verified Ghanaian dual citizenship or can substantiate Ghanaian citizenship through parentage, you are legally classified as an indigenous domestic investor under Ghanaian law! This means the $500,000 minimum foreign capital threshold DOES NOT apply to you.",
-            "Diaspora founders can incorporate a domestic Private Company Limited by Shares under the Companies Act 2019 (Act 992) with standard domestic capital (e.g., GHS 500 stated capital) while retaining the flexibility to partner with foreign co-investors. KIA–Start Up Consult specializes in structuring compliant dual-holding models that preserve domestic regulatory status while maintaining international equity governance.",
+            "Act 1173 explicitly reserves certain business activities exclusively for Ghanaian citizens and wholly Ghanaian-owned enterprises. Foreign investors and non-wholly Ghanaian enterprises are legally prohibited from participating in these sectors:",
+            "• Retail trading in markets, petty trading, hawking, or selling in stalls.",
+            "• Operating beauty salons or barbering shops.",
+            "• Taxi or car hire services with a fleet of fewer than 25 vehicles.",
+            "• Production of exercise books and basic stationery.",
+            "• Retail of finished pharmaceutical products.",
+            "• Production, supply, and retail of sachet water.",
+            "Investors seeking to enter adjacent sectors should structure their ventures carefully with qualified legal counsel. KIA–Start Up Consult can advise on lawful entry structures that respect reserved-sector boundaries.",
           ],
         },
         {
-          heading: "4. Automatic Work & Residence Quotas: Securing Legal Status for Expatriate Talent",
+          heading: "4. The Diaspora Strategic Blueprint: Exemption Pathways Under Act 1173",
           paragraphs: [
-            "One of the most valuable institutional benefits of GIPA/GIPC certification is the automatic grant of expatriate work and residence quotas. These statutory quotas bypass the protracted Ghana Immigration Service general labor-market testing procedures:",
-            "• USD $50,000 to $250,000 Paid-Up Capital: 1 Automatic Expatriate Work Quota",
-            "• USD $250,000 to $500,000 Paid-Up Capital: 2 Automatic Expatriate Work Quotas",
-            "• USD $500,000 to $700,000 Paid-Up Capital: 3 Automatic Expatriate Work Quotas",
-            "• USD $700,000 and Above: 4 Automatic Expatriate Work Quotas",
-            "These quotas allow executives, founders, and key technical personnel to receive multi-year Ghanaian residence and work permits, with accompanying dependent passes for their immediate family members.",
+            "Act 1173 includes a targeted exemption for a specific category of diaspora Ghanaians: citizens who lost their Ghanaian citizenship solely because they assumed the nationality of another country that does not permit dual citizenship. These individuals are legally exempt from the foreign minimum capital requirement for trading enterprises under the Act.",
+            "For Ghanaians who hold verified dual citizenship or can substantiate Ghanaian citizenship through parentage, they are classified as indigenous domestic investors under Ghanaian law and are not subject to the foreign investor capital thresholds at all. Diaspora founders in either category can incorporate a domestic Private Company Limited by Shares under the Companies Act 2019 (Act 992) with standard domestic capital. KIA–Start Up Consult specializes in structuring compliant models that preserve domestic regulatory status while maintaining international equity governance.",
           ],
         },
         {
-          heading: "5. The 5-Step Turnkey Registration Sequence (Zero-Travel Execution)",
+          heading: "5. Automatic Work & Residence Quotas Under Act 1173",
+          paragraphs: [
+            "One of the most valuable institutional benefits of GIPA certification under Act 1173 is the automatic grant of expatriate work and residence quotas. These statutory quotas bypass the protracted Ghana Immigration Service general labor-market testing procedures. The Act 1173 quota tiers are more expansive than the prior framework:",
+            "• USD $50,000 to $500,000 Paid-Up Capital: 2 Automatic Expatriate Work Quotas",
+            "• USD $500,001 to $1,000,000 Paid-Up Capital: 4 Automatic Expatriate Work Quotas",
+            "• USD $1,000,001 to $3,000,000 Paid-Up Capital: 6 Automatic Expatriate Work Quotas",
+            "• USD $3,000,001 to $6,000,000 Paid-Up Capital: 8 Automatic Expatriate Work Quotas",
+            "• USD $6,000,001 to $10,000,000 Paid-Up Capital: 10 Automatic Expatriate Work Quotas",
+            "• Above USD $10,000,000 Paid-Up Capital: 12 Automatic Expatriate Work Quotas",
+            "All quotas under Act 1173 are valid for 5 years and are renewable. They allow executives, founders, and key technical personnel to receive multi-year Ghanaian residence and work permits, with accompanying dependent passes for their immediate family members.",
+          ],
+        },
+        {
+          heading: "6. Investor Protections & Guarantees Under Act 1173",
+          paragraphs: [
+            "Act 1173 enshrines strong investor protections applicable to all registered enterprises:",
+            "• No Discrimination: Foreign investors enjoy the same rights and are subject to the same general business, labour, and tax laws as domestic citizens and enterprises.",
+            "• Protection Against Expropriation: Private property or business assets cannot be nationalized or seized by the Government except in the public interest, with prompt, fair, and adequate compensation, and with access to the High Court for challenge.",
+            "• Unconditional Transfer of Capital & Profits: Registered foreign enterprises are guaranteed free, unconditional transfer of funds through licensed dealers in convertible currencies—covering dividends, net profits, loan repayments, royalties, fees, and liquidation proceeds.",
+          ],
+        },
+        {
+          heading: "7. Dispute Resolution & Investor Grievance Mechanisms",
+          paragraphs: [
+            "Act 1173 introduces a formal investor grievance mechanism and a structured dispute resolution pathway:",
+            "• Investor Grievance Mechanism: GIPA maintains an internal administrative grievance mechanism where investors can file complaints against government agencies. GIPA is required to investigate and respond within 3 months.",
+            "• Mutual Resolution Period: Disputes between a foreign investor and the Government are first subject to a 6-month period of mutual discussion and good-faith resolution.",
+            "• International Arbitration: If mutual resolution fails after 6 months, disputes may be escalated to international arbitration or mediation under the Alternative Dispute Resolution Act.",
+          ],
+        },
+        {
+          heading: "8. The 5-Step Turnkey Registration Sequence (Zero-Travel Execution)",
           paragraphs: [
             "Through KIA–Start Up Consult, international enterprises execute their complete market entry without physical disruption:",
             "Step 1: Corporate Incorporation at ORC. Registration of the Private Company Limited by Shares with the Office of the Registrar of Companies (ORC) under Act 992, including Company Regulations, resident director compliance, and licensed Company Secretary appointment.",
             "Step 2: Bank of Ghana Capital Inflow Certification. Remittance of equity capital through authorized dealer commercial banks in Ghana, with formal issuance of the Bank of Ghana Capital Importation Certificate.",
-            "Step 3: GIPA/GIPC Application & Due Diligence. Submission of statutory investment profiles, feasibility analysis, tax clearance, and anti-money laundering (AML) compliance documentation.",
-            "Step 4: GIPC Investment Certificate Issuance. Formal licensing by the Chief Executive Officer of the GIPC, conferring sovereign investment treaty protections and tax exemption eligibility.",
+            "Step 3: GIPA Application & Due Diligence. Submission of statutory investment profiles, feasibility analysis, tax clearance, and anti-money laundering (AML) compliance documentation to the Ghana Investment Promotion Authority.",
+            "Step 4: GIPA Investment Certificate Issuance. Formal licensing by the Chief Executive Officer of GIPA, conferring sovereign investment treaty protections and tax exemption eligibility under Act 1173.",
             "Step 5: Post-Licensing Quotas & Environmental Clearance. Processing of immigration work permits, Environmental Protection Agency (EPA) clearance (if industrial), and Metropolitan Business Operating Permits (BOP).",
           ],
         },
       ],
       takeaways: [
-        "GIPA/GIPC registration is statutory for any business with foreign shareholding and provides constitutional guarantees against expropriation.",
-        "Foreign minimum capital thresholds are $200,000 for 10% Ghanaian JVs, $500,000 for 100% foreign-owned, and $1,000,000 for general trading.",
-        "Diaspora founders with Ghanaian dual citizenship qualify under domestic rules, completely bypassing foreign minimum capital requirements.",
-        "GIPC certification unlocks automatic expatriate work and residence quotas, securing seamless immigration status for founding teams.",
+        "GIPA (Act 1173) officially replaces GIPC (Act 865) and operates as Ghana's formal one-stop shop for investment registration and protection.",
+        "Foreign minimum capital thresholds are $200,000 for 10% Ghanaian JVs, $500,000 for 100% foreign-owned enterprises, and $500,000 cash for foreign trading enterprises with 75% skilled Ghanaian workforce.",
+        "Six sectors including sachet water, petty trading, beauty salons, pharma retail, and taxi fleets under 25 vehicles are exclusively reserved for Ghanaians under Act 1173.",
+        "Diaspora founders who lost Ghanaian citizenship due to their adopted country's no-dual-citizenship policy are exempt from the trading enterprise foreign capital requirement.",
+        "Act 1173 provides a more expansive 6-tier expatriate quota system (2–12 quotas), valid for 5 years and renewable, bypassing standard Immigration Service procedures.",
+        "Investor disputes are first managed through a 3-month GIPA grievance process and a 6-month mutual discussion window before escalation to international arbitration.",
       ],
       faqs: [
         {
-          question: "What is GIPA or GIPC in Ghana?",
+          question: "What is GIPA and how does it differ from the old GIPC?",
           answer:
-            "The Ghana Investment Promotion Centre (GIPC)—often referred to as the Ghana Investment Promotion Authority (GIPA)—is the apex government agency established under Act 865 to register, facilitate, protect, and regulate foreign direct investments and joint ventures in Ghana.",
+            "The Ghana Investment Promotion Authority (GIPA) is the apex government investment body established by the Ghana Investment Promotion Authority Act, 2026 (Act 1173). It officially replaces the Ghana Investment Promotion Centre (GIPC), which operated under Act 865. GIPA functions as a formal one-stop shop to streamline investor registration, improve transparency, and consolidate approvals for foreign and domestic investors.",
         },
         {
-          question: "What is the minimum capital required for foreign investors to register with GIPC in 2026?",
+          question: "What is the minimum capital required for foreign investors under Act 1173 in 2026?",
           answer:
-            "Under statutory regulations, the minimum foreign capital is: $200,000 for joint ventures with at least 10% Ghanaian equity ownership; $500,000 for 100% foreign-owned enterprises; and $1,000,000 for foreign-owned general trading businesses (which also require employing at least 20 skilled Ghanaians). Capital can be satisfied via cash transfer or imported capital machinery.",
+            "Under Act 1173, the minimum foreign capital thresholds are: $200,000 for joint ventures with at least 10% Ghanaian equity ownership; $500,000 for 100% foreign-owned enterprises; and $500,000 in cash equity for foreign-owned trading enterprises, which must also ensure at least 75% of their employees are skilled Ghanaian nationals. Capital may be satisfied via cash transfer or verifiable imported capital machinery.",
         },
         {
-          question: "Do Ghanaian diaspora citizens need $500,000 minimum capital to start a business in Ghana?",
+          question: "Which sectors are reserved exclusively for Ghanaians under Act 1173?",
           answer:
-            "No. Ghanaian diaspora citizens who hold dual citizenship or can legally verify their Ghanaian nationality are exempt from foreign minimum capital requirements. They can incorporate under standard domestic provisions with nominal stated capital.",
+            "Act 1173 reserves the following sectors exclusively for Ghanaian citizens and wholly Ghanaian-owned businesses: retail in markets, petty trading, hawking, or selling in stalls; operating beauty salons or barbering shops; taxi or car hire with fewer than 25 vehicles; production of exercise books and basic stationery; retail of finished pharmaceutical products; and production, supply, and retail of sachet water.",
         },
         {
-          question: "Can foreign investment capital be imported as machinery or equipment rather than cash?",
+          question: "Do Ghanaian diaspora investors benefit from any exemptions under Act 1173?",
           answer:
-            "Yes. Under GIPC regulations, minimum foreign equity can be satisfied in whole or in part by capital goods, industrial machinery, plant equipment, or specialized technology imported into Ghana, provided they are accompanied by valid bills of lading and customs valuation reports.",
+            "Yes. Act 1173 provides two categories of exemptions. First, Ghanaians who hold dual citizenship or can verify their Ghanaian nationality are classified as domestic investors and are not subject to foreign capital thresholds at all. Second, Ghanaians who lost their citizenship solely because their adopted country does not permit dual citizenship are specifically exempt from the foreign trading enterprise minimum capital requirement.",
         },
         {
-          question: "What are the automatic work quota benefits of GIPC registration?",
+          question: "What are the automatic work quota benefits of GIPA registration under Act 1173?",
           answer:
-            "GIPC registration automatically entitles companies to statutory expatriate work and residence permits based on capital thresholds: 1 quota for $50,000–$250,000; 2 quotas for $250,000–$500,000; 3 quotas for $500,000–$700,000; and 4 quotas for investments above $700,000.",
+            "Act 1173 provides a 6-tier expatriate quota system: 2 quotas for $50,000–$500,000; 4 quotas for $500,001–$1,000,000; 6 quotas for $1,000,001–$3,000,000; 8 quotas for $3,000,001–$6,000,000; 10 quotas for $6,000,001–$10,000,000; and 12 quotas for investments above $10,000,000. All quotas are valid for 5 years and are renewable.",
         },
         {
-          question: "How does KIA–Start Up Consult assist with GIPC and company registration in Ghana?",
+          question: "How are investor disputes handled under Act 1173?",
           answer:
-            "KIA–Start Up Consult provides turnkey, end-to-end advisory: entity structuring under Act 992, ORC incorporation, Bank of Ghana capital importation tracking, GIPA/GIPC certificate processing, resident director compliance, and immigrant work quota facilitation—completely remotely.",
+            "Act 1173 establishes a tiered dispute resolution process. Investors can first file administrative grievances with GIPA, which must be investigated within 3 months. Disputes between a foreign investor and the Government then enter a 6-month mutual discussion window. If unresolved, either party may escalate to international arbitration or mediation under Ghana's Alternative Dispute Resolution Act.",
+        },
+        {
+          question: "How does KIA–Start Up Consult assist with GIPA registration in Ghana?",
+          answer:
+            "KIA–Start Up Consult provides turnkey, end-to-end advisory: entity structuring under Act 992, ORC incorporation, Bank of Ghana capital importation tracking, GIPA (Act 1173) certificate processing, resident director compliance, reserved-sector risk review, and immigrant work quota facilitation—completely remotely.",
         },
       ],
     },
@@ -893,7 +933,7 @@ export const insightArticles: InsightArticle[] = [
             "Step 1 — Company Name Search & Reservation. Use the ORC's online portal (www.orc.gov.gh) to search and reserve your proposed company name. A name is valid for 30 days. It must not be identical or deceptively similar to an existing registered entity, must not be offensive or misleading, and must not misrepresent your industry. Cost: GHS 150–GHS 300 (subject to 2026 tariff schedule).",
             "Step 2 — Draft Company Regulations (Constitution). Under Act 992, a company's 'Regulations' replace the older Memorandum & Articles of Association. Regulations must specify: the nature and scope of the company's business activities, the rights and duties of directors and shareholders, procedures for shareholder meetings and board resolutions, share capital structure and class rights, and dividend and profit distribution policies. This document must be prepared or certified by a licensed legal practitioner or accredited company secretary.",
             "Step 3 — Statutory Form Submission. File Form 3 (Particulars of Directors & Secretaries) and Form 4 (Declaration of Compliance) with the ORC. A Private Limited Company must have: minimum one director (who can also be the shareholder), a licensed Company Secretary (mandatory under Act 992 Section 210), and a registered address in Ghana.",
-            "Step 4 — Payment of Registration Fees. Registration fees are assessed based on the company's stated share capital. As of 2026 ORC tariffs: GHS 500 for stated capital up to GHS 50,000; GHS 1,000–GHS 5,000 for larger capital structures. Foreign-registered companies and those requiring expedited processing attract additional administrative charges.",
+            "Step 4 — Payment of ORC Registration Fees. Registration fees are determined by your chosen legal structure, as per the 2026 official ORC tariff schedule: Business Name / Sole Proprietorship — GHS 130; Partnership — GHS 270; Company Limited by Guarantee — GHS 490; Private Company Limited by Shares — GHS 585 plus 1% Capital Duty on stated capital; External Company (foreign branch) — USD $1,400 (cedi equivalent). Prestige/VIP fast-track processing attracts an additional GHS 1,300 for limited companies and GHS 520 for business names. Certified True Copies of any registered instrument cost GHS 30.",
             "Step 5 — Certificate of Incorporation Issuance. Upon verification of all documents, the ORC issues the Certificate of Incorporation. Processing time via the digital portal averages 3–5 working days for standard applications. Errors in Regulations or Forms trigger rejection notices requiring resubmission. Always use accredited professionals to avoid this.",
             "Step 6 — Tax Registration with Ghana Revenue Authority (GRA). Immediately post-incorporation, register for: Corporate Income Tax (25% standard rate), Value Added Tax (VAT) at 15% standard rate if projected annual turnover exceeds GHS 200,000, PAYE (Pay-As-You-Earn) payroll tax if employing staff, and SSNIT employer contributions at 13% of gross salary.",
             "Step 7 — Metropolitan Business Operating Permit (BOP). Register with your local Metropolitan, Municipal, or District Assembly (MMDA) for an annual Business Operating Permit. Required for physical premises operations. Some assemblies also require Environmental Protection Agency (EPA) clearance for manufacturing, food production, and industrial activities.",
@@ -902,7 +942,7 @@ export const insightArticles: InsightArticle[] = [
         {
           heading: "4. Annual Compliance: What Keeps You Legal After Incorporation",
           paragraphs: [
-            "One of the most neglected aspects of company registration in Ghana is the ongoing annual compliance obligation. Under Act 992, every registered company must file Annual Returns with the ORC within 42 days of the company's annual return date (the anniversary of incorporation). Failure to file triggers automatic penalty fines of GHS 600–1,200 per month and eventual compulsory strike-off from the Companies Register.",
+            "One of the most neglected aspects of company registration in Ghana is the ongoing annual compliance obligation. Under Act 992, every registered company must file Annual Returns with the ORC within 42 days of the company's annual return date (the anniversary of incorporation). The official 2026 ORC fee for filing Annual Returns is GHS 175. Failure to file triggers statutory penalty fines of GHS 1,000 (for defaults of 1–4 years) and GHS 2,000 (for defaults of 5 years and above), plus eventual compulsory strike-off from the Companies Register.",
             "Annual obligations include: Annual Returns Filing with the ORC (Form 11), Audited Financial Statements preparation (mandatory for companies with turnover above GHS 500,000 or companies seeking external capital), GRA Corporate Tax Self-Assessment Filing and Payment by March 31 of the following year, SSNIT monthly employer reports, and renewal of Business Operating Permit from the MMDA.",
             "KIA–Start Up Consult's Annual Compliance Maintenance service provides 12-month automated reminders, statutory filing management, licensed Company Secretary services, and GRA correspondence handling — so founders can focus on growth while we ensure the legal infrastructure never lapses.",
           ],
@@ -937,7 +977,7 @@ export const insightArticles: InsightArticle[] = [
         {
           question: "How much does it cost to register a company in Ghana in 2026?",
           answer:
-            "Total registration costs in 2026 vary by capital size. ORC filing fees range from GHS 500 to GHS 5,000 depending on stated share capital. Additional costs include: name reservation (GHS 150–300), legal/consultant fees for drafting Company Regulations (GHS 800–5,000 depending on complexity), GRA registration (free), and SSNIT registration (free). A typical Private Limited Company registration with professional support costs between GHS 2,500 and GHS 8,000 all-inclusive.",
+            "Total registration costs in 2026 are governed by the official ORC tariff schedule. Core ORC filing fees by entity type: Business Name/Sole Proprietorship — GHS 130; Partnership — GHS 270; Company Limited by Guarantee — GHS 490; Private Company Limited by Shares — GHS 585 + 1% Capital Duty on stated capital; External Company (foreign branch) — USD $1,400 (cedi equivalent). Additional costs include: Prestige/VIP fast-track service (GHS 1,300 extra for companies), Certified True Copies (GHS 30 each), professional consultant/legal fees for drafting Company Regulations and statutory forms (varies), GRA registration (free), and SSNIT registration (free). A typical Private Limited Company registration with professional support typically costs between GHS 3,000 and GHS 6,000 all-inclusive depending on stated capital and service tier.",
         },
         {
           question: "How long does it take to register a company in Ghana?",
@@ -947,7 +987,7 @@ export const insightArticles: InsightArticle[] = [
         {
           question: "Can a foreigner register a company in Ghana?",
           answer:
-            "Yes. Foreigners can fully own a company in Ghana (100% foreign ownership is permitted in most sectors). However, foreign-owned companies must register with the Ghana Investment Promotion Centre (GIPC) under Act 865 and meet minimum foreign equity capital requirements: $200,000 for joint ventures with at least 10% Ghanaian ownership, and $500,000 for 100% foreign-owned enterprises. General trading businesses require $1,000,000.",
+            "Yes. Foreigners can fully own a company in Ghana (100% foreign ownership is permitted in most sectors). However, foreign-owned companies must register with the Ghana Investment Promotion Authority (GIPA) under Act 1173 and meet minimum foreign equity capital requirements: $200,000 for joint ventures with at least 10% Ghanaian ownership, and $500,000 for 100% foreign-owned enterprises. Foreign trading enterprises also require $500,000 in cash equity plus ensuring at least 75% of employees are skilled Ghanaian nationals. Note that six sectors — including petty trading, beauty salons, sachet water, pharma retail, taxi fleets under 25 vehicles, and exercise book production — are exclusively reserved for Ghanaian nationals under Act 1173.",
         },
         {
           question: "What documents do I need to register a company in Ghana?",
