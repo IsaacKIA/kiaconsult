@@ -21,6 +21,7 @@ import {
   Globe2,
   Award,
 } from "lucide-react";
+import { siteConfig } from "@/lib/site-config";
 
 export interface HeroSlide {
   id: string;
@@ -401,9 +402,15 @@ export default function HeroCinematicBanner() {
                   </div>
 
                   {/* Right: Live stage audio wave & speaker tag */}
-                  <div className="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-black/80 backdrop-blur-md border border-white/20 text-white text-[10px] sm:text-xs font-mono shadow-[0_0_20px_rgba(0,0,0,0.8)]">
+                  <a
+                    href={siteConfig.ceoProfileUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="View Isaac Agya Koomson's Official Executive Profile"
+                    className="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-black/80 hover:bg-black/95 backdrop-blur-md border border-white/20 hover:border-gold-400/60 text-white text-[10px] sm:text-xs font-mono shadow-[0_0_20px_rgba(0,0,0,0.8)] transition-all group/speaker"
+                  >
                     <Volume2 className="w-3.5 h-3.5 text-gold-400 shrink-0" />
-                    <span className="font-semibold hidden xs:inline text-white/90">
+                    <span className="font-semibold hidden xs:inline text-white/90 group-hover/speaker:text-gold-300 transition-colors">
                       Isaac Agya Koomson
                     </span>
                     <span className="text-white/40 hidden xs:inline">|</span>
@@ -415,7 +422,7 @@ export default function HeroCinematicBanner() {
                       <span className="w-[3px] bg-gold-400 rounded-full soundwave-bar-4" />
                       <span className="w-[3px] bg-gold-400 rounded-full soundwave-bar-5" />
                     </div>
-                  </div>
+                  </a>
                 </div>
 
                 {/* ── FLOATING CORNER BADGE: AfCFTA CORRIDOR / CONTINENTAL FOOTPRINT ── */}

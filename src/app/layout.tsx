@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     "register business Ghana foreigners",
     "SME consulting Ghana Accra",
   ],
-  authors: [{ name: "Isaac Agya Koomson", url: siteConfig.url }],
+  authors: [{ name: "Isaac Agya Koomson", url: siteConfig.ceoProfileUrl }],
   creator: "KIA–Start Up Consult Ltd",
   publisher: "KIA–Start Up Consult Ltd",
   robots: {
@@ -194,6 +194,11 @@ const organizationSchema = {
     "@type": "Person",
     "@id": `${siteConfig.url}/about#isaac-agya-koomson`,
     name: "Isaac Agya Koomson",
+    url: siteConfig.ceoProfileUrl,
+    sameAs: [
+      siteConfig.ceoProfileUrl,
+      "https://www.linkedin.com/in/isaac-agya-koomson/",
+    ],
     jobTitle: "Founder & Chief Executive Officer",
     description:
       "Keynote speaker at AETF.Ai 2025, Ghana Digital Innovation Week, UNDP Financing for Development Dialogue, and Business Tech Guide national television.",

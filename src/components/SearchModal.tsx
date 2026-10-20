@@ -199,11 +199,20 @@ const STATIC_INDEX: SearchItem[] = [
 
   // ─── DEEP SECTIONS (ABOUT) ───
   {
+    id: "ceo-isaac-agya-koomson-profile",
+    title: "Isaac Agya Koomson — Official Executive Profile & Portfolio",
+    category: "page",
+    href: "https://isaac.kiastartupconsult.com/",
+    description: "Official portfolio of Isaac Agya Koomson (KIA) — Economic Systems Strategist, Founder of KIA-Start Up Consult, HopeFusion Africa & Civitas Estate, IMF/World Bank & UN FfD4 Delegate.",
+    keywords: ["isaac", "agya", "koomson", "ceo", "founder", "biography", "profile", "portfolio", "website", "personal", "speaker", "imf", "world bank", "delegation"],
+    badge: "Official Profile ↗",
+  },
+  {
     id: "section-about-vision",
-    title: "CEO Isaac Agya Koomson — Vision & Profile",
+    title: "CEO Isaac Agya Koomson — Vision & Philosophy (KIA)",
     category: "section",
     href: "/about#vision",
-    description: "Executive profile of Founder & CEO Isaac Agya Koomson, architectural philosophy.",
+    description: "Executive vision of Founder & CEO Isaac Agya Koomson, architectural philosophy.",
     keywords: ["isaac", "agya", "koomson", "ceo", "founder", "biography", "profile", "vision"],
     badge: "About Section",
   },
@@ -421,7 +430,11 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
 
   const handleNavigate = (href: string) => {
     onClose();
-    router.push(href);
+    if (href.startsWith("http")) {
+      window.open(href, "_blank", "noopener,noreferrer");
+    } else {
+      router.push(href);
+    }
   };
 
   if (!isOpen) return null;
@@ -601,7 +614,8 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
               {[
                 { label: "🇬🇭 Business Registration", href: "/services/business-registration-ghana" },
                 { label: "⚡ Capital Simulator", href: "/#simulator" },
-                { label: "👤 CEO Isaac Agya Koomson", href: "/about#vision" },
+                { label: "👤 Isaac Agya Koomson (Official Profile ↗)", href: "https://isaac.kiastartupconsult.com/" },
+                { label: "🏛️ CEO Vision & Philosophy", href: "/about#vision" },
                 { label: "🚀 Adwuma Youth Engine", href: "/platforms#adwuma" },
                 { label: "🌍 AfCFTA Advisory", href: "/services#sector-advisory" },
                 { label: "💬 WhatsApp Desk", href: "/contact#channels" },

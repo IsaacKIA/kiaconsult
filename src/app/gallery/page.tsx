@@ -5,7 +5,7 @@ import MediaGallery from "@/components/MediaGallery";
 import WhatsAppCTA from "@/components/WhatsAppCTA";
 import StickySectionNav, { type NavSectionItem } from "@/components/StickySectionNav";
 import { siteConfig, buildWhatsAppLink } from "@/lib/site-config";
-import { Camera, Award, Globe, Mic, Download, ArrowRight } from "lucide-react";
+import { Camera, Award, Globe, Mic, Download, ArrowRight, ArrowUpRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Executive Media & Photographic Archive | KIA–Start Up Consult Ltd",
@@ -152,13 +152,15 @@ export default function GalleryPage() {
                 <span>Request Speaking Engagement</span>
               </a>
 
-              <Link
-                href="/about"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-black/60 hover:bg-gold-500/15 text-gold-300 hover:text-white font-bold text-sm border-2 border-gold-500/40 transition-all duration-300 shadow-md"
+              <a
+                href={siteConfig.ceoProfileUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-black/60 hover:bg-gold-500/15 text-gold-300 hover:text-white font-bold text-sm border-2 border-gold-500/40 transition-all duration-300 shadow-md group"
               >
                 <span>Read CEO Executive Profile</span>
-                <ArrowRight className="w-4 h-4 text-gold-400" />
-              </Link>
+                <ArrowUpRight className="w-4 h-4 text-gold-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </a>
             </div>
           </div>
         </div>

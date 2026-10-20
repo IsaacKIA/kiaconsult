@@ -3,6 +3,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import {
   ArrowRight,
+  ArrowUpRight,
   Sparkles,
   ShieldCheck,
   ChevronRight,
@@ -136,13 +137,25 @@ export default function Home() {
               access.
             </p>
 
-            <Link
-              href="/about"
-              className="inline-flex items-center gap-2 text-sm font-bold text-gold-deep hover:text-gold-600 transition-colors group"
-            >
-              <span>Read CEO Isaac Agya Koomson&rsquo;s Institutional Profile</span>
-              <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
+            <div className="flex flex-wrap items-center gap-4 pt-1">
+              <a
+                href={siteConfig.ceoProfileUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-bold text-gold-deep hover:text-gold-600 transition-colors group"
+              >
+                <span>Read CEO Isaac Agya Koomson&rsquo;s Official Profile</span>
+                <ArrowUpRight className="h-4 w-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </a>
+              <span className="text-line-dark hidden sm:inline">|</span>
+              <Link
+                href="/about"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold text-ink/70 hover:text-ink transition-colors"
+              >
+                <span>About KIA&rsquo;s Mission</span>
+                <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
+            </div>
           </div>
 
           {/* Right Column: Image with premium frame */}

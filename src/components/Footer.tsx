@@ -212,6 +212,17 @@ export default function Footer() {
                     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                   </svg>
                 </a>
+                {/* Isaac Agya Koomson Executive Profile */}
+                <a
+                  href={siteConfig.ceoProfileUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex h-9 w-9 items-center justify-center rounded-full border border-gold/40 bg-ink-soft text-gold transition-all duration-300 hover:border-gold hover:text-white hover:bg-gold/20 hover:shadow-[0_0_12px_rgba(255,215,0,0.4)]"
+                  aria-label="Isaac Agya Koomson — CEO Official Profile"
+                  title="Isaac Agya Koomson — Official Executive Profile"
+                >
+                  <span className="font-display font-extrabold text-[11px] tracking-tighter">IK</span>
+                </a>
               </div>
             </div>
 
@@ -281,6 +292,15 @@ export default function Footer() {
                     KIA Insights
                     <ArrowUpRight className="h-3 w-3" />
                   </Link>
+                  <a
+                    href={siteConfig.ceoProfileUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1 text-gold hover:underline font-semibold"
+                  >
+                    CEO Profile (Isaac Agya Koomson)
+                    <ArrowUpRight className="h-3 w-3" />
+                  </a>
                 </li>
               </ul>
             </div>

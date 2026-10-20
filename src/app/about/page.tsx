@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
+  ArrowUpRight,
   CheckCircle2,
   Globe,
   Users,
@@ -307,10 +308,19 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="pt-2">
+            <div className="pt-2 flex flex-wrap items-center gap-3">
               <WhatsAppCTA message={whatsappMessages.general} size="sm">
                 Connect Directly with Leadership
               </WhatsAppCTA>
+              <a
+                href={siteConfig.ceoProfileUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-gold-500/40 bg-gold-500/10 hover:bg-gold-500/20 text-ink font-bold text-xs transition-all duration-200 group shadow-sm"
+              >
+                <span>Isaac Agya Koomson&rsquo;s Executive Profile</span>
+                <ArrowUpRight className="h-3.5 w-3.5 text-gold-deep group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </a>
             </div>
           </div>
         </div>

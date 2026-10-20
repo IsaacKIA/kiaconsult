@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, Clock, Calendar, User, Share2, MessageCircle, CheckCircle, HelpCircle } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, Clock, Calendar, User, Share2, MessageCircle, CheckCircle, HelpCircle } from "lucide-react";
 import WhatsAppCTA from "@/components/WhatsAppCTA";
 import { whatsappMessages, siteConfig } from "@/lib/site-config";
 import {
@@ -97,6 +97,7 @@ export default async function InsightArticlePage({ params }: Props) {
       "@id": `${siteConfig.url}/about#isaac-agya-koomson`,
       name: article.author.name,
       jobTitle: article.author.role,
+      url: siteConfig.ceoProfileUrl,
     },
     publisher: {
       "@type": "Organization",
@@ -229,7 +230,16 @@ export default async function InsightArticlePage({ params }: Props) {
                   </div>
                 )}
                 <div>
-                  <p className="text-sm font-semibold text-ink">{article.author.name}</p>
+                  <a
+                    href={siteConfig.ceoProfileUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group/author inline-flex items-center gap-1.5 hover:text-gold-deep transition-colors"
+                    title="View Isaac Agya Koomson's Official Executive Profile"
+                  >
+                    <p className="text-sm font-semibold text-ink group-hover/author:text-gold-deep transition-colors">{article.author.name}</p>
+                    <ArrowUpRight className="h-3.5 w-3.5 text-gold-deep opacity-0 group-hover/author:opacity-100 transition-opacity" />
+                  </a>
                   <p className="text-xs text-ink/60">{article.author.role}</p>
                 </div>
               </div>

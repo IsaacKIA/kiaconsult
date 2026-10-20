@@ -14,8 +14,11 @@ export const siteConfig = {
   email: "info@kiastartupconsult.com",
   address: "Ajumako, Opposite Hope For Future Generation, Ghana",
   logoImage: "/images/kia-logo.jpg",
+  ceoProfileUrl: "https://isaac.kiastartupconsult.com/",
   social: {
     instagram: "https://instagram.com/kiastartupconsult",
+    linkedin: "https://linkedin.com/company/kiastartupconsult",
+    ceoProfile: "https://isaac.kiastartupconsult.com/",
   },
 };
 
