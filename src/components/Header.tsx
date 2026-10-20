@@ -20,6 +20,7 @@ import {
   Layers,
   Sparkles,
   Camera,
+  Calendar,
   ArrowUpRight,
   FileText,
 } from "lucide-react";
@@ -376,6 +377,13 @@ export default function Header() {
 
             <NavLink href="/about" active={pathname === "/about"}>
               About
+            </NavLink>
+
+            <NavLink href="/events" active={pathname.startsWith("/events")}>
+              <span className="flex items-center gap-1.5">
+                <Calendar className="w-3.5 h-3.5 text-gold-deep" />
+                Events
+              </span>
             </NavLink>
 
             <NavLink href="/gallery" active={pathname === "/gallery"}>

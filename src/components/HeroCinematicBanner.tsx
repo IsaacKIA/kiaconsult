@@ -43,6 +43,25 @@ export interface HeroSlide {
 
 const HERO_SLIDES: HeroSlide[] = [
   {
+    id: "3i-africa-summit",
+    image: "/images/3i-africa-summit-executive-delegation.jpg",
+    badge: "CONTINENTAL FINTECH SUMMIT",
+    badgeType: "summit",
+    title: "3i Africa Summit 2026",
+    event: "Bank of Ghana, GhIPSS & GFTN Continental Summit",
+    theme: "The Next Frontier: Shaping Africa's Fintech Future — Innovation, Investment & Impact",
+    location: "Accra International Conference Centre",
+    year: "2026",
+    audience: "Central Bank Governors, Regulators & Global Investors",
+    statHighlight: {
+      value: "3i Framework",
+      label: "Innovation · Investment · Impact",
+    },
+    accentColor: "#f59e0b",
+    quote:
+      "Unlocking Africa's fintech future requires interconnecting payment architecture, regulatory foresight, and sovereign enterprise capital.",
+  },
+  {
     id: "aetf-stage",
     image: "/images/aetf-ai-conference-stage.jpg",
     badge: "CONTINENTAL STAGE KEYNOTE",
@@ -522,7 +541,7 @@ export default function HeroCinematicBanner() {
               </div>
 
               {/* Center / Right: Interactive Thumbnails & Progress Bars */}
-              <div className="grid grid-cols-5 gap-1.5 sm:gap-2.5 w-full md:w-auto">
+              <div className="grid grid-cols-3 sm:grid-cols-6 gap-1.5 sm:gap-2.5 w-full md:w-auto">
                 {HERO_SLIDES.map((slide, idx) => {
                   const isActive = idx === currentIndex;
                   return (

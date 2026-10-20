@@ -118,6 +118,7 @@ const alignment = [
   "United Nations Convention to Combat Desertification (UNCCD)",
   "United Nations Conference on Trade and Development (UNCTAD)",
   "African Union (Agenda 2063 Priorities)",
+  "Bank of Ghana & GhIPSS Fintech Ecosystem (3i Africa)",
   "World Bank Group & IFC",
   "National Entrepreneurship & Innovation Programme (NEIP, Ghana)",
   "Bilateral Development Cooperation Agencies (e.g. GIZ)",
@@ -152,6 +153,12 @@ const milestones = [
     year: "2025",
     title: "AETF.Ai Continental Stage",
     body: "KIA represents Africa's enterprise development agenda at the AETF.Ai Conference — AI for Africa & Sustainable Development.",
+    icon: Award,
+  },
+  {
+    year: "2026",
+    title: "3i Africa Summit Delegation",
+    body: "KIA participates at the 3i Africa Summit (convened by Bank of Ghana, GhIPSS & GFTN) championing Africa's digital financial architecture, fintech innovation, and cross-border enterprise integration.",
     icon: Award,
   },
 ];
@@ -293,6 +300,10 @@ export default function AboutPage() {
               <div className="flex items-center gap-2 rounded-full bg-gold-500/12 border border-gold-500/30 px-4 py-2 text-xs font-semibold text-ink hover:bg-gold-500/20 hover:border-gold-500/50 transition-all duration-200">
                 <GraduationCap className="h-4 w-4 text-gold-deep" />
                 <span>AETF.Ai Continental Speaker</span>
+              </div>
+              <div className="flex items-center gap-2 rounded-full bg-gold-500/12 border border-gold-500/30 px-4 py-2 text-xs font-semibold text-ink hover:bg-gold-500/20 hover:border-gold-500/50 transition-all duration-200">
+                <ShieldCheck className="h-4 w-4 text-gold-deep" />
+                <span>3i Africa Summit 2026</span>
               </div>
             </div>
 

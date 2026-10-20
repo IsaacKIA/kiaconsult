@@ -85,6 +85,7 @@ export const navigation = [
     ],
   },
   { label: "About", href: "/about" },
+  { label: "Events", href: "/events" },
   { label: "Gallery", href: "/gallery" },
   { label: "Insights", href: "/insights" },
   { label: "Contact", href: "/contact" },

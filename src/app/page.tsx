@@ -42,6 +42,7 @@ export const metadata: Metadata = {
 };
 
 const tickerItems = [
+  "3i Africa Summit 2026 Delegation",
   "AETF.Ai Conference 2025 Keynote",
   "Ghana Digital Innovation Week Podium",
   "UNDP Financing for Development Dialogue",
@@ -195,6 +196,7 @@ export default function Home() {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-5 md:gap-8">
             {[
+              { icon: ShieldCheck, label: "3i Africa Summit", sub: "Fintech & Impact 2026" },
               { icon: Globe, label: "UNDP", sub: "Financing for Development" },
               { icon: Award, label: "AETF.Ai 2025", sub: "Keynote Speaker" },
               { icon: TrendingUp, label: "AfCFTA", sub: "Trade Acceleration" },
@@ -463,9 +465,15 @@ export default function Home() {
             </Link>
           </div>
 
-          {/* 3 Featured Highlights */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* 4 Featured Highlights */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
+              {
+                src: "/images/3i-africa-summit-executive-delegation.jpg",
+                alt: "3i Africa Summit 2026 Executive Delegation",
+                badge: "Fintech & Impact",
+                title: "3i Africa Summit 2026 — Executive Delegation",
+              },
               {
                 src: "/images/undp-partnership-meeting.jpg",
                 alt: "UNDP Partnership Dialogue",

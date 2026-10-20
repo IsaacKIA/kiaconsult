@@ -10,14 +10,14 @@ import { Camera, Award, Globe, Mic, Download, ArrowRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "Executive Media & Photographic Archive | KIA–Start Up Consult Ltd",
   description:
-    "Explore verified photographic documentation of CEO Isaac Agya Koomson and KIA–Start Up Consult across international economic forums, UNDP partnerships, national television broadcasts, and continental enterprise summits.",
+    "Explore verified photographic documentation of CEO Isaac Agya Koomson and KIA–Start Up Consult across the 3i Africa Summit, international economic forums, UNDP partnerships, national television broadcasts, and continental enterprise summits.",
   alternates: {
     canonical: `${siteConfig.url}/gallery`,
   },
   openGraph: {
     title: "Executive Media & Photographic Archive | KIA–Start Up Consult Ltd",
     description:
-      "Explore verified photographic documentation of CEO Isaac Agya Koomson and KIA–Start Up Consult across international economic forums, UNDP partnerships, and continental enterprise summits.",
+      "Explore verified photographic documentation of CEO Isaac Agya Koomson and KIA–Start Up Consult across the 3i Africa Summit, international economic forums, UNDP partnerships, and continental enterprise summits.",
     url: `${siteConfig.url}/gallery`,
     siteName: siteConfig.name,
     images: [
@@ -39,10 +39,10 @@ export const metadata: Metadata = {
 };
 
 const STATS = [
-  { label: "High-Level Keynotes Delivered", value: "45+" },
-  { label: "Institutional & Multilateral Delegations", value: "28" },
-  { label: "National Broadcast Broadcasts", value: "15+" },
-  { label: "Youth & Founders Convened", value: "12,000+" },
+  { label: "High-Level Keynotes Delivered", value: "50+" },
+  { label: "Institutional & Multilateral Delegations", value: "32+" },
+  { label: "National Broadcast Features", value: "18+" },
+  { label: "Youth & Founders Convened", value: "14,000+" },
 ];
 
 const GALLERY_NAV_SECTIONS: NavSectionItem[] = [
@@ -78,8 +78,9 @@ export default function GalleryPage() {
 
             <p className="mt-7 text-base sm:text-xl text-white/88 leading-relaxed max-w-2xl font-normal animate-fade-up delay-200">
               Photographic documentation of CEO Isaac Agya Koomson and KIA–Start Up Consult Ltd
-              convening leaders across African Economic Transformation Forums, UNDP multilateral
-              dialogues, national television studios, and grassroots venture hubs.
+              convening leaders across the 3i Africa Summit (Bank of Ghana, GhIPSS &amp; GFTN),
+              African Economic Transformation Forums, UNDP multilateral dialogues, national television
+              studios, and grassroots venture hubs.
             </p>
 
             {/* Quick stats strip */}

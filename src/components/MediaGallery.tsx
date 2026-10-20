@@ -13,6 +13,36 @@ interface GalleryImage {
 
 const galleryImages: GalleryImage[] = [
   {
+    src: "/images/3i-africa-summit-executive-delegation.jpg",
+    alt: "Isaac Agya Koomson and executive delegation at 3i Africa Summit 2026",
+    caption: "3i Africa Summit 2026 — Executive Delegation & Fintech Leadership",
+    category: "Conference",
+  },
+  {
+    src: "/images/3i-africa-summit-networking-discussion.jpg",
+    alt: "KIA executive dialogue on African digital trade & fintech systems at 3i Africa Summit",
+    caption: "3i Africa Summit — Strategic Dialogue on African Digital Infrastructure",
+    category: "Institutional",
+  },
+  {
+    src: "/images/3i-africa-summit-photobooth-frame.jpg",
+    alt: "KIA at 3i Africa Summit 2026 — Innovation, Investment, Impact Showcase",
+    caption: "3i Africa Summit — Bank of Ghana & GhIPSS Fintech Showcase",
+    category: "Conference",
+  },
+  {
+    src: "/images/3i-africa-summit-delegate-portrait.jpg",
+    alt: "KIA Delegation at 3i Africa Summit — Shaping Africa's Fintech Future",
+    caption: "3i Africa Summit — Shaping Africa's Fintech Future",
+    category: "Institutional",
+  },
+  {
+    src: "/images/3i-africa-summit-delegate-outdoor.jpg",
+    alt: "KIA Representative at 3i Africa Summit outdoor pavilion",
+    caption: "3i Africa Summit — Pan-African Innovation & Partner Engagement",
+    category: "Media",
+  },
+  {
     src: "/images/aetf-ai-conference-stage.jpg",
     alt: "Isaac Agya Koomson on stage at AETF.Ai Conference 2025",
     caption: "AETF.Ai Conference 2025 — Keynote Address on AI for Africa",

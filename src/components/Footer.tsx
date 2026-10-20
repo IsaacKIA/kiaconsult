@@ -266,10 +266,17 @@ export default function Footer() {
                     </Link>
                   </li>
                 ))}
-                <li className="pt-1 border-t border-white/8 mt-1">
+                <li className="pt-1 border-t border-white/8 mt-1 space-y-2">
+                  <Link
+                    href="/events"
+                    className="flex items-center gap-1 text-gold hover:underline"
+                  >
+                    Events &amp; Trainings
+                    <ArrowUpRight className="h-3 w-3" />
+                  </Link>
                   <Link
                     href="/insights"
-                    className="flex items-center gap-1 text-gold hover:underline"
+                    className="flex items-center gap-1 text-paper/80 hover:text-gold hover:underline"
                   >
                     KIA Insights
                     <ArrowUpRight className="h-3 w-3" />
