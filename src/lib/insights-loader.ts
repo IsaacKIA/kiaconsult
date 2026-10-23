@@ -92,6 +92,11 @@ export function parseInsightMarkdown(fileContent: string, fileSlug: string): Ins
             .replace(/^["“]/, "")
             .replace(/["”]$/, "")
             .trim();
+        } else if (trimmed.startsWith("### ") && trimmed.includes("\n")) {
+          const firstLine = trimmed.slice(0, trimmed.indexOf("\n")).trim();
+          const remainder = trimmed.slice(trimmed.indexOf("\n")).trim();
+          paragraphs.push(firstLine);
+          if (remainder) paragraphs.push(remainder);
         } else {
           paragraphs.push(trimmed);
         }

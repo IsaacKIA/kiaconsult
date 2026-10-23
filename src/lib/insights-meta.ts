@@ -151,8 +151,8 @@ export const insightArticlesMeta: InsightMeta[] = [
   },
   {
     "slug": "startup-due-diligence-process-checklist-data-room",
-    "title": "The Startup Due Diligence Blueprint: Mastering the 4 Core Pillars (People, Product, Market, Deal) and the Complete 16-Category Virtual Data Room Checklist",
-    "excerpt": "More term sheets collapse in due diligence than during valuation negotiations. Discover the 4 core dimensions institutional investors interrogate — People, Product, Market, and Deal — and how to assemble an audit-grade 16-category Virtual Data Room (VDR) that accelerates funding from months to weeks.",
+    "title": "The Due Diligence Audit: Mastering the 4 Core Pillars (People, Product, Market, Deal) and the Institutional 16-Category Data Room Protocol",
+    "excerpt": "More than 65% of signed term sheets quietly collapse during legal and financial diligence. Here is the operational framework institutional investors interrogate across People, Product, Market, and Deal — and how to construct an audit-grade Virtual Data Room (VDR) that accelerates funding from months to weeks.",
     "category": "Capital & Investment",
     "author": {
       "name": "Isaac Agya Koomson",
@@ -162,7 +162,7 @@ export const insightArticlesMeta: InsightMeta[] = [
     "publishedAt": "October 2026",
     "readingTime": "16 min read",
     "heroImage": "/images/executive-briefing.jpg",
-    "heroCaption": "In venture capital and private equity, due diligence is not a post-term-sheet formality — it is an forensic audit of operational integrity, governance, and fiduciary discipline.",
+    "heroCaption": "In institutional venture capital and private equity, due diligence is not a post-term-sheet formality — it is a forensic audit of fiduciary discipline and operational integrity.",
     "tags": [
       "Startup Due Diligence",
       "Due Diligence Checklist",

@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, ArrowUpRight, Clock, Calendar, User, Share2, MessageCircle, CheckCircle, HelpCircle } from "lucide-react";
 import WhatsAppCTA from "@/components/WhatsAppCTA";
+import ArticleContentRenderer from "@/components/ArticleContentRenderer";
 import { whatsappMessages, siteConfig } from "@/lib/site-config";
 import {
   getAllInsights,
@@ -281,22 +282,7 @@ export default async function InsightArticlePage({ params }: Props) {
             </p>
 
             {article.content.sections.map((section) => (
-              <div key={section.heading} className="space-y-4 pt-6">
-                <h2 className="font-display text-2xl sm:text-3xl font-bold text-ink">
-                  {section.heading}
-                </h2>
-                {section.paragraphs.map((para, i) => (
-                  <p key={i}>{para}</p>
-                ))}
-
-                {section.pullQuote && (
-                  <figure className="my-8 quote-premium py-6 px-8 rounded-2xl shadow-xl">
-                    <blockquote className="font-display text-xl sm:text-2xl font-semibold italic !text-white leading-relaxed">
-                      &ldquo;{section.pullQuote}&rdquo;
-                    </blockquote>
-                  </figure>
-                )}
-              </div>
+              <ArticleContentRenderer key={section.heading} section={section} />
             ))}
 
             {/* Strategic Takeaways Box */}
