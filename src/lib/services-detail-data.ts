@@ -60,7 +60,7 @@ export const servicesDetailData: Record<string, ServiceDetail> = {
     metaTitle: "Enterprise Creation & Venture Development in Africa | KIA Consult",
     metaDescription:
       "Turn your vision into a structured, bankable, and scalable enterprise. Feasibility modeling, legal structuring, go-to-market execution, and investor-grade documentation.",
-    heroImage: "/images/gdiw-keynote-podium.jpg",
+    heroImage: "/images/consulting-session.jpg",
     diagnostic: {
       headline: "Africa Does Not Lack Ideas. It Lacks Venture Architecture.",
       description:
@@ -191,7 +191,7 @@ export const servicesDetailData: Record<string, ServiceDetail> = {
     metaTitle: "SME Growth & Operational Advisory in Africa | KIA Consult",
     metaDescription:
       "Transforming established African SMEs into resilient market leaders. Business restructuring, supply chain optimization, export readiness, and corporate governance.",
-    heroImage: "/images/mentorship-consulting.jpg",
+    heroImage: "/images/strategic-discussion.jpg",
     diagnostic: {
       headline: "The 'Missing Middle' Phenomenon in African Business",
       description:
@@ -321,7 +321,7 @@ export const servicesDetailData: Record<string, ServiceDetail> = {
     metaTitle: "Capital & Financial Advisory in Africa | KIA Consult",
     metaDescription:
       "Bridge the African capital divide. Investment readiness, 3-statement financial modeling, debt/equity syndication, grant advisory, and institutional deal structuring.",
-    heroImage: "/images/undp-partnership-meeting.jpg",
+    heroImage: "/images/advisory-consultation.jpg",
     diagnostic: {
       headline: "Billions in Global Capital Are Idle While African Enterprise Starves",
       description:
@@ -581,7 +581,7 @@ export const servicesDetailData: Record<string, ServiceDetail> = {
     metaTitle: "Sector Advisory: Agribusiness, Real Estate & Tourism | KIA Consult",
     metaDescription:
       "Specialized domain advisory for high-impact African sectors. Agribusiness value chains, real estate syndication, tourism master planning, and AfCFTA cross-border corridors.",
-    heroImage: "/images/executive-panel-discussion.jpg",
+    heroImage: "/images/client-meeting.jpg",
     diagnostic: {
       headline: "Generic Consulting Fails in Africa's Specialized Industries",
       description:
@@ -711,7 +711,7 @@ export const servicesDetailData: Record<string, ServiceDetail> = {
     metaTitle: "Ecosystem Development & Multilateral Advisory in Africa | KIA Consult",
     metaDescription:
       "Partnering with governments, development agencies (UNDP, AfDB), and foundations to build durable African entrepreneurship ecosystems, innovation hubs, and TVET transitions.",
-    heroImage: "/images/aetf-ai-conference-stage.jpg",
+    heroImage: "/images/executive-briefing.jpg",
     diagnostic: {
       headline: "Isolated Donor Projects Evaporate When Funding Ends",
       description:
