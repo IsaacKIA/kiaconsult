@@ -30,7 +30,7 @@ import {
   siteConfig,
   whatsappMessages,
 } from "@/lib/site-config";
-import { insightArticles } from "@/lib/insights-data";
+import { getAllInsightsMeta } from "@/lib/insights-loader";
 import { faqItems } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -68,7 +68,7 @@ const HOME_NAV_SECTIONS: NavSectionItem[] = [
 ];
 
 export default function Home() {
-  const featuredArticles = insightArticles.slice(0, 3);
+  const featuredArticles = getAllInsightsMeta().slice(0, 3);
 
   return (
     <>

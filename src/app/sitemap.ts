@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/site-config";
-import { insightArticles } from "@/lib/insights-data";
+import { getAllInsightsMeta } from "@/lib/insights-loader";
 import { servicesDetailData } from "@/lib/services-detail-data";
 import { platformsDetailData } from "@/lib/platforms-detail-data";
 
@@ -33,7 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
-  const articleRoutes: MetadataRoute.Sitemap = insightArticles.map((a) => ({
+  const articleRoutes: MetadataRoute.Sitemap = getAllInsightsMeta().map((a) => ({
     url: `${siteConfig.url}/insights/${a.slug}`,
     lastModified: new Date(),
     changeFrequency: "monthly",

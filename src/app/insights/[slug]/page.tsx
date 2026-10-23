@@ -6,25 +6,25 @@ import { ArrowLeft, ArrowRight, ArrowUpRight, Clock, Calendar, User, Share2, Mes
 import WhatsAppCTA from "@/components/WhatsAppCTA";
 import { whatsappMessages, siteConfig } from "@/lib/site-config";
 import {
-  insightArticles,
-  getArticleBySlug,
-  getRelatedArticles,
+  getAllInsights,
+  getInsightBySlug,
+  getRelatedInsights,
   type InsightArticle,
-} from "@/lib/insights-data";
+} from "@/lib/insights-loader";
 
 interface Props {
   params: Promise<{ slug: string }>;
 }
 
 export async function generateStaticParams() {
-  return insightArticles.map((art) => ({
+  return getAllInsights().map((art) => ({
     slug: art.slug,
   }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const article = getArticleBySlug(slug);
+  const article = getInsightBySlug(slug);
 
   if (!article) {
     return { title: "Article Not Found" };
@@ -71,13 +71,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function InsightArticlePage({ params }: Props) {
   const { slug } = await params;
-  const article = getArticleBySlug(slug);
+  const article = getInsightBySlug(slug);
 
   if (!article) {
     notFound();
   }
 
-  const related = getRelatedArticles(slug);
+  const related = getRelatedInsights(slug);
   const waArticleMessage = whatsappMessages.article(article.title);
 
   const articleUrl = `${siteConfig.url}/insights/${article.slug}`;
