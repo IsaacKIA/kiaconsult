@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, ArrowUpRight, Clock, Calendar, User, Share2, MessageCircle, CheckCircle, HelpCircle } from "lucide-react";
 import WhatsAppCTA from "@/components/WhatsAppCTA";
-import ArticleContentRenderer from "@/components/ArticleContentRenderer";
+import ArticleContentRenderer, { renderInlineMarkdown } from "@/components/ArticleContentRenderer";
 import { whatsappMessages, siteConfig } from "@/lib/site-config";
 import {
   getAllInsights,
@@ -277,9 +277,23 @@ export default async function InsightArticlePage({ params }: Props) {
 
           {/* Body Content */}
           <div className="space-y-8 text-base sm:text-lg leading-relaxed text-ink/80">
-            <p className="first-letter:text-5xl first-letter:font-display first-letter:font-bold first-letter:mr-2.5 first-letter:float-left first-letter:text-gold-deep">
-              {article.content.intro}
-            </p>
+            <div className="space-y-5">
+              {article.content.intro
+                .split(/\n\s*\n/)
+                .filter((p) => p.trim() && p.trim() !== "---")
+                .map((para, i) => (
+                  <p
+                    key={i}
+                    className={
+                      i === 0
+                        ? "first-letter:text-5xl first-letter:font-display first-letter:font-bold first-letter:mr-2.5 first-letter:float-left first-letter:text-gold-deep"
+                        : ""
+                    }
+                  >
+                    {renderInlineMarkdown(para.trim())}
+                  </p>
+                ))}
+            </div>
 
             {article.content.sections.map((section) => (
               <ArticleContentRenderer key={section.heading} section={section} />

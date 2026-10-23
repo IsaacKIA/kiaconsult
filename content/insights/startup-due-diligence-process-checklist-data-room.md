@@ -104,17 +104,9 @@ faqs:
       renegotiate valuation downward or withdraw the offer entirely.
 ---
 
-In the theater of venture capital and private equity, the pitch deck captures the imagination, but the due diligence room writes the check. 
+Securing a signed term sheet is often treated as the final milestone of a capital round, but in professional transaction advisory, it marks the opening of the most unforgiving phase of investing: confirmatory due diligence. Across African markets and cross-border investment corridors, more transactions dissolve between preliminary agreement and financial close due to governance, tax, or capitalization oversights than during initial commercial pitch meetings.
 
-Every year, hundreds of promising enterprises across Africa and emerging markets sign coveted term sheets, celebrate champagne moments with their leadership teams, and then watch in disbelief as the transaction quietly dissolves six to eight weeks later. The valuation was agreed. The chemistry with the lead investment partner was electric. The commercial thesis was validated. Yet the escrow wire never arrives.
-
-What happened? The company failed the test of operational clarity.
-
-Due diligence is not an administrative nuisance to be endured after fundraising; it is a clinical forensic audit of fiduciary discipline. Tier-one institutional allocators — from private equity sponsors and venture funds to sovereign development finance institutions (DFIs) — know that commercial vision is easy to communicate, but enterprise durability lives in the contracts, board minutes, tax filings, and cap table ledgers. When an investment committee issues a due diligence request list, they are testing one fundamental question: *If we inject institutional capital into this corporate vehicle, will it accelerate, or will it fracture under regulatory and legal pressure?*
-
-At its foundation, institutional due diligence is about achieving uncompromised clarity across four immutable pillars: **People**, **Product**, **Market**, and **The Deal**.
-
----
+Institutional due diligence is an audit of fiduciary discipline. Tier-one venture funds, private equity sponsors, and sovereign development finance institutions conduct diligence to confirm whether an enterprise can absorb growth capital without legal or operational failure. This verification process resolves into four essential areas of operational clarity: People, Product, Market, and Deal mechanics.
 
 ## The 4 Foundational Pillars of Due Diligence Clarity
 

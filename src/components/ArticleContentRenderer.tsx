@@ -10,7 +10,7 @@ interface SectionProps {
 /**
  * Safely parses inline markdown (bold, italic, code) into React elements.
  */
-function renderInlineMarkdown(text: string): React.ReactNode {
+export function renderInlineMarkdown(text: string): React.ReactNode {
   // Regex to split on **bold**, *italic*, `code`
   const tokens: React.ReactNode[] = [];
   const regex = /(\*\*.*?\*\*|\*.*?\*|`.*?`)/g;
