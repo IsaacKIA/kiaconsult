@@ -19,6 +19,38 @@ export interface InsightMeta {
 
 export const insightArticlesMeta: InsightMeta[] = [
   {
+    "slug": "how-to-change-company-director-secretary-ghana-orc-form-17",
+    "title": "Company Amendments in Ghana: The Official Guide to Changing Directors and Secretaries Under Act 992 (Form 17 & 17A)",
+    "excerpt": "A definitive corporate governance walkthrough on filing changes of company directors and secretaries with the Office of the Registrar of Companies (ORC). Explore the four statutory grounds under Act 992—resignation, death, expiration of tenure, and abandonment of office—alongside Form 17/17A filing procedures, documentary proofs, and official fee schedules.",
+    "category": "Policy & Economic Development",
+    "author": {
+      "name": "Isaac Agya Koomson",
+      "role": "Chief Executive Officer, KIA–Start Up Consult Ltd",
+      "avatar": "/images/aetf-ai-panel-speaker.jpg"
+    },
+    "publishedAt": "November 2026",
+    "readingTime": "9 min read",
+    "heroImage": "/images/strategic-discussion.jpg",
+    "heroCaption": "Board restructuring, corporate secretarial compliance, and statutory filings: Updating director and secretarial registers under Ghana's Companies Act, 2019 (Act 992).",
+    "tags": [
+      "Change of Director Ghana",
+      "Company Secretary Ghana",
+      "Form 17 ORC",
+      "Form 17A ORC",
+      "Companies Act 2019",
+      "Act 992",
+      "Corporate Amendments",
+      "Board Governance",
+      "ORC Filing Fees"
+    ],
+    "featured": false,
+    "relatedSlugs": [
+      "incorporation-company-limited-by-shares-ghana-orc-guide",
+      "how-to-register-public-company-limited-by-shares-ghana-plc",
+      "the-323-company-question-ghana-orc-dissolution"
+    ]
+  },
+  {
     "slug": "incorporation-company-limited-by-shares-ghana-orc-guide",
     "title": "Incorporation of a Company Limited by Shares in Ghana: The Definitive ORC Form 3A Guide (2026)",
     "excerpt": "A comprehensive, step-by-step masterclass on incorporating a Private Company Limited by Shares (Ltd) under Ghana's Companies Act, 2019 (Act 992). Discover the official 12-step Form 3A procedure, 1% capital duty mechanics, ICAG auditor rules, stated capital thresholds, and the complete director and shareholder onboarding checklist.",
