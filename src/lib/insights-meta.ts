@@ -19,6 +19,37 @@ export interface InsightMeta {
 
 export const insightArticlesMeta: InsightMeta[] = [
   {
+    "slug": "how-to-register-sole-proprietorship-ghana-orc-guide",
+    "title": "How to Register a Sole Proprietorship in Ghana: The Definitive ORC Business Name Guide (2026)",
+    "excerpt": "A comprehensive, plain-English walkthrough of registering a Business Name (Sole Proprietorship) with the Office of the Registrar of Companies (ORC) under Act 151. Explore the 7-step filing procedure, fee schedules, unlimited liability implications, and the complete applicant data checklist.",
+    "category": "Entrepreneurship",
+    "author": {
+      "name": "Isaac Agya Koomson",
+      "role": "Chief Executive Officer, KIA–Start Up Consult Ltd",
+      "avatar": "/images/aetf-ai-panel-speaker.jpg"
+    },
+    "publishedAt": "November 2026",
+    "readingTime": "9 min read",
+    "heroImage": "/images/young-entrepreneur.jpg",
+    "heroCaption": "Empowering individual enterprise founders: Navigating Business Name formalization, statutory compliance, and commercial legitimacy under the Office of the Registrar of Companies (ORC).",
+    "tags": [
+      "Sole Proprietorship Ghana",
+      "Business Name Registration",
+      "ORC Ghana",
+      "Form A Ghana",
+      "Act 151",
+      "Ghana Startup",
+      "SME Formalization",
+      "Ghana Card Registration"
+    ],
+    "featured": false,
+    "relatedSlugs": [
+      "how-to-register-company-ghana-2026",
+      "complete-guide-formalizing-informal-enterprise-ghana",
+      "the-323-company-question-ghana-orc-dissolution"
+    ]
+  },
+  {
     "slug": "the-323-company-question-ghana-orc-dissolution",
     "title": "The 323-Company Question: Is Ghana Cleaning Its Business Register or Confronting a Deeper Economic Problem?",
     "excerpt": "A definitive strategic review of the Office of the Registrar of Companies (ORC) Bulletin Vol. 49 dissolution notice under Act 992. Why striking off hundreds of entities exposes the tension between statutory compliance, administrative friction, and the real survival rate of Ghanaian enterprises.",
