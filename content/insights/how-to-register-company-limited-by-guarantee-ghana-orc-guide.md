@@ -196,3 +196,4 @@ Anchor your mission on a lawful, institutional foundation that commands donor co
 - **Income Tax Act, 2015 (Act 896):** Section 97 (Tax Exemption Provisions for Charitable and Religious Institutions).
 - **Non-Governmental Organizations Guidelines:** Ministry of Gender, Children and Social Protection (Department of Social Welfare).
 - **Office of the Registrar of Companies (ORC):** Official 2026 Tariff Schedule for Companies Limited by Guarantee (Form 3E).
+

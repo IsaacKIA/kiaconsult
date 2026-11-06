@@ -170,3 +170,4 @@ Protect your board, insulate outgoing officers, and keep your enterprise in flaw
 - **Companies Act, 2019 (Act 992):** Sections 170–173 (Directors), 175 (Removal of Directors), 176 (Notice of Changes in Directors), and 211 (Company Secretary).
 - **Office of the Registrar of Companies (ORC):** Official Tariff and Statutory Schedule for Form 17, Form 17A, and Certified True Copies.
 - **Bank of Ghana Anti-Money Laundering / Counter Financing of Terrorism (AML/CFT) Guidelines:** Mandating official registry CTCs for corporate account mandate modifications.
+

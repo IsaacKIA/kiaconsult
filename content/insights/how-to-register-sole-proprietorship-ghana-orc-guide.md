@@ -200,3 +200,4 @@ Build your business on a rock-solid legal foundation today. Focus on building yo
 - **Companies Act, 2019 (Act 992):** Statutory provisions governing conversion into limited liability corporate entities.
 - **Local Governance Act, 2016 (Act 936):** Mandating Business Operating Permits (BOP) across Metropolitan, Municipal, and District Assemblies (MMDAs).
 - **Office of the Registrar of Companies (ORC):** Official 2026 Tariff and Fee Schedules for Business Names and Annual Renewals.
+

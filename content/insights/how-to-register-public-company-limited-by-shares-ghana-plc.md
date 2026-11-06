@@ -202,3 +202,4 @@ Scale your vision from a private enterprise into an enduring national institutio
 - **Securities Industry Act, 2016 (Act 929):** Governing public offerings, prospectuses, and capital market supervision.
 - **Institute of Chartered Accountants Ghana (ICAG):** Regulatory standards for external corporate audit licensing.
 - **Office of the Registrar of Companies (ORC):** Official 2026 Tariff Schedule for Public Companies (Form 3C) and Annual Filings.
+

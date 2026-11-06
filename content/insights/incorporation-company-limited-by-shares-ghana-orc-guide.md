@@ -192,3 +192,4 @@ Build your business on an unshakeable corporate foundation. Focus on scaling you
 - **Ghana Investment Promotion Centre Act, 2013 (Act 865):** Foreign equity requirements and diaspora enterprise registration.
 - **Local Governance Act, 2016 (Act 936):** Business Operating Permits across Metropolitan, Municipal, and District Assemblies.
 - **Office of the Registrar of Companies (ORC):** Official 2026 Tariff Schedule for Private Companies Limited by Shares (Form 3A).
+
