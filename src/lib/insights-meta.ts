@@ -19,6 +19,37 @@ export interface InsightMeta {
 
 export const insightArticlesMeta: InsightMeta[] = [
   {
+    "slug": "the-323-company-question-ghana-orc-dissolution",
+    "title": "The 323-Company Question: Is Ghana Cleaning Its Business Register or Confronting a Deeper Economic Problem?",
+    "excerpt": "A definitive strategic review of the Office of the Registrar of Companies (ORC) Bulletin Vol. 49 dissolution notice under Act 992. Why striking off hundreds of entities exposes the tension between statutory compliance, administrative friction, and the real survival rate of Ghanaian enterprises.",
+    "category": "Policy & Economic Development",
+    "author": {
+      "name": "Isaac Agya Koomson",
+      "role": "Chief Executive Officer, KIA–Start Up Consult Ltd",
+      "avatar": "/images/aetf-ai-panel-speaker.jpg"
+    },
+    "publishedAt": "November 2026",
+    "readingTime": "12 min read",
+    "heroImage": "/images/orc-companies-bulletin-vol-49.jpg",
+    "heroCaption": "Official Gazette: The Office of the Registrar of Companies (ORC) Companies Bulletin Volume 49, published October 15, 2026, announcing the administrative strike-off and dissolution of 323 corporate entities under Section 289(5) of Act 992.",
+    "tags": [
+      "ORC Ghana",
+      "Companies Act 2019",
+      "Act 992",
+      "Company Dissolution",
+      "Corporate Governance",
+      "Business Environment Ghana",
+      "SME Compliance",
+      "Annual Returns Ghana"
+    ],
+    "featured": true,
+    "relatedSlugs": [
+      "how-to-register-company-ghana-2026",
+      "complete-guide-formalizing-informal-enterprise-ghana",
+      "how-ghanaian-startups-prepare-institutional-funding-2026"
+    ]
+  },
+  {
     "slug": "ghana-vat-act-870-sme-investor-tax-guide",
     "title": "Demystifying Ghana's Value Added Tax Act (Act 870): The Executive Strategic Playbook for SMEs, MSMEs, Diasporas, and Foreign Investors",
     "excerpt": "A masterclass on Ghana's Value Added Tax Act, 2013 (Act 870). Learn how the 12.5% standard vs. 3% flat rate, GHS 200,000 threshold, 7% withholding VAT, 6-month input tax recovery window, and cross-border place-of-supply rules impact cash flow, pricing, and compliance for domestic businesses and international investors.",
