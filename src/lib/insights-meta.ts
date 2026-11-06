@@ -19,6 +19,38 @@ export interface InsightMeta {
 
 export const insightArticlesMeta: InsightMeta[] = [
   {
+    "slug": "incorporation-company-limited-by-shares-ghana-orc-guide",
+    "title": "Incorporation of a Company Limited by Shares in Ghana: The Definitive ORC Form 3A Guide (2026)",
+    "excerpt": "A comprehensive, step-by-step masterclass on incorporating a Private Company Limited by Shares (Ltd) under Ghana's Companies Act, 2019 (Act 992). Discover the official 12-step Form 3A procedure, 1% capital duty mechanics, ICAG auditor rules, stated capital thresholds, and the complete director and shareholder onboarding checklist.",
+    "category": "SME Growth",
+    "author": {
+      "name": "Isaac Agya Koomson",
+      "role": "Chief Executive Officer, KIA–Start Up Consult Ltd",
+      "avatar": "/images/aetf-ai-panel-speaker.jpg"
+    },
+    "publishedAt": "November 2026",
+    "readingTime": "11 min read",
+    "heroImage": "/images/business-registration-ghana.jpg",
+    "heroCaption": "Corporate structuring, equity allocation, and statutory incorporation: Architecting a Private Company Limited by Shares (Ltd) under Ghana's Companies Act, 2019 (Act 992).",
+    "tags": [
+      "Company Limited by Shares",
+      "Private Limited Company Ghana",
+      "Companies Act 2019",
+      "Act 992",
+      "Form 3A",
+      "ORC Ghana",
+      "Business Incorporation Ghana",
+      "SME Formalization",
+      "Capital Duty Ghana"
+    ],
+    "featured": false,
+    "relatedSlugs": [
+      "how-to-register-company-ghana-2026",
+      "how-to-register-public-company-limited-by-shares-ghana-plc",
+      "the-323-company-question-ghana-orc-dissolution"
+    ]
+  },
+  {
     "slug": "how-to-register-company-limited-by-guarantee-ghana-orc-guide",
     "title": "How to Register a Company Limited by Guarantee in Ghana: The Official ORC Form 3E Guide (2026)",
     "excerpt": "A definitive legal and operational walkthrough on incorporating a Public Company Limited by Guarantee (NGOs, Foundations, Churches, and Social Enterprises) with the Office of the Registrar of Companies (ORC) under Act 992. Explore the 10-step Form 3E workflow, the profit-for-objects rule, ICAG auditor mandates, statutory fees, and member guarantee structures.",
