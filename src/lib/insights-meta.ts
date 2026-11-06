@@ -19,6 +19,38 @@ export interface InsightMeta {
 
 export const insightArticlesMeta: InsightMeta[] = [
   {
+    "slug": "how-to-register-public-company-limited-by-shares-ghana-plc",
+    "title": "Incorporating a Public Company Limited by Shares (PLC) in Ghana: The Definitive ORC Act 992 Guide (2026)",
+    "excerpt": "A comprehensive executive masterclass on incorporating a Public Company Limited by Shares (PLC) with the Office of the Registrar of Companies (ORC) under Act 992. Explore the 12-step Form 3C workflow, ICAG auditor consent rules, stated capital requirements, statutory fee schedules, and the complete director and secretary intake checklist.",
+    "category": "Capital & Investment",
+    "author": {
+      "name": "Isaac Agya Koomson",
+      "role": "Chief Executive Officer, KIA–Start Up Consult Ltd",
+      "avatar": "/images/aetf-ai-panel-speaker.jpg"
+    },
+    "publishedAt": "November 2026",
+    "readingTime": "11 min read",
+    "heroImage": "/images/executive-briefing.jpg",
+    "heroCaption": "Institutional capital formation, board structuring, and corporate registration: Architecting a Public Company Limited by Shares (PLC) under Ghana's Companies Act, 2019 (Act 992).",
+    "tags": [
+      "Public Company Ghana",
+      "PLC Ghana",
+      "Companies Act 2019",
+      "Act 992",
+      "Form 3C",
+      "ORC Ghana",
+      "Corporate Governance",
+      "Ghana Stock Exchange",
+      "Company Limited by Guarantee"
+    ],
+    "featured": false,
+    "relatedSlugs": [
+      "how-to-register-company-ghana-2026",
+      "the-323-company-question-ghana-orc-dissolution",
+      "how-to-register-sole-proprietorship-ghana-orc-guide"
+    ]
+  },
+  {
     "slug": "how-to-register-sole-proprietorship-ghana-orc-guide",
     "title": "How to Register a Sole Proprietorship in Ghana: The Definitive ORC Business Name Guide (2026)",
     "excerpt": "A comprehensive, plain-English walkthrough of registering a Business Name (Sole Proprietorship) with the Office of the Registrar of Companies (ORC) under Act 151. Explore the 7-step filing procedure, fee schedules, unlimited liability implications, and the complete applicant data checklist.",
