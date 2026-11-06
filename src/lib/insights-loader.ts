@@ -160,11 +160,18 @@ export function getAllInsights(): InsightArticle[] {
     return parseInsightMarkdown(fileContent, slug);
   });
 
-  // Preserve featured-first and date ordering
+  // Sort: featured first, then by publishedAt descending (newest first).
+  // publishedAt is a string like "November 2026" — parse to a sortable date.
+  const parseDate = (s: string): number => {
+    if (!s) return 0;
+    const d = new Date(s);
+    return isNaN(d.getTime()) ? 0 : d.getTime();
+  };
+
   articles.sort((a, b) => {
     if (a.featured && !b.featured) return -1;
     if (!a.featured && b.featured) return 1;
-    return 0;
+    return parseDate(b.publishedAt) - parseDate(a.publishedAt);
   });
 
   if (process.env.NODE_ENV === "production") {

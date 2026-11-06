@@ -3,10 +3,12 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Search, ArrowRight, BookOpen, Clock, Tag, Sparkles } from "lucide-react";
+import { Search, ArrowRight, BookOpen, Clock, Tag, Sparkles, ChevronDown } from "lucide-react";
 import WhatsAppCTA from "@/components/WhatsAppCTA";
 import { whatsappMessages } from "@/lib/site-config";
 import type { InsightMeta } from "@/lib/insights-loader";
+
+const PAGE_SIZE = 9;
 
 interface Props {
   articles: InsightMeta[];
@@ -16,6 +18,7 @@ interface Props {
 export default function InsightsDirectoryClient({ articles, categories }: Props) {
   const [selectedCategory, setSelectedCategory] = useState<string>("All Insights");
   const [searchQuery, setSearchQuery] = useState<string>("");
+  const [visibleCount, setVisibleCount] = useState<number>(PAGE_SIZE);
 
   const featured = articles.find((a) => a.featured) || articles[0];
 
@@ -31,6 +34,19 @@ export default function InsightsDirectoryClient({ articles, categories }: Props)
 
     return matchesCategory && matchesSearch;
   });
+
+  const visibleArticles = filteredArticles.slice(0, visibleCount);
+  const hasMore = visibleCount < filteredArticles.length;
+
+  const handleCategoryChange = (cat: string) => {
+    setSelectedCategory(cat);
+    setVisibleCount(PAGE_SIZE);
+  };
+
+  const handleSearchChange = (q: string) => {
+    setSearchQuery(q);
+    setVisibleCount(PAGE_SIZE);
+  };
 
   return (
     <>
@@ -78,13 +94,13 @@ export default function InsightsDirectoryClient({ articles, categories }: Props)
                 <input
                   type="text"
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={(e) => handleSearchChange(e.target.value)}
                   placeholder="Filter insights by keyword or topic..."
                   className="w-full bg-transparent px-3 text-sm text-white placeholder:text-white/40 outline-none"
                 />
                 {searchQuery && (
                   <button
-                    onClick={() => setSearchQuery("")}
+                    onClick={() => handleSearchChange("")}
                     className="text-xs text-white/50 hover:text-white font-medium transition-colors px-2"
                   >
                     Clear
@@ -102,7 +118,7 @@ export default function InsightsDirectoryClient({ articles, categories }: Props)
           {categories.map((cat) => (
             <button
               key={cat}
-              onClick={() => setSelectedCategory(cat)}
+              onClick={() => handleCategoryChange(cat)}
               className={`rounded-full px-5 py-2 text-xs font-mono font-bold whitespace-nowrap transition-all duration-300 ${
                 selectedCategory === cat
                   ? "bg-gradient-to-r from-[#ffe570] via-[#ffd700] to-[#c9a227] text-black shadow-[0_0_16px_rgba(255,215,0,0.45)] scale-105"
@@ -216,8 +232,8 @@ export default function InsightsDirectoryClient({ articles, categories }: Props)
             </p>
             <button
               onClick={() => {
-                setSelectedCategory("All Insights");
-                setSearchQuery("");
+                handleCategoryChange("All Insights");
+                handleSearchChange("");
               }}
               className="mt-5 rounded-full bg-ink px-5 py-2.5 text-xs font-bold text-paper hover:bg-gold-deep hover:text-ink transition-all duration-300"
             >
@@ -225,73 +241,97 @@ export default function InsightsDirectoryClient({ articles, categories }: Props)
             </button>
           </div>
         ) : (
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {filteredArticles.map((article, i) => (
-              <article
-                key={article.slug}
-                className="insight-card-premium stat-card-glow group flex flex-col justify-between overflow-hidden rounded-2xl"
-                style={{ animationDelay: `${i * 60}ms` }}
-              >
-                <div>
-                  <div className="card-image-wrapper relative aspect-16/10 overflow-hidden bg-mist">
-                    <Image
-                      src={article.heroImage}
-                      alt={article.title}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 400px"
-                      className="object-cover"
-                    />
-                    {/* Category badge overlay */}
-                    <div className="absolute top-3 left-3">
-                      <span className="px-2.5 py-1 rounded-full bg-black/70 backdrop-blur-sm text-[10px] font-bold uppercase tracking-wider text-gold-400 border border-gold-500/30">
-                        {article.category}
-                      </span>
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <div className="flex items-center justify-between text-xs text-ink/75 mb-3 font-mono font-semibold">
-                      <span>{article.publishedAt}</span>
-                      <span className="flex items-center gap-1 text-gold-deep font-bold">
-                        <Clock className="h-3.5 w-3.5" />
-                        {article.readingTime}
-                      </span>
-                    </div>
-
-                    <h3 className="font-display text-lg font-bold text-ink group-hover:text-gold-deep transition-colors duration-300 line-clamp-2 leading-snug">
-                      <Link href={`/insights/${article.slug}`}>{article.title}</Link>
-                    </h3>
-
-                    <p className="mt-2.5 text-xs leading-relaxed text-ink/85 font-normal line-clamp-3">
-                      {article.excerpt}
-                    </p>
-
-                    <div className="mt-4 flex flex-wrap gap-1.5">
-                      {article.tags.slice(0, 2).map((t) => (
-                        <span
-                          key={t}
-                          className="inline-flex items-center gap-1 rounded-full bg-gold-500/10 border border-gold-500/25 px-2.5 py-0.5 text-[10px] text-gold-deep font-bold"
-                        >
-                          <Tag className="w-2.5 h-2.5" />
-                          {t}
+          <>
+            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+              {visibleArticles.map((article, i) => (
+                <article
+                  key={article.slug}
+                  className="insight-card-premium stat-card-glow group flex flex-col justify-between overflow-hidden rounded-2xl"
+                  style={{ animationDelay: `${i * 60}ms` }}
+                >
+                  <div>
+                    <div className="card-image-wrapper relative aspect-16/10 overflow-hidden bg-mist">
+                      <Image
+                        src={article.heroImage}
+                        alt={article.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 400px"
+                        className="object-cover"
+                      />
+                      {/* Category badge overlay */}
+                      <div className="absolute top-3 left-3">
+                        <span className="px-2.5 py-1 rounded-full bg-black/70 backdrop-blur-sm text-[10px] font-bold uppercase tracking-wider text-gold-400 border border-gold-500/30">
+                          {article.category}
                         </span>
-                      ))}
+                      </div>
+                    </div>
+                    <div className="p-6">
+                      <div className="flex items-center justify-between text-xs text-ink/75 mb-3 font-mono font-semibold">
+                        <span>{article.publishedAt}</span>
+                        <span className="flex items-center gap-1 text-gold-deep font-bold">
+                          <Clock className="h-3.5 w-3.5" />
+                          {article.readingTime}
+                        </span>
+                      </div>
+
+                      <h3 className="font-display text-lg font-bold text-ink group-hover:text-gold-deep transition-colors duration-300 line-clamp-2 leading-snug">
+                        <Link href={`/insights/${article.slug}`}>{article.title}</Link>
+                      </h3>
+
+                      <p className="mt-2.5 text-xs leading-relaxed text-ink/85 font-normal line-clamp-3">
+                        {article.excerpt}
+                      </p>
+
+                      <div className="mt-4 flex flex-wrap gap-1.5">
+                        {article.tags.slice(0, 2).map((t) => (
+                          <span
+                            key={t}
+                            className="inline-flex items-center gap-1 rounded-full bg-gold-500/10 border border-gold-500/25 px-2.5 py-0.5 text-[10px] text-gold-deep font-bold"
+                          >
+                            <Tag className="w-2.5 h-2.5" />
+                            {t}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div className="p-6 pt-0 border-t border-line/60 flex items-center justify-between">
-                  <span className="text-xs text-ink/75 font-semibold">{article.author.name}</span>
-                  <Link
-                    href={`/insights/${article.slug}`}
-                    className="group/link text-xs font-bold text-gold-deep hover:text-gold-600 inline-flex items-center gap-1 transition-all"
-                  >
-                    Read article
-                    <ArrowRight className="h-3.5 w-3.5 group-hover/link:translate-x-0.5 transition-transform" />
-                  </Link>
-                </div>
-              </article>
-            ))}
-          </div>
+                  <div className="p-6 pt-0 border-t border-line/60 flex items-center justify-between">
+                    <span className="text-xs text-ink/75 font-semibold">{article.author.name}</span>
+                    <Link
+                      href={`/insights/${article.slug}`}
+                      className="group/link text-xs font-bold text-gold-deep hover:text-gold-600 inline-flex items-center gap-1 transition-all"
+                    >
+                      Read article
+                      <ArrowRight className="h-3.5 w-3.5 group-hover/link:translate-x-0.5 transition-transform" />
+                    </Link>
+                  </div>
+                </article>
+              ))}
+            </div>
+
+            {/* ── Load More / Archive ── */}
+            {hasMore && (
+              <div className="mt-14 flex flex-col items-center gap-3">
+                <p className="text-xs text-ink/40 font-mono">
+                  Showing {visibleCount} of {filteredArticles.length} articles
+                </p>
+                <button
+                  onClick={() => setVisibleCount((c) => c + PAGE_SIZE)}
+                  className="inline-flex items-center gap-2 rounded-full border border-gold-500/40 bg-paper px-7 py-3 text-xs font-bold text-ink hover:border-gold hover:bg-gold-500/10 hover:text-gold-deep transition-all duration-300 shadow-xs btn-magnetic"
+                >
+                  <ChevronDown className="h-4 w-4" />
+                  Load More Articles
+                </button>
+              </div>
+            )}
+
+            {!hasMore && filteredArticles.length > PAGE_SIZE && (
+              <p className="mt-10 text-center text-xs text-ink/35 font-mono">
+                All {filteredArticles.length} articles loaded
+              </p>
+            )}
+          </>
         )}
       </section>
 
