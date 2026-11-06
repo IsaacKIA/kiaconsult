@@ -19,6 +19,38 @@ export interface InsightMeta {
 
 export const insightArticlesMeta: InsightMeta[] = [
   {
+    "slug": "how-to-register-company-limited-by-guarantee-ghana-orc-guide",
+    "title": "How to Register a Company Limited by Guarantee in Ghana: The Official ORC Form 3E Guide (2026)",
+    "excerpt": "A definitive legal and operational walkthrough on incorporating a Public Company Limited by Guarantee (NGOs, Foundations, Churches, and Social Enterprises) with the Office of the Registrar of Companies (ORC) under Act 992. Explore the 10-step Form 3E workflow, the profit-for-objects rule, ICAG auditor mandates, statutory fees, and member guarantee structures.",
+    "category": "Policy & Economic Development",
+    "author": {
+      "name": "Isaac Agya Koomson",
+      "role": "Chief Executive Officer, KIA–Start Up Consult Ltd",
+      "avatar": "/images/aetf-ai-panel-speaker.jpg"
+    },
+    "publishedAt": "November 2026",
+    "readingTime": "10 min read",
+    "heroImage": "/images/undp-partnership-meeting.jpg",
+    "heroCaption": "Civic formalization, social enterprise structuring, and non-profit corporate governance under the Office of the Registrar of Companies (ORC).",
+    "tags": [
+      "Company Limited by Guarantee",
+      "NGO Registration Ghana",
+      "Church Registration Ghana",
+      "Companies Act 2019",
+      "Act 992",
+      "Form 3E",
+      "ORC Ghana",
+      "Social Enterprise",
+      "Non-Profit Governance"
+    ],
+    "featured": false,
+    "relatedSlugs": [
+      "how-to-register-public-company-limited-by-shares-ghana-plc",
+      "how-to-register-company-ghana-2026",
+      "the-323-company-question-ghana-orc-dissolution"
+    ]
+  },
+  {
     "slug": "how-to-register-public-company-limited-by-shares-ghana-plc",
     "title": "Incorporating a Public Company Limited by Shares (PLC) in Ghana: The Definitive ORC Act 992 Guide (2026)",
     "excerpt": "A comprehensive executive masterclass on incorporating a Public Company Limited by Shares (PLC) with the Office of the Registrar of Companies (ORC) under Act 992. Explore the 12-step Form 3C workflow, ICAG auditor consent rules, stated capital requirements, statutory fee schedules, and the complete director and secretary intake checklist.",
