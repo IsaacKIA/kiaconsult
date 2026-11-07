@@ -153,9 +153,9 @@ In our corporate advisory practice, we routinely rescue companies entangled in a
 
 ## 6. How KIA–Start Up Consult Manages Corporate Amendments
 
-Executing board changes, drafting bulletproof resolutions, swearing declarations, and standing in registry lines can distract executive teams from driving revenue and growing their ventures.
+Executing board changes, drafting bulletproof resolutions, swearing declarations, and standing in registry lines can distract executive teams from driving revenue and growing their ventures. Whether your entity is a [Private Company Limited by Shares (Form 3A)](/insights/incorporation-company-limited-by-shares-ghana-orc-guide), a [Public Company Limited by Shares (Form 3C)](/insights/how-to-register-public-company-limited-by-shares-ghana-plc), or a [Company Limited by Guarantee (Form 3E)](/insights/how-to-register-company-limited-by-guarantee-ghana-orc-guide), timely governance updates protect your corporate veil and prevent [involuntary ORC dissolution under Section 289](/insights/the-323-company-question-ghana-orc-dissolution).
 
-Through our dedicated **Corporate Secretarial & Registry Advisory Practice**, KIA–Start Up Consult delivers a seamless, turnkey service for domestic enterprises and multinational subsidiaries:
+Through our dedicated [**Corporate Secretarial & Registry Advisory Practice**](/services/business-registration-ghana), KIA–Start Up Consult delivers a seamless, turnkey service for domestic enterprises and multinational subsidiaries:
 
 - **Statutory Resolution Drafting:** We author legally enforceable Board and Shareholder Written Resolutions that conform strictly to Act 992 and your Company Constitution.
 - **Turnkey Form 17 / 17A Execution:** We audit documentation, verify GhanaPost GPS data, manage Commissioner for Oaths witnessing, and lodge filings directly with the ORC amendments desk.

@@ -34,16 +34,16 @@ takeaways:
   - "Approval delivers four foundational legal instruments: Certificate of Incorporation, CTC of Registered Constitution, CTC of Form 3C, and Beneficial Ownership (BO) Profiles."
   - "The first Annual Return filing is due within 18 months of incorporation at a statutory fee of GHS 175, accompanied by full audited financial statements, and subsequently every 12 months."
 faqs:
-  - question: What is the legal difference between a Private Limited Company (Ltd) and a Public Company (PLC) in Ghana?
-    answer: A Private Company Limited by Shares (Ltd) limits membership to 50 shareholders, prohibits public share or debenture offerings, and restricts the right to transfer shares. A Public Company Limited by Shares (PLC) has no upper limit on shareholders, can freely invite the public to subscribe for shares and bonds, permits unrestricted share transfers, and is the mandatory vehicle for listing on the Ghana Stock Exchange (GSE) or obtaining banking and insurance licenses.
-  - question: What is a Company Limited by Guarantee and how does it differ from a PLC?
-    answer: A Company Limited by Guarantee (governed by Form 3B under Act 992) does not have share capital. Its members act as guarantors rather than shareholders, committing to contribute a specified sum (e.g., GHS 100) only in the event of winding up. It is strictly reserved for non-profit organizations, NGOs, foundations, churches, charities, and trade associations. It is legally prohibited from distributing profits or dividends to members, unlike a PLC which exists primarily to generate return on equity.
-  - question: What are the auditor requirements for incorporating a PLC under Act 992?
-    answer: The company must submit a formal consent letter and statutory declaration from a practicing chartered accountant or audit firm licensed by the Institute of Chartered Accountants Ghana (ICAG) operating as a sole proprietorship or partnership. Crucially, under Section 139 of Act 992, an external auditor cannot serve the same company for more than six (6) continuous years and must be rotated out after six years.
-  - question: How many directors are required to register a Public Company Limited by Shares?
-    answer: Under Section 170 and 171 of Act 992, a Public Company must have at least two (2) directors at all times (unlike a private company which can operate with one). Each director must submit an individual Statutory Declaration and Consent Letter affirming their eligibility and independence, witnessed by a Commissioner for Oaths or Notary Public.
-  - question: How much does it cost to incorporate a Public Company Limited by Shares with the ORC?
-    answer: The base statutory incorporation and filing fee payable at the ORC in-house bank is GHS 585, plus 1% Capital Duty assessed on the company's stated capital. For applicants requiring fast-track processing within 24 to 48 hours, an optional VIP / Prestige service is available for an additional GHS 1,885 (bringing the total statutory filing fee to GHS 2,470 plus capital duty).
+  - question: "What is the legal difference between a Private Limited Company (Ltd) and a Public Company (PLC) in Ghana?"
+    answer: "A Private Company Limited by Shares (Ltd) limits membership to 50 shareholders, prohibits public share or debenture offerings, and restricts the right to transfer shares. A Public Company Limited by Shares (PLC) has no upper limit on shareholders, can freely invite the public to subscribe for shares and bonds, permits unrestricted share transfers, and is the mandatory vehicle for listing on the Ghana Stock Exchange (GSE) or obtaining banking and insurance licenses."
+  - question: "What is a Company Limited by Guarantee and how does it differ from a PLC?"
+    answer: "A Company Limited by Guarantee (governed by Form 3E under Act 992) does not have share capital. Its members act as guarantors rather than shareholders, committing to contribute a specified sum (e.g., GHS 100) only in the event of winding up. It is strictly reserved for non-profit organizations, NGOs, foundations, churches, charities, and trade associations. It is legally prohibited from distributing profits or dividends to members, unlike a PLC which exists primarily to generate return on equity."
+  - question: "What are the auditor requirements for incorporating a PLC under Act 992?"
+    answer: "The company must submit a formal consent letter and statutory declaration from a practicing chartered accountant or audit firm licensed by the Institute of Chartered Accountants Ghana (ICAG) operating as a sole proprietorship or partnership. Crucially, under Section 139 of Act 992, an external auditor cannot serve the same company for more than six (6) continuous years and must be rotated out after six years."
+  - question: "How many directors are required to register a Public Company Limited by Shares?"
+    answer: "Under Section 170 and 171 of Act 992, a Public Company must have at least two (2) directors at all times (unlike a private company which can operate with one). Each director must submit an individual Statutory Declaration and Consent Letter affirming their eligibility and independence, witnessed by a Commissioner for Oaths or Notary Public."
+  - question: "How much does it cost to incorporate a Public Company Limited by Shares with the ORC?"
+    answer: "The base statutory incorporation and filing fee payable at the ORC in-house bank is GHS 585, plus 1% Capital Duty assessed on the company's stated capital. For applicants requiring fast-track processing within 24 to 48 hours, an optional VIP / Prestige service is available for an additional GHS 1,885 (bringing the total statutory filing fee to GHS 2,470 plus capital duty)."
 ---
 
 When enterprise ambitions outgrow the boundaries of private syndicates, family balance sheets, and bilateral bank facilities, the modern corporation must graduate to the premier legal architecture in Ghanaian commerce: **The Public Company Limited by Shares (PLC)**.
@@ -158,7 +158,7 @@ A person is automatically disqualified from serving as a director of a Public Co
 In a Public Company, the Company Secretary is not a clerical note-taker; they are the chief legal compliance and governance officer of the board. They are legally tasked with:
 - Ensuring board resolutions comply with Act 992 and the Company Constitution.
 - Maintaining statutory registers of members, directors, charges, and beneficial owners.
-- Directing the timely filing of Annual Returns, board changes, and financial disclosures to the ORC.
+- Directing the timely filing of Annual Returns, [board and secretarial changes via Form 17/17A](/insights/how-to-change-company-director-secretary-ghana-orc-form-17), and financial disclosures to the ORC.
 
 ### Auditor Independence & The 6-Year Rotation Rule (Section 139)
 To eradicate long-standing corporate complacency, Act 992 revolutionized external auditing in Ghana. An auditor of a public company:
@@ -174,19 +174,14 @@ However, before a PLC can actively solicit funds or execute licensed operations,
 
 - **1.01** **Securities and Exchange Commission (SEC) Approval:** Under the Securities Industry Act, 2016 (Act 929), any public invitation to purchase shares, corporate bonds, or mutual fund units requires the submission, review, and approval of a formal **Prospectus** by the SEC.
 - **1.02** **Ghana Stock Exchange (GSE) Listing:** If the public company plans to list its equities for trading on the main board or the Ghana Alternative Market (GAX), it must fulfill minimum stated capital requirements, public float percentages (minimum 25% public ownership), and 3-year audited track records.
-- **1.03** **Sectoral Operating Licenses:** Depending on its objects, a PLC must secure secondary operational permits:
-  - Banking or Microfinance: Bank of Ghana (BoG).
-  - Insurance: National Insurance Commission (NIC).
-  - Telecommunications: National Communications Authority (NCA).
-  - Petroleum & Energy: Petroleum Commission / Energy Commission.
-  - Mining: Minerals Commission.
+- **1.03** **Sectoral Operating Licenses:** Depending on its corporate objects, a PLC must secure secondary operational licenses from the **Bank of Ghana (BoG)** for banking/fintech, **National Insurance Commission (NIC)** for insurance, **National Communications Authority (NCA)** for telecoms, or the **Petroleum and Minerals Commissions** for extractive industries.
 - **1.04** **Ghana Revenue Authority (GRA) Large Taxpayer Office (LTO):** PLCs are typically assigned to the GRA's specialized Large Taxpayer Office, requiring full compliance with electronic VAT invoicing (e-VAT), Corporate Income Tax (CIT) quarterly self-assessments, and cross-border transfer pricing documentation.
 
 ## 7. How KIA–Start Up Consult Architects Public Corporations
 
-Incorporating a Public Company Limited by Shares is a sophisticated legal and financial transaction that demands elite corporate engineering.
+Incorporating a Public Company Limited by Shares is a sophisticated legal and financial transaction that demands elite corporate engineering. (For founders seeking a closely held commercial vehicle instead, explore our guide on [Incorporating a Private Company Limited by Shares (Form 3A)](/insights/incorporation-company-limited-by-shares-ghana-orc-guide), or for non-profits, our [Company Limited by Guarantee Guide (Form 3E)](/insights/how-to-register-company-limited-by-guarantee-ghana-orc-guide)).
 
-At KIA–Start Up Consult, our **Corporate Governance & Capital Structuring Practice** provides end-to-end advisory for institutional sponsors, boards of directors, and enterprise groups:
+At KIA–Start Up Consult, our [**Corporate Governance & Business Registration Practice**](/services/business-registration-ghana) provides end-to-end advisory for institutional sponsors, boards of directors, and enterprise groups:
 
 - **Corporate Constitution Drafting:** We author bespoke Company Constitutions that establish balanced board oversight, voting rights, share classes, and robust shareholder protection clauses.
 - **Turnkey Form 3C & ORC Execution:** We assemble all statutory declarations, manage Commissioner for Oaths witnessing, verify GhanaPost GPS data, and liaise directly with the ORC to secure your Certificate of Incorporation and CTCs via standard or VIP Prestige tracks.

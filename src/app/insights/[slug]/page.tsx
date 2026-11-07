@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, ArrowUpRight, Clock, Calendar, User, Share2, MessageCircle, CheckCircle, HelpCircle } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, Clock, Calendar, User, Share2, MessageCircle, CheckCircle, HelpCircle, BookOpen } from "lucide-react";
 import WhatsAppCTA from "@/components/WhatsAppCTA";
 import ArticleContentRenderer, { renderInlineMarkdown } from "@/components/ArticleContentRenderer";
 import { whatsappMessages, siteConfig } from "@/lib/site-config";
@@ -295,24 +295,79 @@ export default async function InsightArticlePage({ params }: Props) {
                 ))}
             </div>
 
-            {article.content.sections.map((section) => (
-              <ArticleContentRenderer key={section.heading} section={section} />
-            ))}
+            {/* Executive At-a-Glance Takeaways & Interactive Section Navigator */}
+            <div className="my-10 space-y-6">
+              {article.content.takeaways && article.content.takeaways.length > 0 && (
+                <div className="rounded-2xl border border-gold-500/35 bg-gradient-to-br from-gold-500/[0.10] via-gold-500/[0.04] to-transparent p-6 sm:p-8 space-y-4 shadow-sm">
+                  <div className="flex items-center gap-2.5">
+                    <CheckCircle className="h-4 w-4 text-gold-deep shrink-0" />
+                    <span className="text-xs font-mono font-bold uppercase tracking-widest text-gold-deep">
+                      Key Takeaways at a Glance
+                    </span>
+                  </div>
+                  <ul className="grid gap-3 sm:grid-cols-2 text-xs sm:text-sm text-ink/90 font-medium leading-relaxed">
+                    {article.content.takeaways.map((takeaway, i) => (
+                      <li
+                        key={i}
+                        className="flex items-start gap-2.5 p-3 rounded-xl bg-white/80 border border-gold-500/20 shadow-2xs"
+                      >
+                        <span className="font-mono text-[11px] font-bold text-gold-deep bg-gold-500/15 px-2 py-0.5 rounded shrink-0 mt-0.5">
+                          0{i + 1}
+                        </span>
+                        <span>{renderInlineMarkdown(takeaway)}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
 
-            {/* Strategic Takeaways Box */}
-            <div className="my-10 rounded-2xl border border-gold-500/35 bg-gold-500/10 p-8 space-y-4 shadow-md">
-              <span className="text-xs font-mono font-bold uppercase tracking-widest text-gold-deep block">
-                Executive Strategic Takeaways
-              </span>
-              <ul className="space-y-3 text-sm sm:text-base text-ink/90 font-medium">
-                {article.content.takeaways.map((takeaway, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-gold-deep shrink-0 mt-0.5" />
-                    <span>{takeaway}</span>
-                  </li>
-                ))}
-              </ul>
+              {article.content.sections.length > 1 && (
+                <nav
+                  aria-label="Table of contents"
+                  className="rounded-2xl border border-line bg-paper/80 p-6 sm:p-7 space-y-4 shadow-xs"
+                >
+                  <div className="flex items-center justify-between border-b border-line/60 pb-3">
+                    <div className="flex items-center gap-2.5">
+                      <BookOpen className="h-4 w-4 text-gold-deep shrink-0" />
+                      <span className="text-xs font-mono font-bold uppercase tracking-widest text-ink">
+                        In This Guide — Quick Jump to Section
+                      </span>
+                    </div>
+                    <span className="text-[11px] font-mono text-ink/50">
+                      {article.content.sections.length} Sections
+                    </span>
+                  </div>
+                  <ol className="grid gap-2.5 sm:grid-cols-2">
+                    {article.content.sections.map((sec, idx) => {
+                      const cleanHeading = sec.heading.replace(/^[0-9]+\.\s*/, "");
+                      return (
+                        <li key={sec.heading}>
+                          <a
+                            href={`#section-${idx + 1}`}
+                            className="group flex items-center gap-3 p-2.5 rounded-xl border border-transparent hover:border-gold-500/35 hover:bg-white transition-all text-xs sm:text-sm text-ink/80 hover:text-ink font-medium"
+                          >
+                            <span className="shrink-0 w-6 h-6 rounded-full bg-gold-500/15 border border-gold-500/30 text-gold-deep font-mono text-[11px] font-bold flex items-center justify-center group-hover:bg-ink group-hover:text-gold-400 transition-colors">
+                              {idx + 1}
+                            </span>
+                            <span className="line-clamp-1 group-hover:text-gold-deep transition-colors">
+                              {cleanHeading}
+                            </span>
+                          </a>
+                        </li>
+                      );
+                    })}
+                  </ol>
+                </nav>
+              )}
             </div>
+
+            {article.content.sections.map((section, idx) => (
+              <ArticleContentRenderer
+                key={section.heading}
+                section={section}
+                sectionId={`section-${idx + 1}`}
+              />
+            ))}
 
             {/* Frequently Asked Questions / Google People Also Ask Box */}
             {article.content.faqs && article.content.faqs.length > 0 && (

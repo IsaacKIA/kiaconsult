@@ -33,16 +33,16 @@ takeaways:
   - "Applicants must supply full residential, postal, and GhanaPost GPS location particulars, alongside separate front-and-back scans of their valid Ghana Card and verified mother's maiden name."
   - "While ideal for low-risk micro-enterprises and freelance professionals, growing businesses exposed to debt or third-party liabilities should strategically transition to a Company Limited by Shares under Act 992."
 faqs:
-  - question: What is the legal difference between a Business Name (Sole Proprietorship) and a Limited Liability Company (Ltd) in Ghana?
-    answer: A Business Name or Sole Proprietorship is governed by the Registration of Business Names Act, 1962 (Act 151) and is not a distinct legal entity separate from the founder. The owner takes all decisions, retains all profits, and bears personal, unlimited liability for all business debts and court judgments. A Company Limited by Shares, governed by the Companies Act, 2019 (Act 992), is a separate legal person where shareholder liability is strictly limited to their unpaid share capital, offering robust asset protection.
-  - question: How much does it cost to register a Sole Proprietorship with the ORC in 2026?
-    answer: The standard statutory filing fee payable at the ORC in-house bank is GHS 130. For entrepreneurs requiring expedited processing within 24 to 48 hours, an optional VIP / Prestige fast-track service is available for an additional GHS 650 (bringing the total VIP statutory cost to GHS 780). Annual renewal costs GHS 70 each year.
-  - question: How do I renew my registered Business Name using mobile money?
-    answer: You can renew your Business Name remotely without visiting an ORC office by dialing the official government USSD code *222#. Select the Registrar of Companies option, enter your business registration number, review the accrued annual renewal fees (GHS 70 per year plus any default penalties), and authorize payment via mobile money (MTN MoMo, Telecel Cash, or AT Money).
-  - question: Can a foreigner register a Sole Proprietorship in Ghana?
-    answer: Under Ghanaian law, sole proprietorships and petty trading are primarily reserved for Ghanaian citizens. Furthermore, foreign investors seeking commercial operations in Ghana must comply with the Ghana Investment Promotion Authority (GIPA) regulations, which impose substantial foreign equity minimums ($200,000 for joint ventures or $500,000 for 100% foreign ownership) that require incorporating a limited liability corporate structure rather than a sole proprietorship.
-  - question: What documents and personal details are needed to complete Form A?
-    answer: You need 3 proposed business names in order of preference, a description of principal business activities, physical location details with a GhanaPost GPS digital address, postal box address, contact numbers, email, personal biographical data (full name, date/place of birth, marital status, occupation), mother's maiden name, your Taxpayer Identification Number (TIN), and clear, separate photographs or scans of the front and back of your valid Ghana Card.
+  - question: "What is the legal difference between a Business Name (Sole Proprietorship) and a Limited Liability Company (Ltd) in Ghana?"
+    answer: "A Business Name or Sole Proprietorship is governed by the Registration of Business Names Act, 1962 (Act 151) and is not a distinct legal entity separate from the founder. The owner takes all decisions, retains all profits, and bears personal, unlimited liability for all business debts and court judgments. A Company Limited by Shares, governed by the Companies Act, 2019 (Act 992), is a separate legal person where shareholder liability is strictly limited to their unpaid share capital, offering robust asset protection."
+  - question: "How much does it cost to register a Sole Proprietorship with the ORC in 2026?"
+    answer: "The standard statutory filing fee payable at the ORC in-house bank is GHS 130. For entrepreneurs requiring expedited processing within 24 to 48 hours, an optional VIP / Prestige fast-track service is available for an additional GHS 650 (bringing the total VIP statutory cost to GHS 780). Annual renewal costs GHS 70 each year."
+  - question: "How do I renew my registered Business Name using mobile money?"
+    answer: "You can renew your Business Name remotely without visiting an ORC office by dialing the official government USSD code *222#. Select the Registrar of Companies option, enter your business registration number, review the accrued annual renewal fees (GHS 70 per year plus any default penalties), and authorize payment via mobile money (MTN MoMo, Telecel Cash, or AT Money)."
+  - question: "Can a foreigner register a Sole Proprietorship in Ghana?"
+    answer: "Under Ghanaian law, sole proprietorships and petty trading are primarily reserved for Ghanaian citizens. Furthermore, foreign investors seeking commercial operations in Ghana must comply with the Ghana Investment Promotion Authority (GIPA) regulations, which impose substantial foreign equity minimums ($200,000 for joint ventures or $500,000 for 100% foreign ownership) that require incorporating a limited liability corporate structure rather than a sole proprietorship."
+  - question: "What documents and personal details are needed to complete Form A?"
+    answer: "You need 3 proposed business names in order of preference, a description of principal business activities, physical location details with a GhanaPost GPS digital address, postal box address, contact numbers, email, personal biographical data (full name, date/place of birth, marital status, occupation), mother's maiden name, your Taxpayer Identification Number (TIN), and clear, separate photographs or scans of the front and back of your valid Ghana Card."
 ---
 
 For hundreds of thousands of aspiring entrepreneurs across Ghana, the entrepreneurial journey begins not in a boardroom, but with a singular vision, personal savings, and relentless individual drive.
@@ -174,7 +174,7 @@ However, as your enterprise matures, you will inevitably hit the structural limi
 - You bear unlimited personal risk if a major transaction goes bad.
 - Commercial banks cap credit limits because enterprise survival depends entirely on a single person.
 
-When your business reaches this inflection point, KIA–Start Up Consult facilitates a seamless statutory transition: **converting your Sole Proprietorship into a Private Company Limited by Shares under the Companies Act, 2019 (Act 992)**.
+When your business reaches this inflection point, KIA–Start Up Consult facilitates a seamless statutory transition: [**converting your Sole Proprietorship into a Private Company Limited by Shares under the Companies Act, 2019 (Act 992)**](/insights/incorporation-company-limited-by-shares-ghana-orc-guide).
 
 This process involves re-registering the enterprise as a distinct corporate body, transferring business assets, drafting modern Company Regulations, establishing a board of directors, appointing a qualified Company Secretary, and obtaining a brand-new Certificate of Incorporation—all while preserving your existing brand equity, commercial goodwill, and customer relationships.
 
@@ -184,7 +184,7 @@ This process involves re-registering the enterprise as a distinct corporate body
 
 Navigating statutory counters, verifying GPS boundary data, formatting Form A particulars, and standing in banking queues can distract founders from what truly matters: serving customers and generating revenue.
 
-Through our dedicated **Business Registration & Regulatory Advisory Practice**, KIA–Start Up Consult delivers a seamless, 100% remote registration experience for Ghanaian founders, diaspora returnees, and provincial business owners:
+Through our dedicated [**Business Registration & Regulatory Advisory Practice**](/services/business-registration-ghana), KIA–Start Up Consult delivers a seamless, 100% remote registration experience for Ghanaian founders, diaspora returnees, and provincial business owners:
 
 - **Comprehensive Name Search & Clearance:** We audit and clear your proposed business names to ensure zero conflict with existing trademarks and ORC databases.
 - **Accurate Form A Execution:** Our compliance analysts handle end-to-end data capturing, GhanaPost GPS coordinate mapping, and statutory form verification to eliminate clerical rejections.

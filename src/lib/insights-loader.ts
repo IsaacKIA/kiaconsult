@@ -82,24 +82,159 @@ export function parseInsightMarkdown(fileContent: string, fileSlug: string): Ins
 
       let pullQuote: string | undefined;
       const paragraphs: string[] = [];
-      const blocks = rest.split(/\n\s*\n/);
+      const rawLines = rest.split("\n");
 
-      for (const block of blocks) {
-        const trimmed = block.trim();
-        if (!trimmed) continue;
-        if (trimmed.startsWith(">")) {
-          pullQuote = trimmed
-            .replace(/^>\s*/, "")
-            .replace(/^["“]/, "")
-            .replace(/["”]$/, "")
-            .trim();
-        } else if (trimmed.startsWith("### ") && trimmed.includes("\n")) {
-          const firstLine = trimmed.slice(0, trimmed.indexOf("\n")).trim();
-          const remainder = trimmed.slice(trimmed.indexOf("\n")).trim();
-          paragraphs.push(firstLine);
-          if (remainder) paragraphs.push(remainder);
-        } else {
+      let i = 0;
+      while (i < rawLines.length) {
+        const line = rawLines[i];
+        const trimmed = line.trim();
+
+        // Skip empty lines and horizontal rules
+        if (!trimmed || /^---+$/.test(trimmed)) {
+          i++;
+          continue;
+        }
+
+        // 1. Fenced code block (``` ... ```)
+        if (trimmed.startsWith("```")) {
+          const codeLines: string[] = [line];
+          i++;
+          while (i < rawLines.length && !rawLines[i].trim().startsWith("```")) {
+            codeLines.push(rawLines[i]);
+            i++;
+          }
+          if (i < rawLines.length) {
+            codeLines.push(rawLines[i]);
+            i++;
+          }
+          paragraphs.push(codeLines.join("\n"));
+          continue;
+        }
+
+        // 2. Subheading (### ...)
+        if (trimmed.startsWith("### ")) {
           paragraphs.push(trimmed);
+          i++;
+          continue;
+        }
+
+        // 3. Blockquote / Pull quote (> ...)
+        if (trimmed.startsWith(">")) {
+          const quoteLines: string[] = [];
+          while (i < rawLines.length && rawLines[i].trim().startsWith(">")) {
+            quoteLines.push(
+              rawLines[i]
+                .trim()
+                .replace(/^>\s*/, "")
+                .replace(/^["“]/, "")
+                .replace(/["”]$/, "")
+                .trim()
+            );
+            i++;
+          }
+          const cleanQuote = quoteLines.join(" ").trim();
+          if (cleanQuote) {
+            // Keep inline quote marker so renderer places it in exact reading flow
+            paragraphs.push(`> ${cleanQuote}`);
+          }
+          continue;
+        }
+
+        // 4. Numbered list block (1. ... plus any indented sub-bullets)
+        if (/^[0-9]+\.\s+/.test(trimmed)) {
+          const numBlockLines: string[] = [];
+          while (i < rawLines.length) {
+            const cur = rawLines[i];
+            const curTrim = cur.trim();
+            if (!curTrim) {
+              // Look ahead: if next non-empty line is another numbered item or indented sub-bullet, continue
+              let nextIdx = i + 1;
+              while (nextIdx < rawLines.length && !rawLines[nextIdx].trim()) nextIdx++;
+              if (
+                nextIdx < rawLines.length &&
+                (/^[0-9]+\.\s+/.test(rawLines[nextIdx].trim()) ||
+                  /^\s{2,}[-*]\s+/.test(rawLines[nextIdx]))
+              ) {
+                i = nextIdx;
+                continue;
+              }
+              break;
+            }
+            if (/^[0-9]+\.\s+/.test(curTrim)) {
+              numBlockLines.push(curTrim);
+              i++;
+            } else if (/^[-*]\s+/.test(curTrim) && numBlockLines.length > 0) {
+              // Sub-bullet belonging to the current numbered item
+              numBlockLines.push(`  ${curTrim}`);
+              i++;
+            } else {
+              break;
+            }
+          }
+          paragraphs.push(numBlockLines.join("\n"));
+          continue;
+        }
+
+        // 5. Checkmark list block (- ✓ or ✓)
+        if (/^[-*]?\s*[✓✔]\s+/.test(trimmed)) {
+          const checkLines: string[] = [];
+          while (i < rawLines.length && /^[-*]?\s*[✓✔]\s+/.test(rawLines[i].trim())) {
+            checkLines.push(rawLines[i].trim());
+            i++;
+          }
+          paragraphs.push(checkLines.join("\n"));
+          continue;
+        }
+
+        // 6. Decimal audit code list block (- **1.01** ...)
+        if (/^[-*]?\s*\*\*([0-9.]+)\*\*\s+/.test(trimmed)) {
+          const decLines: string[] = [];
+          while (i < rawLines.length && /^[-*]?\s*\*\*([0-9.]+)\*\*\s+/.test(rawLines[i].trim())) {
+            decLines.push(rawLines[i].trim());
+            i++;
+          }
+          paragraphs.push(decLines.join("\n"));
+          continue;
+        }
+
+        // 7. Standard bullet list block (- ... or * ...)
+        if (/^[-*]\s+/.test(trimmed)) {
+          const bulletLines: string[] = [];
+          while (
+            i < rawLines.length &&
+            /^[-*]\s+/.test(rawLines[i].trim()) &&
+            !/^[-*]?\s*[✓✔]\s+/.test(rawLines[i].trim()) &&
+            !/^[-*]?\s*\*\*([0-9.]+)\*\*\s+/.test(rawLines[i].trim())
+          ) {
+            bulletLines.push(rawLines[i].trim());
+            i++;
+          }
+          paragraphs.push(bulletLines.join("\n"));
+          continue;
+        }
+
+        // 8. Standard prose paragraph (collect until blank line or special block start)
+        const proseLines: string[] = [];
+        while (i < rawLines.length) {
+          const curTrim = rawLines[i].trim();
+          if (
+            !curTrim ||
+            /^---+$/.test(curTrim) ||
+            curTrim.startsWith("### ") ||
+            curTrim.startsWith("```") ||
+            curTrim.startsWith(">") ||
+            /^[0-9]+\.\s+/.test(curTrim) ||
+            /^[-*]?\s*[✓✔]\s+/.test(curTrim) ||
+            /^[-*]?\s*\*\*([0-9.]+)\*\*\s+/.test(curTrim) ||
+            /^[-*]\s+/.test(curTrim)
+          ) {
+            break;
+          }
+          proseLines.push(curTrim);
+          i++;
+        }
+        if (proseLines.length > 0) {
+          paragraphs.push(proseLines.join(" "));
         }
       }
 
