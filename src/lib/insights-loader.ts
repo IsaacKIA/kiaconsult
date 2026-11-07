@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { insightArticlesMeta } from "./insights-meta";
 
 export interface InsightArticle {
   slug: string;
@@ -160,8 +161,11 @@ export function getAllInsights(): InsightArticle[] {
     return parseInsightMarkdown(fileContent, slug);
   });
 
-  // Sort: featured first, then by publishedAt descending (newest first).
-  // publishedAt is a string like "November 2026" — parse to a sortable date.
+  // Sort strictly newest-first using the canonical editorial order in insightArticlesMeta,
+  // falling back to publishedAt descending for any unindexed markdown files.
+  const metaOrderMap = new Map<string, number>(
+    insightArticlesMeta.map((m, idx) => [m.slug, idx])
+  );
   const parseDate = (s: string): number => {
     if (!s) return 0;
     const d = new Date(s);
@@ -169,8 +173,13 @@ export function getAllInsights(): InsightArticle[] {
   };
 
   articles.sort((a, b) => {
-    if (a.featured && !b.featured) return -1;
-    if (!a.featured && b.featured) return 1;
+    const idxA = metaOrderMap.get(a.slug);
+    const idxB = metaOrderMap.get(b.slug);
+    if (idxA !== undefined && idxB !== undefined) {
+      return idxA - idxB;
+    }
+    if (idxA !== undefined) return -1;
+    if (idxB !== undefined) return 1;
     return parseDate(b.publishedAt) - parseDate(a.publishedAt);
   });
 

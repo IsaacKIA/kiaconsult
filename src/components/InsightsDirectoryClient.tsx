@@ -8,7 +8,7 @@ import WhatsAppCTA from "@/components/WhatsAppCTA";
 import { whatsappMessages } from "@/lib/site-config";
 import type { InsightMeta } from "@/lib/insights-loader";
 
-const PAGE_SIZE = 9;
+const PAGE_SIZE = 12;
 
 interface Props {
   articles: InsightMeta[];
